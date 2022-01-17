@@ -117,6 +117,3 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • White Label
 
-### Contact To Buy The Script
-
-• https://t.me/Akbar218
