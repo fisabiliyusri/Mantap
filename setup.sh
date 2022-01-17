@@ -159,14 +159,6 @@ echo "   - Auto Delete Expired Account" | tee -a log-install.txt
 echo "   - Full Orders For Various Services" | tee -a log-install.txt
 echo "   - White Label" | tee -a log-install.txt
 echo "   - Installation Log --> /root/log-install.txt"  | tee -a log-install.txt
-echo ""  | tee -a log-install.txt
-echo "   - Dev/Main                : Horas Marolop Amsal Siregar"  | tee -a log-install.txt
-echo "   - Recode                  : Akbar Maulana" | tee -a log-install.txt
-echo "   - Telegram                : T.me/Akbar218"  | tee -a log-install.txt
-echo "   - Instagram               : ~"  | tee -a log-install.txt
-echo "   - Whatsapp                : 081545854516"  | tee -a log-install.txt
-echo "   - Facebook                : https://m.facebook.com/lis.tio.718" | tee -a log-install.txt
-echo "----------------------Script Created By Akbar Maulana Project----------------------" | tee -a log-install.txt
 echo ""
 echo " Reboot 15 Sec"
 sleep 15
