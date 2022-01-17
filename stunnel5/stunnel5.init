@@ -1,0 +1,240 @@
+#! /bin/sh -e
+### BEGIN INIT INFO
+# Provides:          stunnel
+# Required-Start:    $local_fs $remote_fs
+# Required-Stop:     $local_fs $remote_fs
+# Should-Start:      $syslog
+# Should-Stop:       $syslog
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: Start or stop stunnel 4.x (TLS tunnel for network daemons)
+# Description:       Starts or stops all configured TLS network tunnels. Each *.conf file in
+#                    /usr/local/etc/stunnel/ will spawn a separate stunnel process. The list of files
+#                    can be overridden in /usr/local/etc/default/stunnel, and that same file can be used
+#                    to completely disable *all* tunnels.
+### END INIT INFO
+
+. /lib/lsb/init-functions
+
+DEFAULTPIDFILE="/var/run/stunnel.pid"
+DAEMON=/usr/local/lamvpn/stunnel5
+NAME=stunnel5
+DESC="Stunnel5 Service"
+OPTIONS=""
+
+get_opt() {
+  sed -e "s;^[[:space:]]*;;" -e "s;[[:space:]]*$;;" \
+    -e "s;[[:space:]]*=[[:space:]]*;=;" "$1" |
+    grep -i "^$2=" | sed -e "s;^[^=]*=;;"
+}
+
+get_pidfile() {
+  local file=$1
+  if [ -f $file ]; then
+    CHROOT=`get_opt $file chroot`
+    PIDFILE=`get_opt $file pid`
+    if [ "$PIDFILE" = "" ]; then
+      PIDFILE=$DEFAULTPIDFILE
+    fi
+    echo "$CHROOT/$PIDFILE"
+  fi
+}
+
+startdaemons() {
+  local res file args pidfile warn status
+
+  if ! [ -d /var/run/stunnel ]; then
+    rm -rf /var/run/stunnel
+    install -d -o stunnel -g stunnel /var/run/stunnel
+  fi
+  if [ -n "$RLIMITS" ]; then
+    ulimit $RLIMITS
+  fi
+  res=0
+  for file in $FILES; do
+    if [ -f $file ]; then
+      echo -n " $file: "
+      args="$file $OPTIONS"
+      pidfile=`get_pidfile $file`
+      if egrep -qe '^pid[[:space:]]*=' "$file"; then
+        warn=''
+      else
+        warn=' (no pid=pidfile specified!)'
+      fi
+      status=0
+      start_daemon -p "$pidfile" "$DAEMON" $args || status=$?
+      if [ "$status" -eq 0 ]; then
+        echo -n "started$warn"
+      else
+        echo "failed$warn"
+        echo "You should check that you have specified the pid= in you configuration file"
+        res=1
+      fi
+    fi
+  done;
+  echo ''
+  return "$res"
+}
+
+killdaemons()
+{
+  local sig file pidfile status
+
+  sig=$1
+  res=0
+  for file in $FILES; do
+    echo -n " $file: "
+    pidfile=`get_pidfile $file`
+    if [ ! -e "$pidfile" ]; then
+      echo -n "no pid file"
+    else
+      status=0
+      killproc -p "$pidfile" "$DAEMON" ${sig:+"$sig"} || status=$?
+      if [ "$status" -eq 0 ]; then
+        echo -n 'stopped'
+      else
+        echo -n 'failed'
+        res=1
+      fi
+    fi
+  done
+  echo ''
+  return "$res"
+}
+
+querydaemons()
+{
+  local res file pidfile status
+
+  res=0
+  for file in $FILES; do
+    echo -n " $file: "
+    pidfile=`get_pidfile "$file"`
+    if [ ! -e "$pidfile" ]; then
+      echo -n 'no pid file'
+      res=1
+    else
+      status=0
+      pidofproc -p "$pidfile" "$DAEMON" >/dev/null || status="$?"
+      if [ "$status" = 0 ]; then
+        echo -n 'running'
+      elif [ "$status" = 4 ]; then
+        echo "cannot access the pid file $pidfile"
+        res=1
+      else
+        echo -n 'stopped'
+        res=1
+      fi
+    fi
+  done
+  echo ''
+  exit "$res"
+}
+
+restartrunningdaemons()
+{
+  local res file pidfile status args
+
+  res=0
+  for file in $FILES; do
+    echo -n " $file: "
+    pidfile=`get_pidfile "$file"`
+    if [ ! -e "$pidfile" ]; then
+      echo -n 'no pid file'
+    else
+      status=0
+      pidofproc -p "$pidfile" "$DAEMON" >/dev/null || status="$?"
+      if [ "$status" = 0 ]; then
+        echo -n 'stopping'
+        killproc -p "$pidfile" "$DAEMON" "$sig" || status="$?"
+        if [ "$status" -eq 0 ]; then
+          echo -n ' starting'
+          args="$file $OPTIONS"
+          start_daemon -p "$pidfile" "$DAEMON" $args || status="$?"
+          if [ "$status" -eq 0 ]; then
+            echo -n ' started'
+          else
+            echo ' failed'
+            res=1
+          fi
+        else
+          echo -n ' failed'
+          res=1
+        fi
+      elif [ "$status" = 4 ]; then
+        echo "cannot access the pid file $pidfile"
+      else
+        echo -n 'stopped'
+      fi
+    fi
+  done
+  echo ''
+  exit "$res"
+}
+
+if [ "x$OPTIONS" != "x" ]; then
+  OPTIONS="-- $OPTIONS"
+fi
+
+# If the user want to manage a single tunnel, the conf file's name
+# is in $2. Otherwise, respect /usr/local/etc/default/stunnel4 setting.
+# If no setting there, use /usr/local/etc/stunnel/*.conf.
+if [ -n "${2:-}" ]; then
+  if [ -e "/etc/stunnel5/stunnel5.conf" ]; then
+    FILES="/etc/stunnel5/stunnel5.conf"
+  fi
+else
+  if [ -z "$FILES" ]; then
+    FILES="/etc/stunnel5/*.conf"
+  fi
+fi
+
+[ -x $DAEMON ] || exit 0
+
+set -e
+
+res=0
+case "$1" in
+  start)
+    echo -n "Starting $DESC:"
+    startdaemons
+    res=$?
+    ;;
+  stop)
+    echo -n "Stopping $DESC:"
+    killdaemons
+    res=$?
+    ;;
+  reopen-logs)
+    echo -n "Reopening log files $DESC:"
+    killdaemons USR1
+    res=$?
+    ;;
+  force-reload|reload)
+    echo -n "Reloading configuration $DESC:"
+    killdaemons HUP
+    res=$?
+    ;;
+  restart)
+    echo -n "Restarting $DESC:"
+    killdaemons && startdaemons
+    res=$?
+    ;;
+  try-restart)
+    echo -n "Restarting $DESC if running:"
+    restartrunningdaemons
+    res=$?
+    ;;
+  status)
+    echo -n "$DESC status:"
+    querydaemons
+    res=$?
+    ;;
+  *)
+    N=/etc/init.d/$NAME
+    echo "Usage: $N {start|stop|status|reload|reopen-logs|restart|try-restart} [<stunnel instance>]" >&2
+    res=1
+    ;;
+esac
+
+exit "$res"
