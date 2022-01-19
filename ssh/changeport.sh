@@ -1,4 +1,4 @@
-#!/bin/bash
+   #!/bin/bash
 # My Telegram : https://t.me/Akbar218
 # ==========================================
 # Color
@@ -35,7 +35,9 @@ echo -e "[3]. Change Port Vmess + Vless"
 echo -e "[4]. Change Port Trojan"
 echo -e "[5]. Change Port Squid"
 echo -e "[6]. Change Port SSTP"
-echo -e "[7]. Exit"
+echo -e "[7]. Change Port SSH WS NON TLS"
+echo -e "[8]. Change Port SSH WS TLS / SSL"
+echo -e "[9]. Exit"
 echo -e ""
 echo -e "======================================"
 echo -e ""
@@ -61,6 +63,12 @@ portsquid
 portsstp
 ;;
 7)
+portsshws
+;;
+8)
+portsshnontls
+;;
+9)
 clear
 menu
 ;;
