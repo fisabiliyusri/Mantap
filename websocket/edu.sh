@@ -30,11 +30,11 @@ fi
 akbarvpn="raw.githubusercontent.com/senowahyu62/scriptvps/main/websocket"
 
 # Getting Proxy Template
-wget -q -O /usr/local/bin/websocket https://${akbarvpn}/websocket.py
-chmod +x /usr/local/bin/websocket
+wget -q -O /usr/local/bin/ws-nontls https://${akbarvpn}/websocket.py
+chmod +x /usr/local/bin/ws-nontls
 
 # Installing Service
-cat > /etc/systemd/system/websocket.service << END
+cat > /etc/systemd/system/ws-nontls.service << END
 [Unit]
 Description=Python Proxy Mod By Akbar Maulana
 Documentation=https://t.me/Akbar218
@@ -46,7 +46,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/python -O /usr/local/bin/websocket 8880
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-nontls 8880
 Restart=on-failure
 
 [Install]
@@ -54,8 +54,8 @@ WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
-systemctl enable websocket
-systemctl restart websocket
+systemctl enable ws-nontls
+systemctl restart ws-nontls
 
 # Getting Proxy Template
 wget -q -O /usr/local/bin/ws-ovpn https://${akbarvpn}/ws-ovpn.py
@@ -84,3 +84,31 @@ END
 systemctl daemon-reload
 systemctl enable ws-ovpn
 systemctl restart ws-ovpn
+
+# Getting Proxy Template
+wget -q -O /usr/local/bin/ws-tls https://${akbarvpn}/ws-tls
+chmod +x /usr/local/bin/ws-tls
+
+# Installing Service
+cat > /etc/systemd/system/ws-tls.service << END
+[Unit]
+Description=Python Proxy Mod By geovpn
+Documentation=https://t.me/geovpn
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 443
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.targe
+END
+
+systemctl daemon-reload
+systemctl enable ws-tls
+systemctl restart ws-tls
