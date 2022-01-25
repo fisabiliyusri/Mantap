@@ -106,7 +106,7 @@ ExecStart=/usr/bin/python -O /usr/local/bin/ws-tls 443
 Restart=on-failure
 
 [Install]
-WantedBy=multi-user.targe
+WantedBy=multi-user.target
 END
 
 systemctl daemon-reload
