@@ -29,12 +29,16 @@ clear
 echo start
 sleep 0.5
 source /var/lib/akbarstorevpn/ipvps.conf
-domain=$IP
-systemctl enable xray.service
-/root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256
-~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
-systemctl restart xray.service
-echo Done
+domain=$IPsudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
+cd /root/
+wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+bash acme.sh --install
+rm acme.sh
+cd .acme.sh
+echo "starting...., Port 80 Akan di Hentikan Saat Proses install Cert"
+bash acme.sh --register-account -m senowahyu62@gmail.com
+bash acme.sh --issue --standalone -d $domain
+bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
+echo "Done, Silahkan Restart Layanan Yang Menggunakan Port 80 Dan 443"
 sleep 0.5
 clear 
-neofetch
