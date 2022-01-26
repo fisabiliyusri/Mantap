@@ -41,4 +41,3 @@ bash acme.sh --issue --standalone -d $domain
 bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
 echo "Done, Silahkan Restart Layanan Yang Menggunakan Port 80 Dan 443"
 sleep 0.5
-clear 
