@@ -86,7 +86,7 @@ cat > /etc/xray/config.json << END
         "clients": [
           {
             "id": "${uuid1}",
-            "alterId": 32
+            "alterId": 0
 #xray-vmess-tls
           }
         ]
@@ -122,7 +122,7 @@ cat > /etc/xray/config.json << END
 
           {
             "id": "${uuid2}",
-            "alterId": 32
+            "alterId": 0
 #xray-vmess-nontls
           }
         ]
@@ -342,7 +342,7 @@ END
 # / / Installation Xray Service
 cat > /etc/systemd/system/xray.service << END
 [Unit]
-Description=Xray Service By SL
+Description=Xray Service Mod By SL
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
@@ -460,8 +460,8 @@ END
 # Installing Trojan Go Service
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
-Description=Trojan-Go Service By SL
-Documentation=https://nekopoi.care
+Description=Trojan-Go Service Mod By SL
+Documentation=nekopoi.care
 After=network.target nss-lookup.target
 
 [Service]
