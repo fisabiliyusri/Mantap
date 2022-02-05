@@ -1,5 +1,5 @@
 #!/bin/bash
-# @ Copyrigt 2022 By SL
+# Mod By SL
 # =====================================================
 
 # Color
@@ -343,7 +343,7 @@ END
 cat > /etc/systemd/system/xray.service << END
 [Unit]
 Description=Xray Service By SL
-Documentation=https://google.com
+Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
 [Service]
@@ -461,7 +461,7 @@ END
 cat > /etc/systemd/system/trojan-go.service << END
 [Unit]
 Description=Trojan-Go Service By SL
-Documentation=https://google.com
+Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
 [Service]
