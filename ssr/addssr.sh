@@ -1,5 +1,5 @@
 #!/bin/bash
-# My Telegram : https://t.me/Akbar218
+# SL
 # ==========================================
 # Color
 RED='\033[0;31m'
@@ -14,15 +14,12 @@ LIGHT='\033[0;37m'
 # Getting
 MYIP=$(wget -qO- ipinfo.io/ip);
 echo "Checking VPS"
-IZIN=$( curl https://raw.githubusercontent.com/senowahyu62/perizinan/main/ipvps.txt | grep $MYIP )
+IZIN=$( curl ipinfo.io/ip | grep $MYIP )
 if [ $MYIP = $MYIP ]; then
 echo -e "${NC}${GREEN}Permission Accepted...${NC}"
 else
 echo -e "${NC}${RED}Permission Denied!${NC}";
-echo -e "${NC}${LIGHT}Please Contact Admin!!"
-echo -e "${NC}${LIGHT}Facebook : https://m.facebook.com/lis.tio.718"
-echo -e "${NC}${LIGHT}WhatsApp : 081545854516"
-echo -e "${NC}${LIGHT}Telegram : https://t.me/Akbar218"
+echo -e "${NC}${LIGHT}Fuck You"
 exit 0
 fi
 clear
@@ -34,7 +31,7 @@ echo ""
 echo -e "Username ${RED}${ssr_user}${NC} Already On VPS Please Choose Another"
 exit 1
 fi
-source /var/lib/akbarstorevpn/ipvps.conf
+source /var/lib/crot/ipvps.conf
 if [[ "$IP2" = "" ]]; then
 domain=$(cat /etc/xray/domain)
 else
@@ -87,4 +84,4 @@ echo -e "Expired     : ${exp} "
 echo -e "=========================="
 echo -e "Link SSR    : ${ssr_link}"
 echo -e "=========================="
-echo -e "Script By Akbar Maulana"
+echo -e "Script Mod By SL"
