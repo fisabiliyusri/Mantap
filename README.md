@@ -11,7 +11,7 @@ Mod SL
 
 <p align="center"><img src="https://img.shields.io/badge/Service-SSH_Websocket-success.svg">  <img src= "https://img.shields.io/badge/Service-OHP_Open_Http_Puncher-success.svg">  <img src= "https://img.shields.io/badge/Service-SSTP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-L2TP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-PPTP_VPN-success.svg">
 <p align="center"><img src="https://img.shields.io/badge/Service-SSH_OpenSSH-success.svg">  <img src="https://img.shields.io/badge/Service-SSH_Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Stunnel-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-SlowDns-success.svg">   <img
-src="https://img.shields.io/badge/Service-Xray-success.svg">  <img src= "https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">  <img src= "https://img.shields.io/badge/Service-Shadowsocks-success.svg">  
+src="https://img.shields.io/badge/Service-Xray_V2ray-success.svg">  <img src= "https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan_Go-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">  <img src= "https://img.shields.io/badge/Service-Shadowsocks-success.svg">  
 
 ### Command Install
 
@@ -22,9 +22,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### Fitur Script
 • SSH & OpenVPN
 
-• SSH Websocket TLS & No TLS
+• SSH Websocket SSL/TLS & No TLS(HTTP)
 
-• OHP SSH & OHP Dropbear & OHP OpenVPN
+• OHP SSH & OHP Dropbear & OHP OpenVPN (OHP=Open-Http-Puncher)
 
 • XRAY VMESS 
 
