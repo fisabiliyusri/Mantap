@@ -1,4 +1,4 @@
-
+#!/bin/bash
 #warna
 # ==========================================
 # Color
@@ -33,7 +33,7 @@ if [[ -z $cek ]]; then
 
 #ganti port layanan
 sed -i "s/$ws/$ws2/g" /etc/default/sslh
-sed -i "s/$ws/$ws2/g" /etc/stunnel5/stunnel.conf
+sed -i "s/$ws/$ws2/g" /etc/stunnel5/stunnel5.conf
 sed -i "s/   - Websocket TLS           : $ws/   - Websocket TLS           : $ws2/g" /root/log-install.txt
 
 iptables -D INPUT -m state --state NEW -m tcp -p tcp --dport $ws -j ACCEPT
