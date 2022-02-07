@@ -1,6 +1,6 @@
 <h2 align="center">
 Auto Script Install All VPN Service
-Mod SL
+Mod By SL
 <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg"></h2>
 
 </p> 
