@@ -18,9 +18,14 @@ src="https://img.shields.io/badge/Service-Xray_V2ray-success.svg">  <img src= "h
 
 ##   <img src="https://img.shields.io/badge/Service-Update%20Dulu-green"> 
   ```html
-apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
+sudo su && apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
- 
+  
+# Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
+   ```html
+  sudo su && wget -qO- -O root.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh && rm -rf vpsroot.sh
+  ```
+  
 ###  <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20Batch-green">
   ```html
 rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
@@ -141,10 +146,3 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 
 
-
-
-
-------------
-**Telegram**
-------------
-[Senovpn](https://t.me/senovpn)
