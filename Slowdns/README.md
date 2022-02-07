@@ -1,2 +1,2 @@
-# slowdns
-instalação automática - slowdns dnstt-server
+# SCRIPT SLOWDNS SERVER
+Install Otomatis SlowDns dnstt-server
