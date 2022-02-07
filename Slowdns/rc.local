@@ -1,0 +1,15 @@
+#!/bin/sh -e
+#
+# rc.local
+#
+# Skrip ini berjalan di akhir setiap runlevel multi-pengguna.
+# Pastikan skrip "akan keluar 0" jika berhasil atau lainnya
+# nilai jika terjadi kesalahan.
+# Untuk mengaktifkan atau menonaktifkan skrip ini, cukup ubah eksekusi
+# bits.
+#
+# Secara default skrip ini tidak melakukan apa-apa.
+iptables -I INPUT -p udp --dport 5300 -j ACCEPT 
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 5300
+cd /etc/slowdns && ./startdns
+exit 0
