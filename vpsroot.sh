@@ -1,6 +1,6 @@
 #!/bin/bash
 # Mod By SL
-wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/fisabiliyusri/Mantap/vpsroot/main/sshd_config;
+wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sshd_config;
 systemctl restart sshd;
 clear;
 echo -e "Masukkan Password:";
