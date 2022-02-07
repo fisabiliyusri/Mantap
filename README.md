@@ -23,7 +23,7 @@ sudo su && apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reb
   
 # Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
    ```html
-  sudo su && wget -qO- -O root.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh && rm -rf vpsroot.sh
+  sudo su && wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh && rm -rf vpsroot.sh
   ```
   
 ###  <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20Batch-green">
