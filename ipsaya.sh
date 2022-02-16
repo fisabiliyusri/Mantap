@@ -8,7 +8,7 @@ host2=hostname --all-ip-addresses | awk '{print $2}'
 host3=hostname --all-ip-addresses | awk '{print $2}'
 host4=hostname --all-ip-addresses | awk '{print $2}'
 ipcidr=ip -4 -o addr show eth0 | awk '{print $4}'
-ports=${ipv4intr#*.*.*.}
+slports=sudo lsof -nP -iTCP -sTCP:LISTEN
 
 echo Alamat IPv6 internal anda adalah:
 echo $ipv6aku
@@ -31,5 +31,5 @@ echo $host4
 echo IP CIDR adalah:
 echo $ipcidr
 echo
-echo NAT VPS anda bisa diakses dari port berikut:
-echo [$ipaku]:$ports\01 - $ports\20
+echo Semua Port TCP Yang Aktif:
+echo $slport
