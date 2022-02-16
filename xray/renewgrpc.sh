@@ -63,7 +63,7 @@ service cron restart
 clear
 echo ""
 echo "==============================="
-echo "  Xray/Vmess GRPC Account Renewed  "
+echo "  Xray/Vmess GRPC/Vless GRPC Account Renewed  "
 echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp4"
