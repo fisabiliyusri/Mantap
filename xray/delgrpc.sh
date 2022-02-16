@@ -68,7 +68,7 @@ systemctl restart vless-grpc.service
 clear
 echo ""
 echo "==============================="
-echo "  Xray/GRPC Account Deleted  "
+echo "  Xray/GRPC VMESS VLESS Account Deleted  "
 echo "==============================="
 echo "Username  : $user"
 echo "Expired   : $exp"
