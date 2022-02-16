@@ -427,7 +427,7 @@ wget -O ssrmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upd
 wget -O vmessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vmessmenu.sh"
 wget -O vlessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vlessmenu.sh"
 wget -O grpcmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu.sh"
-wget -O grpc-update https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpc-update.sh"
+wget -O grpc-update "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpc-update.sh"
 wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trmenu.sh"
 wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
 wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
