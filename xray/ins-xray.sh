@@ -373,7 +373,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/vmessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vmess-grpc.json
 Restart=on-failure
 RestartPreventExitStatus=23
 
@@ -394,7 +394,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/vlessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vless-grpc.json
 Restart=on-failure
 RestartPreventExitStatus=23
 
