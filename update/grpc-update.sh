@@ -6,7 +6,6 @@
 akbarvpnn="raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray"
 
 cd /usr/bin
-
 wget -O addgrpc "https://${akbarvpnn}/addgrpc.sh"
 wget -O cekgrpc "https://${akbarvpnn}/cekgrpc.sh"
 wget -O delgrpc "https://${akbarvpnn}/delgrpc.sh"
