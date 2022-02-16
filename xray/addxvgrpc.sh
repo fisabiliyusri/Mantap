@@ -70,12 +70,12 @@ systemctl restart vless-grpc.service
 service cron restart
 clear
 echo -e "================================="
-echo -e "            XRAY GRPC            " 
+echo -e "    XRAY/VMESS-GRPC/VLESS-GRPC   " 
 echo -e "================================="
 echo -e "Remarks           : ${user}"
 echo -e "Domain            : ${domain}"
-echo -e "Port VMess        : ${tls}"
-echo -e "Port VLess        : $vl"
+echo -e "Port VMess GRPC   : ${tls}"
+echo -e "Port VLess GRPC   : $vl"
 echo -e "ID                : ${uuid}"
 echo -e "Alter ID          : 0"
 echo -e "Mode              : Gun"
