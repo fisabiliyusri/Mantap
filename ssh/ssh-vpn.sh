@@ -429,6 +429,7 @@ wget -O grpcmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/up
 wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trmenu.sh"
 wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
 wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
+wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
 
 
 chmod +x portsshnontls
@@ -447,6 +448,7 @@ chmod +x grpcmenu
 chmod +x trmenu
 chmod +x trgomenu
 chmod +x setmenu
+chmod +x slowdnsmenu
 
 chmod +x addhost
 chmod +x menu
