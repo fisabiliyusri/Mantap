@@ -410,56 +410,6 @@ cat > /etc/xray/vmessgrpc.json << END
 }
 END
 
-cat > /etc/xray/vlessgrpc.json << END
-{
-    "log": {
-            "access": "/var/log/xray/access5.log",
-        "error": "/var/log/xray/error.log",
-        "loglevel": "info"
-    },
-    "inbounds": [
-        {
-            "port": 7777,
-            "protocol": "vless",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "${uuid}"
-#vlessgrpc
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "gun",
-                "security": "tls",
-                "tlsSettings": {
-                    "serverName": "${domain}",
-                    "alpn": [
-                        "h2"
-                    ],
-                    "certificates": [
-                        {
-                            "certificateFile": "/etc/xray/xray.crt",
-                            "keyFile": "/etc/xray/xray.key"
-                        }
-                    ]
-                },
-                "grpcSettings": {
-                    "serviceName": "GunService"
-                }
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "tag": "direct"
-        }
-    ]
-}
-END
-
 cat > /etc/systemd/system/vmess-grpc.service << EOF
 [Unit]
 Description=XRay VMess GRPC Service
