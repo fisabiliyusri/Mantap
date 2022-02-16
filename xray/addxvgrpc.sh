@@ -42,6 +42,8 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		fi
 	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
+read -p "Expired (Days) : " masaaktif
+hariini=`date -d "0 days" +"%Y-%m-%d"`
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/vmessgrpc.json
@@ -90,6 +92,7 @@ echo -e "================================="
 echo -e "Link VLess GRPC  : "
 echo -e "${vlesslink1}"
 echo -e "================================="
+echo -e "Created     : $hariini"
 echo -e "Expired On     : $exp"
 echo -e "=================================" 
 echo -e "Script Mod By SL"
