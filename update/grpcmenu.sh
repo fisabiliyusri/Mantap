@@ -40,6 +40,7 @@ menu
 7)
 clear
 exit
+;;
 *)
 clear
 menu
