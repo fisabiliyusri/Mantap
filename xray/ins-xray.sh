@@ -360,59 +360,11 @@ WantedBy=multi-user.target
 END
 
 
-cat > /etc/xray/vmessgrpc.json << END
-{
-    "log": {
-            "access": "/var/log/xray/access5.log",
-        "error": "/var/log/xray/error.log",
-        "loglevel": "info"
-    },
-    "inbounds": [
-        {
-            "port": 8888,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "${uuid}"
-#vmessgrpc
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "gun",
-                "security": "tls",
-                "tlsSettings": {
-                    "serverName": "${domain}",
-                    "alpn": [
-                        "h2"
-                    ],
-                    "certificates": [
-                        {
-                            "certificateFile": "/etc/xray/xray.crt",
-                            "keyFile": "/etc/xray/xray.key"
-                        }
-                    ]
-                },
-                "grpcSettings": {
-                    "serviceName": "GunService"
-                }
-            }
-        }
-    ],
-    "outbounds": [
-        {
-            "protocol": "freedom",
-            "tag": "direct"
-        }
-    ]
-}
-END
+# install ini grpc vmess 1
 
 cat > /etc/systemd/system/vmess-grpc.service << EOF
 [Unit]
-Description=XRay VMess GRPC Service
+Description=XRay VMess GRPC Service a
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
@@ -428,13 +380,12 @@ RestartPreventExitStatus=23
 [Install]
 WantedBy=multi-user.target
 END
-
-
 EOF
 
+# installl vless grpc 2
 cat > /etc/systemd/system/vless-grpc.service << EOF
 [Unit]
-Description=Xray Vless GRPC Service 
+Description=Xray Vless GRPC Service b
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
@@ -450,10 +401,9 @@ RestartPreventExitStatus=23
 [Install]
 WantedBy=multi-user.target
 END
-
 EOF
 
-# coba
+# CONFIG grpc VMESS a
 cat > /etc/xray/vmess-grpc.json <<END
 {
   "log": {
@@ -586,8 +536,7 @@ cat > /etc/xray/vmess-grpc.json <<END
   }
 }
 END
-#coba lagi
-# coba
+# CONFIG vless grpc b
 cat > /etc/xray/vless-grpc.json <<END
 {
   "log": {
