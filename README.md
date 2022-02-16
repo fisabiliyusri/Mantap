@@ -84,7 +84,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • Dropbear                : 443, 109, 143, (1153)
 
-• Stunnel5                : 443, 445, 777, (3353)
+• Stunnel5                : 443, 445, (3353)
 
 • SLOWDNS OPENSSH         : (2253)
 
