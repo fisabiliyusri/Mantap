@@ -169,12 +169,14 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 
 # setting port ssh
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
+sed -i '/Port 22/a Port 2253' /etc/ssh/sshd_config
+/etc/init.d/ssh restart
 
 # install dropbear
 apt -y install dropbear
 sed -i 's/NO_START=1/NO_START=0/g' /etc/default/dropbear
 sed -i 's/DROPBEAR_PORT=22/DROPBEAR_PORT=143/g' /etc/default/dropbear
-sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109"/g' /etc/default/dropbear
+sed -i 's/DROPBEAR_EXTRA_ARGS=/DROPBEAR_EXTRA_ARGS="-p 109 -p 1153"/g' /etc/default/dropbear
 echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
@@ -341,7 +343,7 @@ echo "Banner /etc/issue.net" >>/etc/ssh/sshd_config
 sed -i 's@DROPBEAR_BANNER=""@DROPBEAR_BANNER="/etc/issue.net"@g' /etc/default/dropbear
 
 # Install BBR
-wget https://${akbarvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
+#wget https://${akbarvpn}/bbr.sh && chmod +x bbr.sh && ./bbr.sh
 
 # Ganti Banner
 wget -O /etc/issue.net "https://${akbarvpn}/issue.net"
@@ -396,6 +398,7 @@ wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
 wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
 wget -O addvless "https://${akbarvpnn}/addvless.sh"
 wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
+wget -O addxvgrpc "https://${akbarvpnn}/addxvgrpc.sh"
 wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
 wget -O delvless "https://${akbarvpnn}/delvless.sh"
 wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
@@ -422,6 +425,7 @@ wget -O ssmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upda
 wget -O ssrmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ssrmenu.sh"
 wget -O vmessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vmessmenu.sh"
 wget -O vlessmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/vlessmenu.sh"
+wget -O grpcmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu.sh"
 wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trmenu.sh"
 wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
 wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
@@ -439,6 +443,7 @@ chmod +x ssmenu
 chmod +x ssrmenu
 chmod +x vmessmenu
 chmod +x vlessmenu
+chmod +x grpcmenu
 chmod +x trmenu
 chmod +x trgomenu
 chmod +x setmenu
@@ -474,6 +479,7 @@ chmod +x swapkvm
 chmod +x addvmess
 chmod +x addvless
 chmod +x addtrojan
+chmod +x addxvgrpc
 chmod +x delvmess
 chmod +x delvless
 chmod +x deltrojan
