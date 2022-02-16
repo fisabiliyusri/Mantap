@@ -41,6 +41,16 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 			exit 1
 		fi
 	done
+until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
+		read -rp "User: " -e user
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/vlessgrpc.json | wc -l)
+
+		if [[ ${CLIENT_EXISTS} == '1' ]]; then
+			echo ""
+			echo "A client with the specified name was already created, please choose another name."
+			exit 1
+		fi
+	done
 uuid=$(cat /proc/sys/kernel/random/uuid)
 read -p "Expired (Days) : " masaaktif
 hariini=`date -d "0 days" +"%Y-%m-%d"`
