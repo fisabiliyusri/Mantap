@@ -469,7 +469,7 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/xray/xray -config /etc/xray/vmessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vmessgrpc.json
 RestartPreventExitStatus=23
 LimitNPROC=10000
 LimitNOFILE=1000000
@@ -487,7 +487,7 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/xray/xray -config /etc/xray/vlessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vlessgrpc.json
 RestartPreventExitStatus=23
 LimitNPROC=10000
 LimitNOFILE=1000000
