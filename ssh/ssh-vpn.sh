@@ -448,7 +448,7 @@ chmod +x ssrmenu
 chmod +x vmessmenu
 chmod +x vlessmenu
 chmod +x grpcmenu
-chmod +x grpc-update
+chmod +x grpcupdate
 chmod +x trmenu
 chmod +x trgomenu
 chmod +x setmenu
