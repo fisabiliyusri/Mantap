@@ -38,6 +38,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • SSH Websocket SSL/TLS & No TLS(HTTP)
 
+• SLOWDNS SSH/SSL/TLS
+
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OHP=Open-Http-Puncher)
 
 • XRAY VMESS 
