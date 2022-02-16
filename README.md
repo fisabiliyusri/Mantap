@@ -88,6 +88,12 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • Dropbear                : 443, 109, 143, (1153)
 
+• SLOWDNS OPENSSH         : (2253)
+
+• SLOWDNS DROPBEAR        : (1153)
+
+• SLOWDNS SSL/TLS         : (3353)
+
 • Squid Proxy             : 3128, 8080
 
 • Badvpn                  : 7100, 7200, 7300
@@ -138,11 +144,6 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • Trojan Go               : 2087
 
-• SLOWDNS OPENSSH         : (2253)
-
-• SLOWDNS DROPBEAR        : (1153)
-
-• SLOWDNS SSL/TLS         : (3353)
 
  ### Server Information & Other Features
 
