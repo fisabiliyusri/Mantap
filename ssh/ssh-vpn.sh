@@ -270,9 +270,6 @@ connect = 127.0.0.1:109
 accept = 990
 connect = 127.0.0.1:1194
 
-[slowdns]
-accept = 3353
-coonect = 127.0.0.1:443
 
 END
 
@@ -399,6 +396,9 @@ wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
 wget -O addvless "https://${akbarvpnn}/addvless.sh"
 wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
 wget -O addgrpc "https://${akbarvpnn}/addgrpc.sh"
+wget -O cekgrpc "https://${akbarvpnn}/cekgrpc.sh"
+wget -O delgrpc "https://${akbarvpnn}/delgrpc.sh"
+wget -O renewgrpc "https://${akbarvpnn}/renewgrpc.sh"
 wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
 wget -O delvless "https://${akbarvpnn}/delvless.sh"
 wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
