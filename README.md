@@ -76,13 +76,13 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 # Service & Port
 
-• OpenSSH                 : 443, 22
+• OpenSSH                 : 22, (2253)
 
 • OpenVPN                 : TCP 1194, UDP 2200, SSL 990
 
-• Stunnel5                : 443, 445, 777
+• Stunnel5                : 443, 445, 777, (3353)
 
-• Dropbear                : 443, 109, 143
+• Dropbear                : 443, 109, 143, (1153)
 
 • Squid Proxy             : 3128, 8080
 
@@ -131,6 +131,12 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 • OHP OpenVPN             : 8383
 
 • Trojan Go               : 2087
+
+• SLOWDNS OPENSSH         : (2253)
+
+• SLOWDNS DROPBEAR        : (1153)
+
+• SLOWDNS SSL/TLS         : (3353)
 
  ### Server Information & Other Features
 
