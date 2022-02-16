@@ -46,6 +46,10 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAY TROJAN
 
+• XRAY VMESS GRPC
+
+• XRAY VLESS GRPC
+
 • SHADOWSOCKS
 
 • SSR
@@ -110,6 +114,10 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAYS Trojan            : 2083
 
+• XRAYS Vmess GRPC        : 8888
+
+• XRAYS Vless GRPC        : 7777
+
 • Websocket TLS           : 443
 
 • Websocket None TLS      : 8880
@@ -140,7 +148,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • Autoreboot On 05.00 GMT +7
 
-• Futo Delete Expired Account
+• Auto Delete Expired Account
 
 • Full Orders For Various Services
 
