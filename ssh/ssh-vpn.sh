@@ -398,7 +398,7 @@ wget -O swapkvm "https://${akbarvpn}/swapkvm.sh"
 wget -O addvmess "https://${akbarvpnn}/addv2ray.sh"
 wget -O addvless "https://${akbarvpnn}/addvless.sh"
 wget -O addtrojan "https://${akbarvpnn}/addtrojan.sh"
-wget -O addxvgrpc "https://${akbarvpnn}/addxvgrpc.sh"
+wget -O addgrpc "https://${akbarvpnn}/addgrpc.sh"
 wget -O delvmess "https://${akbarvpnn}/delv2ray.sh"
 wget -O delvless "https://${akbarvpnn}/delvless.sh"
 wget -O deltrojan "https://${akbarvpnn}/deltrojan.sh"
@@ -483,13 +483,16 @@ chmod +x swapkvm
 chmod +x addvmess
 chmod +x addvless
 chmod +x addtrojan
-chmod +x addxvgrpc
+chmod +x addgrpc
+chmod +x delgrpc
 chmod +x delvmess
 chmod +x delvless
 chmod +x deltrojan
+chmod +x cekgrpc
 chmod +x cekvmess
 chmod +x cekvless
 chmod +x cektrojan
+chmod +x renewgrpc
 chmod +x renewvmess
 chmod +x renewvless
 chmod +x renewtrojan
