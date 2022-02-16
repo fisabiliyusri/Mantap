@@ -73,7 +73,7 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install Slowdns Server
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
 # Informasi IP Saya dan Semua Port TCP UDP
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
+# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 
 rm -f /root/ssh-vpn.sh
