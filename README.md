@@ -48,7 +48,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • SSH Websocket SSL/TLS & HTTP (Cloudflare)
 
-• SSH CloudFront Websocket (Aws CloudFront Only)
+• SSH CloudFront Websocket (Aws CloudFront Only)[OFF]
 
 • SLOWDNS SSH/SSL/TLS
 
@@ -138,7 +138,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAYS Vless GRPC TLS    : 7777
 
-• CloudFront Websocket    : 
+• CloudFront Websocket    : [OFF]
 
 • Websocket TLS           : 443
 
