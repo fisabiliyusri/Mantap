@@ -114,9 +114,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAYS Trojan            : 2083
 
-• XRAYS Vmess GRPC        : 8888
+• XRAYS Vmess GRPC TLS    : 8888
 
-• XRAYS Vless GRPC        : 7777
+• XRAYS Vless GRPC TLS    : 7777
 
 • Websocket TLS           : 443
 
