@@ -468,32 +468,39 @@ After=network.target nss-lookup.target
 
 [Service]
 User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/vmessgrpc.json
+Restart=on-failure
 RestartPreventExitStatus=23
-LimitNPROC=10000
-LimitNOFILE=1000000
 
 [Install]
 WantedBy=multi-user.target
+END
+
+
 EOF
 
 cat > /etc/systemd/system/vless-grpc.service << EOF
 [Unit]
-Description=XRay VMess GRPC Service
+Description=Xray Vless GRPC Service 
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
 [Service]
 User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/vlessgrpc.json
+Restart=on-failure
 RestartPreventExitStatus=23
-LimitNPROC=10000
-LimitNOFILE=1000000
 
 [Install]
 WantedBy=multi-user.target
+END
+
 EOF
 
 # coba
