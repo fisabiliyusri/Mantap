@@ -8,7 +8,7 @@ host2=hostname --all-ip-addresses | awk '{print $2}'
 host3=hostname --all-ip-addresses | awk '{print $2}'
 host4=hostname --all-ip-addresses | awk '{print $2}'
 ipcidr=ip -4 -o addr show eth0 | awk '{print $4}'
-slports=sudo lsof -nP -iTCP -sTCP:LISTEN
+slport=sudo lsof -nP -iTCP -sTCP:LISTEN
 
 echo Alamat IPv6 internal anda adalah:
 echo $ipv6aku
