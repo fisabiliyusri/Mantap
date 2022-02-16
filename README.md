@@ -36,7 +36,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### Fitur Script
 • SSH & OpenVPN
 
-• SSH Websocket SSL/TLS & No TLS(HTTP)
+• SSH Websocket SSL/TLS & HTTP (Cloudflare)
 
 • SSH CloudFront Websocket (Aws CloudFront Only)
 
