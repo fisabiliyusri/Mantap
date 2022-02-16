@@ -18,10 +18,12 @@ echo -e "$yy 8$y.  VMESS MENU$wh"
 echo -e "$yy 9$y.  VLESS MENU$wh"
 echo -e "$yy 10$y. TROJAN GFW MENU$wh"
 echo -e "$yy 11$y. TROJAN GO MENU$wh"
-echo -e "$yy 12$y. Settings$wh"
-echo -e "$yy 13$y. Exit$wh"
+echo -e "$yy 12$y. GRPC MENU$wh"
+echo -e "$yy 13$y. SLOWDNS MENU$wh"
+echo -e "$yy 14$y. Settings$wh"
+echo -e "$yy 15$y. Exit$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 13 ] : " menu
+read -p "Select From Options [ 1 - 15 ] : " menu
 case $menu in
 1)
 clear
@@ -69,9 +71,17 @@ trgomenu
 ;;
 12)
 clear
-setmenu
+grpcmenu
 ;;
 13)
+clear
+slowdnsmenu
+;;
+14)
+clear
+setmenu
+;;
+15)
 clear
 exit
 ;;
