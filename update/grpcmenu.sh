@@ -18,16 +18,16 @@ read -p "Select From Options [ 1 - 6 ] : " menu
 echo -e ""
 case $menu in
 1)
-addxvgrpc
+addgrpc
 ;;
 2)
-delxvgrpc
+delgrpc
 ;;
 3)
-renewxvgrpc
+renewgrpc
 ;;
 4)
-cekxvgrpc
+cekgrpc
 ;;
 5)
 clear
