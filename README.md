@@ -34,6 +34,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ```
 
 ### Fitur Script
+
+• CEK SEMUA IP DAN PORT (Service ALL VPN)
+
 • SSH & OpenVPN
 
 • SSH Websocket SSL/TLS & HTTP (Cloudflare)
