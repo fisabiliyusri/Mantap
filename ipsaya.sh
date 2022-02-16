@@ -1,6 +1,6 @@
 #!/bin/bash
 ipv6addr=$(ip addr show dev venet0 | sed -e's/^.*inet6 \([^ ]*\)\/.*$/\1/;t;d')
-ipv4intr=$(ifconfig venet0:0 | grep 'inet addr' | cut -d ':' -f 2 | cut -d ' ' -f 1)
+ipv4intr=$(ip a s eth0 | egrep -o 'inet [0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}' | cut -d' ' -f2)
 ipaku=$(wget -qO- ipecho.net/plain)
 ports=${ipv4intr#*.*.*.}
 
