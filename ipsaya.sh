@@ -1,7 +1,8 @@
 #!/bin/bash
 
-echo Semua Port TCP Yang Aktif:
-echo $slport
+echo Semua Port TCP UDP Yang Aktif:
+echo $slporttcp
+echo $slportudp
 echo 
 
 ipv6aku=$(ip addr show eth0 | grep "inet6\b" | awk '{print $2}' | cut -d/ -f1)
@@ -13,7 +14,8 @@ host2=$(hostname --all-ip-addresses | awk '{print $2}')
 host3=$(hostname --all-ip-addresses | awk '{print $2}')
 host4=$(hostname --all-ip-addresses | awk '{print $2}')
 ipcidr=$(ip -4 -o addr show eth0 | awk '{print $4}')
-slport=sudo lsof -nP -iTCP -sTCP:LISTEN
+slporttcp=sudo lsof -nP -iTCP -sTCP:LISTEN
+slportudp=sudo lsof -iUDP -P -n | egrep -v '(127|::1)'
 
 echo 
 echo Alamat IPv6 internal anda adalah:
