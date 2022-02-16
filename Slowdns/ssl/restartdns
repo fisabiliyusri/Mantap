@@ -32,7 +32,7 @@ screen -ls | grep slowdns | cut -d. -f1 | awk '{print $1}' | xargs kill
 sleep 2
 nameserver='1234'
 cd /etc/slowdns
-screen -dmS slowdns /etc/slowdns/dns-server -udp :5300 -privkey-file /root/server.key $nameserver 127.0.0.1:443
+screen -dmS slowdns /etc/slowdns/dns-server -udp :5300 -privkey-file /root/server.key $nameserver 127.0.0.1:3353
 sleep 1
 }
 fun_bar 'fun_start'
