@@ -416,6 +416,7 @@ wget -O cektrgo "https://${akbarvpnnn}/cektrgo.sh"
 wget -O portsshnontls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshnontls.sh"
 wget -O portsshws "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/websocket/portsshws.sh"
 
+wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sshovpn.sh"
 wget -O l2tpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/l2tpmenu.sh"
 wget -O pptpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/pptpmenu.sh"
@@ -435,6 +436,7 @@ wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main
 chmod +x portsshnontls
 chmod +x portsshws
 
+chmod +x ipsaya
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
 chmod +x pptpmenu
