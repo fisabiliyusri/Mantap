@@ -57,7 +57,7 @@ fun_bar 'fun_att'
 echo -e "KONFIGURASI FIREWALL..."
 echo ""
 fun_ports () {
-apt install firewalld -y && sudo firewall-cmd --zone=public --permanent --add-port=80/tcp && sudo firewall-cmd --zone=public --permanent --add-port=8080/tcp && sudo firewall-cmd --zone=public --permanent --add-port=443/tcp && sudo firewall-cmd && sudo firewall-cmd --zone=public --permanent --add-port=53/udp && sudo firewall-cmd --zone=public --permanent --add-port=5300/udp && sudo firewall-cmd && sudo firewall-cmd --zone=public --permanent --add-port=2222/tcp && sudo firewall-cmd --reload
+apt install firewalld -y && sudo firewall-cmd --zone=public --permanent --add-port=1153/tcp && sudo firewall-cmd --zone=public --permanent --add-port=2253/tcp && sudo firewall-cmd --zone=public --permanent --add-port=3353/tcp && sudo firewall-cmd && sudo firewall-cmd --zone=public --permanent --add-port=53/udp && sudo firewall-cmd --zone=public --permanent --add-port=5300/udp && sudo firewall-cmd && sudo firewall-cmd --zone=public --permanent --add-port=2222/tcp && sudo firewall-cmd --reload
 }
 fun_bar 'fun_ports'
 echo -e "MENGATUR DNS CLOUDFLARE..."
