@@ -507,6 +507,10 @@ iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 80 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 2083 -j ACCEPT
 iptables -I INPUT -m state --state NEW -m udp -p udp --dport 2083 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 7777 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7777 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8888 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8888 -j ACCEPT
 iptables-save > /etc/iptables.up.rules
 iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
@@ -516,6 +520,12 @@ systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
+systemctl stop vmess-grpc.service
+systemctl enable vmess-grpc.service
+systemctl restart vmess-grpc.service
+systemctl stop vless-grpc.service
+systemctl enable vless-grpc.service
+systemctl restart vless-grpc.service
 
 # Install Trojan Go
 latest_version="$(curl -s "https://api.github.com/repos/p4gefau1t/trojan-go/releases" | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
