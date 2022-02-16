@@ -38,6 +38,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • SSH Websocket SSL/TLS & No TLS(HTTP)
 
+• SSH CloudFront Websocket (Aws CloudFront Only)
+
 • SLOWDNS SSH/SSL/TLS
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OHP=Open-Http-Puncher)
@@ -119,6 +121,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 • XRAYS Vmess GRPC TLS    : 8888
 
 • XRAYS Vless GRPC TLS    : 7777
+
+• CloudFront Websocket    : 
 
 • Websocket TLS           : 443
 
