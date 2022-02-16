@@ -17,7 +17,6 @@ src="https://img.shields.io/badge/Service-Xray_V2ray-success.svg">  <img src= "h
 Buat VPS Fresh atau VPS Baru
 
 ## Installation 
-
 ## 1.
 Part 1: Update dan Upgrade
    <img src="https://img.shields.io/badge/Update%20Upgrade-green"> 
@@ -25,6 +24,11 @@ Part 1: Update dan Upgrade
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
   
+## 2.0
+Aktifkan Root Sementara
+  ```html
+sudo su
+```
 # 2.
 Part 2: Buat Akses Root Di VPS /Root VPS
   <img src="https://img.shields.io/badge/Akses_Root%20VPS-green">
