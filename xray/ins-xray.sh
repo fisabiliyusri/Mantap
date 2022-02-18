@@ -432,7 +432,7 @@ cat > /etc/xray/vmess-grpc.json <<END
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "gun",
         "security": "tls",
         "tlsSettings": {
           "certificates": [
@@ -565,7 +565,7 @@ cat > /etc/xray/vless-grpc.json <<END
         "decryption": "none"
       },
       "streamSettings": {
-        "network": "grpc",
+        "network": "gun",
         "security": "tls",
         "tlsSettings": {
           "certificates": [
