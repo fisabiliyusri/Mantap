@@ -379,7 +379,6 @@ RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
-END
 EOF
 
 # installl vless grpc 2
@@ -400,7 +399,6 @@ RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
-END
 EOF
 
 # CONFIG grpc VMESS a
