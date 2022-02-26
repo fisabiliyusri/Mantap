@@ -17,13 +17,13 @@ bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypa
 echo Starting Update SSL Sertificate
 sleep 3
 sudo pkill -f nginx & wait $!
+systemctl daemon-reload
 systemctl stop nginx
 systemctl stop xray
 systemctl stop xray.service
-systemctl stop v2ray
-systemctl stop v2ray.service
-systemctl stop trojan
-systemctl stop trojan.service
+systemctl stop vmess-grpc.service
+systemctl stop vless-grpc.service
+
 sleep 2
 /root/.acme.sh/acme.sh --issue -d $domain --standalone -k ec-256 --server letsencrypt >> /etc/tls/$domain.log
 ~/.acme.sh/acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key --ecc
@@ -160,6 +160,17 @@ server {
 EOF
 systemctl daemon-reload
 service nginx restart
+systemctl daemon-reload
+systemctl stop xray.service
+systemctl start xray.service
+systemctl enable xray.service
+systemctl restart xray.service
+systemctl stop vmess-grpc.service
+systemctl enable vmess-grpc.service
+systemctl restart vmess-grpc.service
+systemctl stop vless-grpc.service
+systemctl enable vless-grpc.service
+systemctl restart vless-grpc.service
 echo -e "\033[32m[Info]\033[0m nginx Start Successfully !"
 echo ""
 echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━\033[0m"
