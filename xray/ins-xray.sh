@@ -493,7 +493,7 @@ WantedBy=multi-user.target
 END
 
 # installl vless grpc 2
-cat > /etc/systemd/system/vless-grpc.service << EOF
+cat > /etc/systemd/system/vless-grpc.service << END
 [Unit]
 Description=Xray Vless GRPC Service
 Documentation=https://nekopoi.care
