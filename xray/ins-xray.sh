@@ -510,8 +510,6 @@ RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
-EOF
-
 END
 #done
 
