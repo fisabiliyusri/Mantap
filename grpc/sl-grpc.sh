@@ -195,10 +195,13 @@ systemctl restart sl-vmess-grpc
 systemctl enable sl-vless-grpc
 systemctl restart sl-vless-grpc
 #
-wget -O addgrpc "
+cd /usr/bin
 
-chmod +x addgrpc
-chmod +x delgrpc
-chmod +x renewgrpc
-chmod +x cekgrpc
 
+wget -O sl-addgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-addgrpc.sh"
+chmod +x sl-addgrpc
+chmod +x sl-delgrpc
+chmod +x sl-renewgrpc
+chmod +x sl-cekgrpc
+
+rm -f sl-grpc.sh
