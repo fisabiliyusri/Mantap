@@ -6,6 +6,7 @@ MYIP=$(wget -qO- icanhazip.com);
 apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
+rm -f /etc/xray/domain
 
 DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
@@ -41,5 +42,6 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/v2ray/domain
-echo $SUB_DOMAIN > /var/lib/crot-script/ipvps.conf
+echo $SUB_DOMAIN > /etc/xray/domain
+echo $SUB_DOMAIN > /var/lib/crot/ipvps.conf
 
