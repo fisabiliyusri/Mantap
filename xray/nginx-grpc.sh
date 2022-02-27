@@ -1,7 +1,12 @@
 #!/bin/bash
 # Mod By SL
 # =====================================================
-
+source /var/lib/crot/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
