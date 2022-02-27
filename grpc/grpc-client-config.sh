@@ -32,7 +32,7 @@ cat <<EOF >>/etc/xray/grpc-client-config.json
         "settings": {
             "vnext": [{
                 "address": "$MYIP", //域名
-                "port": 443, //端口
+                "port": 55443, //端口
                 "users": [{
                     "id": "", //uuid
                     "encryption": "none"
