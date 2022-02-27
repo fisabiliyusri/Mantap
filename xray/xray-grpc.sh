@@ -1,3 +1,8 @@
+#!/bin/bash
+# Mod By SL
+# =====================================================
+
+
 source /var/lib/crot/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
@@ -105,6 +110,7 @@ netfilter-persistent reload
 
 # restart
 systemctl daemon-reload
+service nginx restart
 systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
