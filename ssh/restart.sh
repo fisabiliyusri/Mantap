@@ -15,11 +15,13 @@ clear
 echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
+systemctl daemon-reload
 systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart xray.service
-systemctl restart vless-grpc.service
+systemctl restart sl-vless-grpc
+systemctl restart sl-vmess-grpc
 systemctl restart shadowsocks-libev
 systemctl restart xl2tpd
 systemctl restart pptpd
