@@ -432,10 +432,8 @@ wget -O trmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upda
 wget -O trgomenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/trgomenu.sh"
 wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/setmenu.sh"
 wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
-
-
-chmod +x portsshnontls
-chmod +x portsshws
+wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
 
 chmod +x ipsaya
 chmod +x sshovpnmenu
@@ -453,6 +451,12 @@ chmod +x trmenu
 chmod +x trgomenu
 chmod +x setmenu
 chmod +x slowdnsmenu
+chmod +x running
+chmod +x updatemenu
+
+
+chmod +x portsshnontls
+chmod +x portsshws
 
 chmod +x addhost
 chmod +x menu
