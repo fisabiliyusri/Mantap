@@ -100,11 +100,11 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • Stunnel5                : 443, 445, (3353)
 
-• SLOWDNS OPENSSH         : (2253)
+• SLOWDNS OPENSSH         : (2253)[OFF]
 
-• SLOWDNS DROPBEAR        : (1153)
+• SLOWDNS DROPBEAR        : (1153)[OFF]
 
-• SLOWDNS SSL/TLS         : (3353)
+• SLOWDNS SSL/TLS         : (3353)[OFF]
 
 • OpenVPN                 : TCP 1194, UDP 2200, SSL 990
 
