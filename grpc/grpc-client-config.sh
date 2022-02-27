@@ -11,7 +11,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 
-grpc-client-config.json
+fileaku=grpc-client-config.json
 rm /etc/xray/grpc-client-config.json
 touch /etc/xray/grpc-client-config.json
 cat <<EOF >>/etc/xray/grpc-client-config.json
