@@ -29,21 +29,10 @@ domain=$(cat /etc/xray/domain)
 else
 domain=$IP
 fi
-tls=$(cat /etc/xray/vmess-grpc.json | grep port | awk '{print $2}' | sed 's/,//g')
-vl=$(cat /etc/xray/vless-grpc.json | grep port | awk '{print $2}' | sed 's/,//g')
+tls=$(cat /etc/xray/xray-grpc.json | grep port | awk '{print $2}' | sed 's/,//g')
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/vmess-grpc.json | wc -l)
-
-		if [[ ${CLIENT_EXISTS} == '1' ]]; then
-			echo ""
-			echo "A client with the specified name was already created, please choose another name."
-			exit 1
-		fi
-	done
-until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
-		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/vless-grpc.json | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/xray-grpc.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -58,7 +47,7 @@ exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
 },{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/vmess-grpc.json
 sed -i '/#vlessgrpc$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vless-grpc.json
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/xray-grpc.json
 cat > /etc/xray/$user-tls.json << EOF
       {
       "v": "0",
@@ -76,9 +65,9 @@ cat > /etc/xray/$user-tls.json << EOF
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
 vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
-vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=$sni#$user"
+vlesslink1="vless://${uuid}@${domain}:${tls}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=$sni#$user"
 systemctl restart vmess-grpc.service
-systemctl restart vless-grpc.service
+systemctl restart xray@grpc.service
 service cron restart
 clear
 echo -e "================================="
