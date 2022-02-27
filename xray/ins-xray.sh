@@ -361,27 +361,6 @@ RestartPreventExitStatus=23
 WantedBy=multi-user.target
 END
 
-# installl vless grpc 2
-cat > /etc/systemd/system/vless-grpc.service << END
-[Unit]
-Description=Xray Vless GRPC Service
-Documentation=https://nekopoi.care
-After=network.target nss-lookup.target
-
-[Service]
-User=root
-CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
-NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/vless-grpc.json
-Restart=on-failure
-RestartPreventExitStatus=23
-
-[Install]
-WantedBy=multi-user.target
-END
-#done
-
 # // Enable & Start Service
 # Accept port Xray
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8443 -j ACCEPT
