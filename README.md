@@ -64,9 +64,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAY TROJAN
 
-• XRAY VMESS GRPC[OFF]
+• XRAY VMESS GRPC[ON]
 
-• XRAY VLESS GRPC[OFF]
+• XRAY VLESS GRPC[ON]
 
 • SHADOWSOCKS
 
@@ -138,9 +138,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • XRAYS Trojan            : 2083
 
-• XRAYS Vmess GRPC TLS    : 8888[OFF]
+• XRAYS Vmess GRPC TLS    : 1180
 
-• XRAYS Vless GRPC TLS    : 7777[OFF]
+• XRAYS Vless GRPC TLS    : 2280
 
 • CloudFront Websocket    : [OFF]
 
