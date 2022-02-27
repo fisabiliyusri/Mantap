@@ -21,10 +21,11 @@ echo -e "$yy 11$y. TROJAN GO MENU$wh"
 echo -e "$yy 12$y. GRPC MENU$wh"
 echo -e "$yy 13$y. SLOWDNS MENU$wh"
 echo -e "$yy 14$y. CEK SEMUA IP PORT$wh"
-echo -e "$yy 15$y. Settings$wh"
-echo -e "$yy 16$y. Exit$wh"
+echo -e "$yy 15$y. CEK SEMUA SERVICE VPN$wh"
+echo -e "$yy 16$y. Settings$wh"
+echo -e "$yy 17$y. Exit$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 16 ] : " menu
+read -p "Select From Options [ 1 - 17 ] : " menu
 case $menu in
 1)
 clear
@@ -84,9 +85,13 @@ ipsaya
 ;;
 15)
 clear
-setmenu
+running
 ;;
 16)
+clear
+setmenu
+;;
+17)
 clear
 exit
 ;;
