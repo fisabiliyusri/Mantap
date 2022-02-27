@@ -75,6 +75,8 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
+# install xray grpc
+wget 
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
