@@ -83,6 +83,16 @@ WantedBy=multi-user.target
 END
 #done
 
+#iptables
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 7777 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 7777 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 8888 -j ACCEPT
+iptables -I INPUT -m state --state NEW -m udp -p udp --dport 8888 -j ACCEPT
+iptables-save > /etc/iptables.up.rules
+iptables-restore -t < /etc/iptables.up.rules
+netfilter-persistent save
+netfilter-persistent reload
+
 # restart
 systemctl daemon-reload
 systemctl stop xray.service
