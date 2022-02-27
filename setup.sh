@@ -76,7 +76,8 @@ wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
 # install xray grpc
-wget 
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && ./sl-grpc.sh
+#
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -89,6 +90,7 @@ rm -f /root/set-br.sh
 rm -f /root/edu.sh
 rm -f /root/ohp.sh
 rm -f /root/install
+rm -f /root/sl-grpc.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
