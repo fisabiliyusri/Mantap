@@ -11,17 +11,21 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 
+#Update Sertificate SSL
+echo Starting Update SSL Sertificate
+sleep 3
 sudo pkill -f nginx & wait $!
+systemctl daemon-reload
+systemctl stop nginx
 systemctl daemon-reload
 systemctl stop nginx
 systemctl stop xray
 systemctl stop xray.service
 systemctl stop xray@grpc
 systemctl stop xray@grpc.service
-
-rm /etc/nginx/conf.d/default.conf
-touch /etc/nginx/conf.d/default.conf
-cat <<EOF >>/etc/nginx/conf.d/default.conf
+rm /etc/nginx/conf.d/abc.conf
+touch /etc/nginx/conf.d/abc.conf
+cat <<EOF >>/etc/nginx/conf.d/abc.conf
 server {
         listen 88;
 	listen 7788 ssl http2;
