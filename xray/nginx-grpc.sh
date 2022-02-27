@@ -34,6 +34,6 @@ systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
-systemctl stop xray-grpc.service
-systemctl enable xray-grpc.service
-systemctl restart xray-grpc.service
+systemctl stop xray@grpc.service
+systemctl enable xray@grpc.service
+systemctl restart xray@grpc.service
