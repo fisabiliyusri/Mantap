@@ -52,9 +52,9 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 • SSH Websocket SSL/TLS & HTTP (Cloudflare)
 
-• SSH CloudFront Websocket (Aws CloudFront Only)[OFF]
+• SSH CloudFront Websocket (Aws CloudFront Only) [OFF]
 
-• SLOWDNS SSH/SSL/TLS
+• SLOWDNS SSH/SSL/TLS [OFF]
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OHP=Open-Http-Puncher)
 
