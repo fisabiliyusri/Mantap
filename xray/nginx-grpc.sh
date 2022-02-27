@@ -10,7 +10,10 @@ fi
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
+
 systemctl stop nginx
+rm /etc/nginx/conf.d/default.conf
+touch /etc/nginx/conf.d/default.conf
 cat <<EOF >>/etc/nginx/conf.d/default.conf
 server {
         listen 88;
