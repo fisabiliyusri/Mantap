@@ -1,3 +1,16 @@
+#!/bin/bash
+# Mod By SL
+# =====================================================
+source /var/lib/crot/ipvps.conf
+if [[ "$IP" = "" ]]; then
+domain=$(cat /etc/xray/domain)
+else
+domain=$IP
+fi
+MYIP=$(wget -qO- ipinfo.io/ip);
+clear
+domain=$(cat /etc/xray/domain)
+
 rm /etc/nginx/grpc.conf
 touch /etc/nginx/grpc.conf
 cat <<EOF >>/etc/nginx/grpc.conf
@@ -33,7 +46,7 @@ http {
 
 	server {
 		listen 55443 ssl http2; #监听443
-		server_name comebey; 
+		server_name $domain; 
 
 		index index.html;
 		root /usr/share/nginx/html; #网站模板路径只建议用html 当然也可以配置其他的比如php等
