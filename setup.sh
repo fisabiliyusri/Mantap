@@ -71,7 +71,7 @@ wget https://${akbarvpnnnnnnnnn}/edu.sh && chmod +x edu.sh && ./edu.sh
 # Ohp Server
 wget https://${akbarvpnnnnnnnnnn}/ohp.sh && chmod +x ohp.sh && ./ohp.sh
 # Install Slowdns Server
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
+# wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/install && chmod +x install && bash install
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
@@ -132,8 +132,8 @@ echo "   - XRAYS Vmess None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Vless TLS         : 8443"  | tee -a log-install.txt
 echo "   - XRAYS Vless None TLS    : 80"  | tee -a log-install.txt
 echo "   - XRAYS Trojan            : 2083"  | tee -a log-install.txt
-echo "   - XRAYS VMESS GRPC        : 8888"  | tee -a log-install.txt
-echo "   - XRAYS VLESS GRPC        : 7777"  | tee -a log-install.txt
+echo "   - XRAYS VMESS GRPC        : 1180"  | tee -a log-install.txt
+echo "   - XRAYS VLESS GRPC        : 2280"  | tee -a log-install.txt
 echo "   - CloudFront Websocket    : "  | tee -a log-install.txt
 echo "   - Websocket TLS           : 443"  | tee -a log-install.txt
 echo "   - Websocket None TLS      : 8880"  | tee -a log-install.txt
@@ -142,9 +142,9 @@ echo "   - OHP SSH                 : 8181"  | tee -a log-install.txt
 echo "   - OHP Dropbear            : 8282"  | tee -a log-install.txt
 echo "   - OHP OpenVPN             : 8383"  | tee -a log-install.txt
 echo "   - TrojanGo                : 2087"  | tee -a log-install.txt
-echo "   - SLOWDNS OpenSSH         : 2253"  | tee -a log-install.txt
-echo "   - SLOWDNS Dropbear        : 1153"  | tee -a log-install.txt
-echo "   - SLOWDNS SSL/TLS         : 3353"  | tee -a log-install.txt
+echo "   - SLOWDNS OpenSSH         : 2253[OFF]"  | tee -a log-install.txt
+echo "   - SLOWDNS Dropbear        : 1153[OFF]"  | tee -a log-install.txt
+echo "   - SLOWDNS SSL/TLS         : 3353[OFF]"  | tee -a log-install.txt
 echo ""  | tee -a log-install.txt
 echo "   >>> Server Information & Other Features"  | tee -a log-install.txt
 echo "   - Timezone                : Asia/Jakarta (GMT +7)"  | tee -a log-install.txt
