@@ -1,3 +1,7 @@
+#!/bin/bash
+# Mod By SL
+# =====================================================
+
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
