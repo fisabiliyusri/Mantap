@@ -11,7 +11,14 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 
+sudo pkill -f nginx & wait $!
+systemctl daemon-reload
 systemctl stop nginx
+systemctl stop xray
+systemctl stop xray.service
+systemctl stop xray@grpc
+systemctl stop xray@grpc.service
+
 rm /etc/nginx/conf.d/default.conf
 touch /etc/nginx/conf.d/default.conf
 cat <<EOF >>/etc/nginx/conf.d/default.conf
@@ -42,6 +49,7 @@ EOF
 systemctl daemon-reload
 service nginx restart
 systemctl daemon-reload
+service nginx restart
 systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
