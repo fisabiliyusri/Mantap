@@ -8,6 +8,7 @@ NC='\e[0m'
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
+uuid=$(cat /proc/sys/kernel/random/uuid)
 
 cat > /etc/xray/sl-vmessgrpc.json << END
 {
@@ -158,3 +159,9 @@ systemctl enable sl-vmess-grpc
 systemctl restart sl-vmess-grpc
 systemctl enable sl-vless-grpc
 systemctl restart sl-vless-grpc
+#
+chmod +x addgrpc
+chmod +x delgrpc
+chmod +x renewgrpc
+chmod +x cekgrpc
+
