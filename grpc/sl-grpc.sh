@@ -10,6 +10,24 @@ clear
 domain=$(cat /etc/xray/domain)
 uuid=$(cat /proc/sys/kernel/random/uuid)
 
+
+mkdir -p /usr/bin/xray
+mkdir -p /etc/xray
+
+# / / Unzip Xray Linux 64
+cd `mktemp -d`
+curl -sL "$xraycore_link" -o xray.zip
+unzip -q xray.zip && rm -rf xray.zip
+mv xray /usr/local/bin/xray
+chmod +x /usr/local/bin/xray
+
+# Make Folder XRay
+mkdir -p /var/log/xray/
+#
+wget -q -O /usr/local/bin/xray/geosite.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geosite.dat"
+wget -q -O /usr/local/bin/xray/geoip.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geoip.dat"
+
+#
 cat > /etc/xray/sl-vmessgrpc.json << END
 {
     "log": {
@@ -119,7 +137,7 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/xray/xray -config /etc/xray/sl-vmessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vmessgrpc.json
 RestartPreventExitStatus=23
 LimitNPROC=10000
 LimitNOFILE=1000000
@@ -137,7 +155,7 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/xray/xray -config /etc/xray/sl-vlessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vlessgrpc.json
 RestartPreventExitStatus=23
 LimitNPROC=10000
 LimitNOFILE=1000000
