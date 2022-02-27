@@ -12,7 +12,7 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 
-fileaku=grpc-client-config.json
+fileaku=grpc-server-config.json
 
 rm /etc/xray/grpc-server-config.json
 touch /etc/xray/grpc-server-config.json
@@ -62,3 +62,30 @@ cat <<EOF >>/etc/xray/grpc-server-config.json
 }
 EOF
 
+# installl xray vless grpc tls
+cat > /etc/systemd/system/xray@grpc-tls.service << END
+[Unit]
+Description=Xray Vless GRPC Service
+Documentation=https://nekopoi.care
+After=network.target nss-lookup.target
+
+[Service]
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/usr/local/bin/xray -config /etc/xray/grpc-server-config.json
+Restart=on-failure
+RestartPreventExitStatus=23
+
+[Install]
+WantedBy=multi-user.target
+END
+#done
+# restart
+systemctl daemon-reload
+service nginx restart
+systemctl stop xray@grpc-tls.service
+systemctl enable xray@grpc-tls.service
+systemctl restart xray@grpc-tls.service
+#done
