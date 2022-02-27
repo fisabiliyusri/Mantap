@@ -1,3 +1,7 @@
+#!/bin/bash
+# Mod By SL
+# =====================================================
+
 source /var/lib/crot/ipvps.conf
 if [[ "$IP" = "" ]]; then
 domain=$(cat /etc/xray/domain)
