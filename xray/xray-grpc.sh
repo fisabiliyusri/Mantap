@@ -63,7 +63,7 @@ END
 
 
 # installl xray vless grpc
-cat > /etc/systemd/system/xray-grpc.service << END
+cat > /etc/systemd/system/xray@grpc.service << END
 [Unit]
 Description=Xray Vless GRPC Service
 Documentation=https://nekopoi.care
@@ -99,6 +99,6 @@ systemctl stop xray.service
 systemctl start xray.service
 systemctl enable xray.service
 systemctl restart xray.service
-systemctl stop xray-grpc.service
-systemctl enable xray-grpc.service
-systemctl restart xray-grpc.service
+systemctl stop xray@grpc.service
+systemctl enable xray@grpc.service
+systemctl restart xray@grpc.service
