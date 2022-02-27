@@ -8,6 +8,16 @@ MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
 
+#
+wget http://nginx.org/keys/nginx_signing.key && apt-key add nginx_signing.key
+apt update -y
+apt install -y nginx
+apt --fix-broken install -y
+apt install -y curl tar socat wget
+apt --fix-broken install -y
+systemctl start nginx
+#
+
 cat > /etc/xray/xray-grpc.json <<END
 {
   "log": {
