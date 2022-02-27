@@ -33,7 +33,7 @@ server {
 	index index.html;                         # 默认页面
 	root /usr/share/nginx/html;               # 网页根目录路径
  
-	ssl_certificate //etc/xray/xray.crt;           # 证书路径
+	ssl_certificate /etc/xray/xray.crt;           # 证书路径
 	ssl_certificate_key /etc/xray/xray.key;    # 密钥路径
 	ssl_protocols TLSv1.2 TLSv1.3;
 	ssl_ciphers ECDHE-ECDSA-AES128-GCM-SHA256:ECDHE-RSA-AES128-GCM-SHA256:ECDHE-ECDSA-AES256-GCM-SHA384:ECDHE-RSA-AES256-GCM-SHA384:ECDHE-ECDSA-CHACHA20-POLY1305:ECDHE-RSA-CHACHA20-POLY1305:DHE-RSA-AES128-GCM-SHA256:DHE-RSA-AES256-GCM-SHA384;
