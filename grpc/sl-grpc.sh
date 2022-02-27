@@ -154,3 +154,7 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
+systemctl enable sl-vmess-grpc
+systemctl restart sl-vmess-grpc
+systemctl enable sl-vless-grpc
+systemctl restart sl-vless-grpc
