@@ -195,6 +195,8 @@ systemctl restart sl-vmess-grpc
 systemctl enable sl-vless-grpc
 systemctl restart sl-vless-grpc
 #
+wget -O addgrpc "
+
 chmod +x addgrpc
 chmod +x delgrpc
 chmod +x renewgrpc
