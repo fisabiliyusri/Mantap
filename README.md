@@ -47,7 +47,6 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### 99.
 
 # Fix Stunnel5 Error
- ```
 ```html
 cd /usr/bin && ./cf.sh
  ```
