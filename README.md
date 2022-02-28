@@ -52,7 +52,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### 99.
 
 # Fix Stunnel5 Error
-# buat domain (bash slhost.sh)
+# buat domain baru(bash slhost.sh)
 ```html
 cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
  ```
