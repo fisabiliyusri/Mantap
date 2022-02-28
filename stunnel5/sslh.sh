@@ -12,7 +12,9 @@ cat > /etc/default/sslh <<-END
 # - sslh(8) via "man sslh" for more configuration details.
 # Once configuration ready, you *must* set RUN to yes here
 # and try to start sslh (standalone mode only)
+
 RUN=yes
+
 # binary to use: forked (sslh) or single-thread (sslh-select) version
 # systemd users: don't forget to modify /lib/systemd/system/sslh.service
 DAEMON=/usr/sbin/sslh
