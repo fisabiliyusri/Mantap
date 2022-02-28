@@ -75,8 +75,18 @@ isi dengan host subdomain kamu
 
 ### lalu update cert
 ```html
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && bash certv2ray.sh
+ ```
+# atau
+```html
 certv2ray
  ```
+
+# nano = edit
+# rm = hapus
+# rm -r = hapus
+# rm -f = hapus
+# rm -rf = hapus
 
 ### Fitur Script
 
