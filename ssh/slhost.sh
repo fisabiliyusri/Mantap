@@ -14,6 +14,7 @@ mkdir -p /etc/xray
 DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.akbar-store.me
+echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 CF_ID=sandigaming01@gmail.com
 CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
@@ -48,7 +49,6 @@ echo $SUB_DOMAIN > /etc/v2ray/domain
 echo $SUB_DOMAIN > /etc/xray/domain
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/xray/domain
-echo "IP=$SUB_DOMAIN" >>/var/lib/crot/ipvps.conf
 # / / Make Main Directory
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
