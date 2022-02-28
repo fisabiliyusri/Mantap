@@ -82,11 +82,43 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.
 certv2ray
  ```
 
-# nano = edit
-# rm = hapus
-# rm -r = hapus
-# rm -f = hapus
-# rm -rf = hapus
+# perintah
+```html
+wget = download
+cp = copy/salin
+nano = edit
+rm = hapus
+rm -r = hapus
+rm -f = hapus
+rm -rf = hapus
+git clone = digunakan untuk mengunduh code yang ada pada repository
+ ```
+
+# uninstall script websocket
+```html
+rm -r /etc/systemd/system/ws-nontls.service 
+&& 
+rm -r /etc/systemd/system/ws-tls.service 
+&& 
+rm -r /usr/local/bin/ws-nontls 
+&& 
+rm -r /usr/local/bin/ws-tls 
+&&
+rm -r /etc/systemd/system/ws-ovpn.service 
+&& 
+rm -r /usr/local/bin/ws-ovpn 
+ ```
+# uninstall ssl && stunnel
+rm -f /etc/default/sslh
+rm -r -f stunnel
+rm -f stunnel5.zip
+rm -f /etc/stunnel5/stunnel5.conf
+rm -r -f /usr/local/share/doc/stunnel/
+rm -r -f /usr/local/etc/stunnel/
+rm -f /usr/local/bin/stunnel
+rm -f /usr/local/bin/stunnel3
+rm -f /usr/local/bin/stunnel4
+rm -f /usr/local/bin/stunnel5
 
 ### Fitur Script
 
