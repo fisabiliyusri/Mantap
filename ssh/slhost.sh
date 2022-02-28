@@ -7,6 +7,7 @@ apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
 rm -f /etc/xray/domain
+rm -rf /etc/xray/domain
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 
@@ -45,9 +46,9 @@ echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/v2ray/domain
 echo $SUB_DOMAIN > /etc/xray/domain
-echo $SUB_DOMAIN > /var/lib/crot/ipvps.conf
 echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/xray/domain
+echo "IP=$SUB_DOMAIN" >>/var/lib/crot/ipvps.conf
 # / / Make Main Directory
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
