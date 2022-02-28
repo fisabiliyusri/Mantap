@@ -52,15 +52,20 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### 99.
 
 # Fix Stunnel5 Error
+# buat domain (bash slhost.sh)
 ```html
-cd /usr/bin && ./cf.sh
+cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
  ```
+
+### 99.1 edit manual ip domain
 ```html
 nano /var/lib/crot/ipvps.conf
  ```
 ```html
 IP=masukan host subdomain kamu
  ```
+
+### 99.2 edit manual domain
 ```html
 nano /etc/xray/domain
  ```
