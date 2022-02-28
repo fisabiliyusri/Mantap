@@ -66,8 +66,9 @@ nano /etc/xray/domain
  ```
 ```html
 isi dengan host subdomain kamu
-'''
-# lalu update cert
+ ```
+
+### lalu update cert
 ```html
 certv2ray
  ```
