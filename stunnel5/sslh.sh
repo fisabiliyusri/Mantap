@@ -1,3 +1,4 @@
+# Install SSLH
 apt -y install sslh
 rm -f /etc/default/sslh
 
@@ -5,6 +6,7 @@ rm -f /etc/default/sslh
 cat > /etc/default/sslh <<-END
 # Default options for sslh initscript
 # sourced by /etc/init.d/sslh
+
 # Disabled by default, to force yourself
 # to read the configuration:
 # - /usr/share/doc/sslh/README.Debian (quick start)
@@ -20,6 +22,7 @@ RUN=yes
 DAEMON=/usr/sbin/sslh
 
 DAEMON_OPTS="--user sslh --listen 0.0.0.0:443 --ssl 127.0.0.1:777 --ssh 127.0.0.1:109 --openvpn 127.0.0.1:1194 --http 127.0.0.1:8880 --pidfile /var/run/sslh/sslh.pid -n"
+
 END
 
 # Restart Service SSLH
