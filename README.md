@@ -59,8 +59,15 @@ cd /usr/bin && ./cf.sh
 nano /var/lib/crot/ipvps.conf
  ```
 ```html
-IP=masukan host kamu
+IP=masukan host subdomain kamu
  ```
+```html
+nano /etc/xray/domain
+ ```
+```html
+isi dengan host subdomain kamu
+'''
+# lalu update cert
 ```html
 certv2ray
  ```
