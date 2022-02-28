@@ -44,4 +44,9 @@ echo $SUB_DOMAIN > /root/domain
 echo $SUB_DOMAIN > /etc/v2ray/domain
 echo $SUB_DOMAIN > /etc/xray/domain
 echo $SUB_DOMAIN > /var/lib/crot/ipvps.conf
-
+echo $SUB_DOMAIN > /root/domain
+echo $SUB_DOMAIN > /etc/xray/domain
+# / / Make Main Directory
+mkdir -p /usr/bin/xray
+mkdir -p /etc/xray
+cp /root/domain /etc/xray/domain
