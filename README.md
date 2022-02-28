@@ -45,15 +45,16 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ```
 
 # Fix Stunnel5 Error
-```
+ ```
 cd /usr/bin && ./cf.sh
-```
+ ```
 nano /var/lib/crot/ipvps.conf
-```
+ ```
 IP=masukan host kamu
-```
+ ```
 certv2ray
-```
+
+
 ### Fitur Script
 
 • CEK SEMUA IP DAN PORT (Service ALL VPN)
