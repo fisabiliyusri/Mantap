@@ -15,7 +15,6 @@ clear
 echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
-systemctl daemon-reload
 systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
