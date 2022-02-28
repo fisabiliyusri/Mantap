@@ -16,6 +16,11 @@ src="https://img.shields.io/badge/Service-Xray_V2ray-success.svg">  <img src= "h
 ### Info:
 Buat VPS Fresh atau VPS Baru
 
+### Link Video Tutorial Cara Install
+```html
+https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
+```
+
 ## Installation 
 ## 1.
 Part 1: Update dan Upgrade
