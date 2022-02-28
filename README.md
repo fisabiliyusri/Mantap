@@ -109,6 +109,7 @@ rm -r /etc/systemd/system/ws-ovpn.service
 rm -r /usr/local/bin/ws-ovpn 
  ```
 # uninstall ssl && stunnel
+```html
 rm -f /etc/default/sslh
 rm -r -f stunnel
 rm -f stunnel5.zip
@@ -119,6 +120,7 @@ rm -f /usr/local/bin/stunnel
 rm -f /usr/local/bin/stunnel3
 rm -f /usr/local/bin/stunnel4
 rm -f /usr/local/bin/stunnel5
+```
 
 ### Fitur Script
 
