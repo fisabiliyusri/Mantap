@@ -27,7 +27,7 @@ apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ## 2.0
 Aktifkan Root Sementara
   ```html
-sudo su
+sudo su && cd
 ```
 # 2.
 Part 2: Buat Akses Root Di VPS /Root VPS
@@ -40,7 +40,7 @@ Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws
 # 2.5
 Di sini wajib pake user root atau bisa aktifkan root sementara
    ```html
-sudo su
+sudo su && cd
   ```
 ### 3.
 Part 3: Install Semua Layanan VPN /Install All VPN Service
