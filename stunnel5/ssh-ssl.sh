@@ -42,6 +42,7 @@ organizationalunit=akbarstorevpn
 commonname=akbarstorevpn
 email=akbarssh21@gmail.com
 
+cd
 
 # ssl
 # Install SSLH
