@@ -37,6 +37,11 @@ Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws
   wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
   ```
   
+# 2.5
+Di sini wajib pake user root atau bisa aktifkan root sementara
+   ```html
+sudo su
+  ```
 ### 3.
 Part 3: Install Semua Layanan VPN /Install All VPN Service
   <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20Batch-green">
