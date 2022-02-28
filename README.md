@@ -75,7 +75,7 @@ isi dengan host subdomain kamu
 
 ### lalu update cert
 ```html
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && bash certv2ray.sh
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && chmod +x certv2ray.sh && bash certv2ray.sh
  ```
 # atau
 ```html
