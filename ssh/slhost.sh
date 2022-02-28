@@ -7,6 +7,8 @@ apt install jq curl -y
 rm -f /root/domain
 rm -f /etc/v2ray/domain
 rm -f /etc/xray/domain
+mkdir -p /usr/bin/xray
+mkdir -p /etc/xray
 
 DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
