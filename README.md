@@ -110,6 +110,7 @@ rm -r /usr/local/bin/ws-ovpn
  ```
 # uninstall ssl && stunnel
 ```html
+
 rm -f /etc/default/sslh
 rm -r -f stunnel
 rm -f stunnel5.zip
@@ -120,6 +121,36 @@ rm -f /usr/local/bin/stunnel
 rm -f /usr/local/bin/stunnel3
 rm -f /usr/local/bin/stunnel4
 rm -f /usr/local/bin/stunnel5
+```
+# uninstall all sslh && all stunnel
+```html
+sudo apt-get remove stunnel4
+&&
+sudo apt-get remove stunnel5
+&&
+sudo apt-get remove --auto-remove stunnel4
+&&
+sudo apt-get remove --auto-remove stunnel5
+&&
+sudo apt-get purge stunnel4
+&&
+sudo apt-get purge stunnel5
+&&
+sudo apt-get purge --auto-remove stunnel4
+&&
+sudo apt-get purge --auto-remove stunnel5
+&&
+
+sudo apt remove sslh
+&&
+sudo apt-get remove --auto-remove sslh
+&&
+sudo apt-get purge sslh
+&&
+sudo apt-get purge --auto-remove sslh
+&&
+sudo apt autoclean && sudo apt autoremove
+&& 
 ```
 
 ### Fitur Script
