@@ -44,6 +44,16 @@ Part 3: Install Semua Layanan VPN /Install All VPN Service
 rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
 
+# Fix Stunnel5 Error
+```
+cd /usr/bin && ./cf.sh
+```
+nano /var/lib/crot/ipvps.conf
+```
+IP=masukan host kamu
+```
+certv2ray
+```
 ### Fitur Script
 
 • CEK SEMUA IP DAN PORT (Service ALL VPN)
