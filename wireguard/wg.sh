@@ -27,7 +27,7 @@ exit 0
 fi
 # ==================================================
 # Link Hosting Kalian
-fisabiliyusri="raw.githubusercontent.com/fisabiliyusri/Mod-Script-SL/main/wireguard"
+fisabiliyusri="raw.githubusercontent.com/fisabiliyusri/Mantap/main/wireguard"
 
 # Check OS version
 if [[ -e /etc/debian_version ]]; then
