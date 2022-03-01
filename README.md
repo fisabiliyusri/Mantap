@@ -87,6 +87,34 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.
 certv2ray
  ```
 
+### 99.3 Fix Error SSLH & Fix Error SSH WS-TLS
+
+# Perbaiki sslh yang error di vps yg gak suppport sslh
+# khusus yg vps nya gak support sslh
+# matikan ws-tls
+```html
+systemctl stop ws-tls
+```
+# buatt user sslh / edit passwd
+```html
+echo sslh:x:109:114::/nonexistent:/bin/false >> /etc/passwd
+```
+* note: edit passwd dan pindah sslh nya di atas vnstat
+
+# start sslh dan jalankan
+```html
+systemctl start sslh 
+&& 
+/etc/init.d/sslh start 
+&& 
+/etc/init.d/sslh restart 
+```
+# lalu start ws-tls
+```html
+systemctl start ws-tls
+```
+
+
 # perintah
 ```html
 wget = download
