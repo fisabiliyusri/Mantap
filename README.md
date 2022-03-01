@@ -287,9 +287,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • Websocket TLS           : 443
 
-• Websocket None TLS      : 8880
+• Websocket HTTP          : 8880
 
-• Websocket Ovpn          : 2086
+• Websocket OpenVPN       : 2086
 
 • OHP SSH                 : 8181
 
