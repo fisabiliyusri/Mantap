@@ -127,7 +127,7 @@ rm -rf = hapus
 git clone = digunakan untuk mengunduh code yang ada pada repository
  ```
 
-# uninstall script websocket
+# (hapus) uninstall script websocket
 ```html
 rm -r /etc/systemd/system/ws-nontls.service 
 && 
@@ -141,7 +141,7 @@ rm -r /etc/systemd/system/ws-ovpn.service
 && 
 rm -r /usr/local/bin/ws-ovpn 
  ```
-# uninstall ssl && stunnel
+# (hapus) uninstall ssl && stunnel
 ```html
 
 rm -f /etc/default/sslh
@@ -155,7 +155,7 @@ rm -f /usr/local/bin/stunnel3
 rm -f /usr/local/bin/stunnel4
 rm -f /usr/local/bin/stunnel5
 ```
-# uninstall all sslh && all stunnel
+# (hapus) uninstall all sslh && all stunnel
 ```html
 sudo apt-get remove stunnel4
 &&
