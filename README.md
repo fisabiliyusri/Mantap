@@ -57,7 +57,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ### 99.
 
 # Fix Stunnel5 Error
-# buat domain baru(bash slhost.sh)
+* buat domain baru(bash slhost.sh)
 ```html
 cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
  ```
@@ -78,30 +78,30 @@ nano /etc/xray/domain
 isi dengan host subdomain kamu
  ```
 
-### lalu update cert
+* lalu update cert
 ```html
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && chmod +x certv2ray.sh && bash certv2ray.sh
  ```
-# atau
+* atau
 ```html
 certv2ray
  ```
 
 ### 99.3 Fix Error SSLH & Fix Error SSH WS-TLS
 
-# Perbaiki sslh yang error di vps yg gak suppport sslh
-# khusus yg vps nya gak support sslh
-# matikan ws-tls
+* Perbaiki sslh yang error di vps yg gak suppport sslh
+* khusus yg vps nya gak support sslh
+* matikan ws-tls
 ```html
 systemctl stop ws-tls
 ```
-# buatt user sslh / edit passwd
+* buatt user sslh / edit passwd
 ```html
 echo sslh:x:109:114::/nonexistent:/bin/false >> /etc/passwd
 ```
 * note: edit passwd dan pindah sslh nya di atas vnstat
 
-# start sslh dan jalankan
+* start sslh dan jalankan
 ```html
 systemctl start sslh 
 && 
