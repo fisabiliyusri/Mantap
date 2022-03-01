@@ -191,13 +191,17 @@ sudo apt autoclean && sudo apt autoremove
 
 • SSH & OpenVPN
 
-• SSH Websocket SSL/TLS & HTTP (Cloudflare)
+• SSH Websocket SSH (Cloudflare)
+
+• SSH Websocket OpenVPN (Cloudflare)
+
+• SSLH
 
 • SSH CloudFront Websocket (Aws CloudFront Only) [OFF]
 
-• SLOWDNS SSH/SSL/TLS [OFF]
+• SLOWDNS Over SSH [OFF]
 
-• OHP SSH & OHP Dropbear & OHP OpenVPN (OHP=Open-Http-Puncher)
+• OHP SSH & OHP Dropbear & OHP OpenVPN (OPEN HTTP PUNCHER)
 
 • XRAY VMESS 
 
@@ -205,9 +209,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • XRAY TROJAN
 
-• XRAY VMESS GRPC[ON]
+• XRAY VMESS GRPC
 
-• XRAY VLESS GRPC[ON]
+• XRAY VLESS GRPC
 
 • SHADOWSOCKS
 
@@ -235,19 +239,19 @@ sudo apt autoclean && sudo apt autoremove
 
 # Service & Port
 
-• OpenSSH                 : 22, (2253)
+• OpenSSH                 : 22, 2253
 
-• Dropbear                : 443, 109, 143, (1153)
+• Dropbear                : 443, 109, 143, 1153
 
-• Stunnel5                : 443, 445, (3353)
-
-• SLOWDNS OPENSSH         : (2253)[OFF]
-
-• SLOWDNS DROPBEAR        : (1153)[OFF]
-
-• SLOWDNS SSL/TLS         : (3353)[OFF]
+• Stunnel5                : 443, 445, 777
 
 • OpenVPN                 : TCP 1194, UDP 2200, SSL 990
+
+• Websocket SSH TLS       : 443
+
+• Websocket SSH HTTP      : 8880
+
+• Websocket OpenVPN       : 2086
 
 • Squid Proxy             : 3128, 8080
 
@@ -283,14 +287,6 @@ sudo apt autoclean && sudo apt autoremove
 
 • XRAYS Vless GRPC TLS    : 2280
 
-• CloudFront Websocket    : [OFF]
-
-• Websocket TLS           : 443
-
-• Websocket HTTP          : 8880
-
-• Websocket OpenVPN       : 2086
-
 • OHP SSH                 : 8181
 
 • OHP Dropbear            : 8282
@@ -298,6 +294,15 @@ sudo apt autoclean && sudo apt autoremove
 • OHP OpenVPN             : 8383
 
 • Trojan Go               : 2087
+
+• CloudFront Websocket    : [OFF]
+
+• SLOWDNS OPENSSH         : (2253)[OFF]
+
+• SLOWDNS DROPBEAR        : (1153)[OFF]
+
+• SLOWDNS SSL/TLS         : (3353)[OFF]
+
 
 
  ### Server Information & Other Features
