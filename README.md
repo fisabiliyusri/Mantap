@@ -88,13 +88,13 @@ certv2ray
 
 ### 99.3 Fix Error SSLH & Fix Error SSH WS-TLS
 
-* Perbaiki sslh yang error di vps yg gak suppport sslh
-* khusus yg vps nya gak support sslh
+* Perbaiki sslh yang error di vps yang tidak support sslh
+* khusus yang vps nya tidak support sslh
 * matikan ws-tls
 ```html
 systemctl stop ws-tls
 ```
-* buatt user sslh / edit passwd
+* buat user sslh / edit passwd
 ```html
 echo sslh:x:109:114::/nonexistent:/bin/false >> /etc/passwd
 ```
@@ -112,7 +112,7 @@ systemctl start sslh
 ```html
 systemctl start ws-tls
 ```
-
+*done
 
 # perintah
 ```html
@@ -184,6 +184,9 @@ sudo apt-get purge --auto-remove sslh
 sudo apt autoclean && sudo apt autoremove
 && 
 ```
+
+
+
 
 ### Fitur Script
 
