@@ -28,7 +28,7 @@ tput cnorm
 }
 echo "MULAI SLOWDNS"
 fun_start () {
-nameserver='1234'
+nameserver='0.0.0.0'
 cd /etc/slowdns
 screen -dmS slowdns /etc/slowdns/dns-server -udp :5300 -privkey-file /root/server.key $nameserver 127.0.0.1:2253
 sleep 1
