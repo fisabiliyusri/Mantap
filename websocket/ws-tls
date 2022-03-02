@@ -88,7 +88,7 @@ class ConnectionHandler(threading.Thread):
         self.client = socClient
         self.client_buffer = ''
         self.server = server
-        self.log = 'Connection: ' + str(addr)
+        self.log = f'Connection: {str(addr)}'
 
     def close(self):
         try:
@@ -147,7 +147,7 @@ class ConnectionHandler(threading.Thread):
             self.server.removeConn(self)
 
     def findHeader(self, head, header):
-        aux = head.find(header + ': ')
+        aux = head.find(f'{header}: ')
 
         if aux == -1:
             return ''
@@ -167,11 +167,7 @@ class ConnectionHandler(threading.Thread):
             port = int(host[i+1:])
             host = host[:i]
         else:
-            if self.method=='CONNECT':
-                port = 443
-            else:
-                port = sys.argv[1]
-
+            port = 443 if self.method=='CONNECT' else sys.argv[1]
         (soc_family, soc_type, proto, _, address) = socket.getaddrinfo(host, port)[0]
 
         self.target = socket.socket(soc_family, soc_type, proto)
@@ -179,7 +175,7 @@ class ConnectionHandler(threading.Thread):
         self.target.connect(address)
 
     def method_CONNECT(self, path):
-        self.log += ' - CONNECT ' + path
+        self.log += f' - CONNECT {path}'
 
         self.connect_target(path)
         self.client.sendall(RESPONSE)
