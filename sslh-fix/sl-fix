@@ -4,9 +4,17 @@
 
 cd /usr/bin
 
+rm -rf restart
+rm -rf sslh-fix-reboot
+rm -rf updatemenu
+
 wget -O sslh-fix-reboot "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sslh-fix-reboot.sh"
+wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
+wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
 
 chmod +x sslh-fix-reboot
+chmod +x restart
+chmod +x updatemenu
 
 cd
 
