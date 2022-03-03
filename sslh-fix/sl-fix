@@ -3,21 +3,27 @@
 
 
 cd /usr/bin
-
 rm -rf restart
+rm -r restart
+rm restart
+rm -r sslh-fix-reboot
 rm -rf sslh-fix-reboot
+rm sslh-fix-reboot
+rm -r updatemenu
 rm -rf updatemenu
+rm updatemenu
 
+cd /usr/bin
 wget -O sslh-fix-reboot "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sslh-fix-reboot.sh"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
 
+cd /usr/bin
 chmod +x sslh-fix-reboot
 chmod +x restart
 chmod +x updatemenu
 
-cd
-
+cd /root/
 systemctl daemon-reload
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
@@ -44,4 +50,4 @@ systemctl start rc-local.service
 echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6
 sed -i '$ i\echo 1 > /proc/sys/net/ipv6/conf/all/disable_ipv6' /etc/rc.local
 
-cd
+cd /root/
