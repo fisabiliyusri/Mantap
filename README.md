@@ -55,7 +55,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 
 ### 4.
-# Fix Error SSLH + WS-TLS 443
+# Auto Fix Error SSLH + WS-TLS 443
 * 1 • Jika terjadi error di SSLH dan SSH WS-TLS nya,gunakan script ini untuk memperbaiki nya
 ```html
 cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix" && chmod +x sl-fix && cd && updatemenu && menu
