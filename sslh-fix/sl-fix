@@ -36,7 +36,7 @@ END
 chmod +x /etc/rc.local
 
 # enable rc local
-systemctl daemon-teload
+systemctl daemon-reload
 systemctl enable rc-local
 systemctl start rc-local.service
 
