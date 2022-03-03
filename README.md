@@ -55,22 +55,20 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 
 
 ### 4. 
-* 1
-Jika terjadi error di SSLH dan SSH WS-TLS nya,gunakan script ini untuk memperbaiki nya
-  ```html
+* 1 • Jika terjadi error di SSLH dan SSH WS-TLS nya,gunakan script ini untuk memperbaiki nya
+```html
 cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix" && chmod +x sl-fix && cd && updatemenu && menu
-```
+ ```
 ### 4.1
-* 2
-di menu lalu pilih 17 (SL Menu )
-  ```html
+* 2 • di menu lalu pilih 17 (SL Menu )
+```html
 17
-```
+ ```
 ### 4.2
-* 3 jika sudah selesai lalu reboot/ hidupkan ulang vps nya
-  ```html
+* 3 • jika sudah selesai lalu reboot/ hidupkan ulang vps nya
+```html
 reboot
-```
+ ```
 
 
 
