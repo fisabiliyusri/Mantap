@@ -23,10 +23,11 @@ echo -e "$yy 13$y. SLOWDNS MENU$wh"
 echo -e "$yy 14$y. CEK SEMUA IP PORT$wh"
 echo -e "$yy 15$y. CEK SEMUA SERVICE VPN$wh"
 echo -e "$yy 16$y. UPDATE MENU$wh"
-echo -e "$yy 17$y. Settings$wh"
-echo -e "$yy 18$y. Exit$wh"
+echo -e "$yy 17$y. SL Menu(Perbaiki Error SSLH+WS)$wh"
+echo -e "$yy 18$y. Settings$wh"
+echo -e "$yy 19$y. Exit$wh"
 echo -e "$y-------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 18 ] : " menu
+read -p "Select From Options [ 1 - 19 ] : " menu
 case $menu in
 1)
 clear
@@ -94,9 +95,13 @@ updatemenu
 ;;
 17)
 clear
-setmenu
+sl-fix
 ;;
 18)
+clear
+setmenu
+;;
+19)
 clear
 exit
 ;;
