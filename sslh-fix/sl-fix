@@ -1,0 +1,10 @@
+#!/bin/bash
+# ==========================================
+
+
+cd /usr/bin
+
+wget -O sslh-fix-reboot "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sslh-fix-reboot.sh"
+
+chmod +x sslh-fix-reboot
+cd
