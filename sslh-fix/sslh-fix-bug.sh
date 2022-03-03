@@ -2,4 +2,4 @@
 # ==========================================
 
 
-echo "0 5 * * * root clearlog && cd && ./sl-fix-reboot" >> /etc/crontab
+echo "0 5 * * * root clearlog && cd && ./sslh-fix-reboot.sh" >> /etc/crontab
