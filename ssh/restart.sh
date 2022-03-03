@@ -15,6 +15,11 @@ clear
 echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
+systemctl stop ws-tls
+systemctl start sslh
+systemctl restart sslh
+/etc/init.d/sslh start
+/etc/init.d/sslh restart
 systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
