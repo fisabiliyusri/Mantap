@@ -439,7 +439,9 @@ wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upd
 wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
 wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
+wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
 
+chmod +x sl-fix
 chmod +x ipsaya
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
