@@ -141,6 +141,9 @@ systemctl start sslh
 ```html
 systemctl start ws-tls
 ```
+```html
+reboot
+```
 *done
 
 # perintah
