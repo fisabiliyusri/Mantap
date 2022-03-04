@@ -75,13 +75,13 @@ reboot
 
 ### 99.
 
-# Fix Stunnel5 Error
+# (Manual) Fix Stunnel5 Error
 * buat domain baru(bash slhost.sh)
 ```html
 cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
  ```
 
-### 99.1 edit manual ip domain
+* edit manual ip domain
 ```html
 nano /var/lib/crot/ipvps.conf
  ```
@@ -89,7 +89,7 @@ nano /var/lib/crot/ipvps.conf
 IP=masukan host subdomain kamu
  ```
 
-### 99.2 edit manual domain
+* edit manual domain
 ```html
 nano /etc/xray/domain
  ```
@@ -106,7 +106,7 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.
 certv2ray
  ```
 
-### 99.3 Fix Error SSLH & Fix Error SSH WS-TLS
+### 100 (manual) Fix Error SSLH & Fix Error SSH WS-TLS
 
 * Perbaiki sslh yang error di vps yang tidak support sslh
 * khusus yang vps nya tidak support sslh
