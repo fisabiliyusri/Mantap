@@ -29,7 +29,6 @@ chmod +x updatemenu
 chmod +x menu
 
 cd /root/
-systemctl daemon-reload
 # nano /etc/rc.local
 cat > /etc/rc.local <<-END
 #!/bin/sh -e
@@ -47,7 +46,6 @@ END
 chmod +x /etc/rc.local
 
 # enable rc local
-systemctl daemon-reload
 systemctl enable rc-local
 systemctl start rc-local.service
 
