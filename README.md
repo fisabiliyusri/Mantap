@@ -34,6 +34,7 @@ Aktifkan Root Sementara
 sudo su
 cd
 cd
+
 ```
 # 2.
 Part 2: Buat Akses Root Di VPS /Root VPS
@@ -49,6 +50,7 @@ Di sini wajib pake user root atau bisa aktifkan root sementara
 sudo su
 cd
 cd
+
   ```
 ### 3.
 Part 3: Install Semua Layanan VPN /Install All VPN Service
