@@ -128,7 +128,7 @@ systemctl start sslh
 && 
 /etc/init.d/sslh restart 
 ```
-# lalu start ws-tls
+* lalu start ws-tls
 ```html
 systemctl start ws-tls
 ```
