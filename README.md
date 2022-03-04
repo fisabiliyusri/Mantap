@@ -14,6 +14,7 @@ Mod By SL
 
 ### Info:
 Buat VPS Fresh atau VPS Baru
+Wajib Pake User: root
 
 ### Link Video Tutorial Cara Install
 ```html
