@@ -46,7 +46,9 @@ wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main
 wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
 wget -O copyrepo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/salin/copyrepo.sh"
+wget -O slhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh"
 
+chmod +x slhost
 chmod +x copyrepo
 chmod +x menu
 chmod +x ipsaya
