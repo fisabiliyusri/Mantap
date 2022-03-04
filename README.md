@@ -61,7 +61,7 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix" && chmod +x sl-fix && cd && updatemenu && menu
  ```
 ### 4.1
-* 2 • di menu lalu pilih 17 (SL Menu )
+* 2 • di menu lalu pilih 17 (SL-FIX Menu)
 ```html
 17
  ```
