@@ -1,10 +1,32 @@
 #!/bin/bash
 # ==========================================
 # Color
+# hapus menu
+rm -rf menu
+rm -rf ipsaya
+rm -rf sl-fix
+rm -rf sshovpnmenu
+rm -rf l2tpmenu
+rm -rf pptpmenu
+rm -rf sstpmenu
+rm -rf wgmenu
+rm -rf ssmenu
+rm -rf ssrmenu
+rm -rf vmessmenu
+rm -rf vlessmenu
+rm -rf grpcmenu
+rm -rf grpcupdate
+rm -rf trmenu
+rm -rf trgomenu
+rm -rf setmenu
+rm -rf slowdnsmenu
+rm -rf running
 
+# download menu
 cd /usr/bin
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
 wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
+wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
 wget -O sshovpnmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/sshovpn.sh"
 wget -O l2tpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/l2tpmenu.sh"
 wget -O pptpmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/pptpmenu.sh"
@@ -25,6 +47,7 @@ wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/
 
 chmod +x menu
 chmod +x ipsaya
+chmod +x sl-fix
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
 chmod +x pptpmenu
