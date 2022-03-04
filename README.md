@@ -58,6 +58,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 ```
 
 ### 4. DONE / SELESAI
+* • jika tidak bisa login di vps ,gunakan port ssh
+* • 22, 2253
 
 ### NOTE : FIX ERROR SSLH WS
 # Auto Fix Error SSLH + WS-TLS 443
