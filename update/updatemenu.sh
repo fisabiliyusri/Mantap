@@ -21,6 +21,7 @@ rm -rf trgomenu
 rm -rf setmenu
 rm -rf slowdnsmenu
 rm -rf running
+rm -rf copyrepo
 
 # download menu
 cd /usr/bin
@@ -44,7 +45,9 @@ wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upd
 wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
 wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
+wget -O copyrepo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/salin/copyrepo.sh"
 
+chmod +x copyrepo
 chmod +x menu
 chmod +x ipsaya
 chmod +x sl-fix
