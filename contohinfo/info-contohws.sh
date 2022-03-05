@@ -8,3 +8,6 @@ echo -e "ISI-DENGAN-BUG-WEBSOCKET-CLOUDFLARE"
 echo -e "Server Remote:"
 echo -e "ISI-DENGAN-BUG-WEBSOCKET-CLOUDFLARE:443"
 echo -e ""
+
+
+menuinfo
