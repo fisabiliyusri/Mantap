@@ -1,7 +1,6 @@
 #!/bin/bash
 domain=$(cat /etc/xray/domain)
 
-#Payload
 echo -e "Info Opok Tsel:"
 echo -e "Methode SSL/TLS Websocket Bug Cloudflare"
 echo -e "Payload SSL:"
