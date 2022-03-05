@@ -126,7 +126,7 @@ systemctl stop ws-tls
 ```
 * buat user sslh / edit passwd
 ```html
-echo sslh:x:109:114::/nonexistent:/bin/false >> /etc/passwd
+echo sslh:x:109:114::/nonexistent:/usr/sbin/nologin >> /etc/passwd
 ```
 * note: edit passwd dan pindah sslh nya di atas vnstat
 
