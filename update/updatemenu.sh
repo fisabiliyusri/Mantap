@@ -26,6 +26,7 @@ rm -rf copyrepo
 # download menu
 cd /usr/bin
 rm -rf menu
+rm -rf menuinfo
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
 wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
 wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
