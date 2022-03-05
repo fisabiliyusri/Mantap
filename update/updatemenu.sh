@@ -25,6 +25,7 @@ rm -rf copyrepo
 
 # download menu
 cd /usr/bin
+rm -rf menu
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
 wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
 wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
@@ -75,5 +76,3 @@ chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
 sl-download-info
-cd /usr/bin
-cd
