@@ -10,4 +10,5 @@ echo -e "covid19.go.id"
 echo -e "Server Remote:"
 echo -e "covid19.go.id:443"
 echo -e ""
-menuinfo
+
+
