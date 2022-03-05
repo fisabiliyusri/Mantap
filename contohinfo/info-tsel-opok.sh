@@ -1,5 +1,6 @@
 #!/bin/bash
 domain=$(cat /etc/xray/domain)
+clear
 
 echo -e "Info Opok Tsel:"
 echo -e "Methode SSL/TLS Websocket Bug Cloudflare"
