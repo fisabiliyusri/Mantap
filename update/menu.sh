@@ -27,8 +27,8 @@ echo -e "$yy 16$y. UPDATE MENU (2x)$wh"
 echo -e "$yy 17$y. SL-FIX (Perbaiki Error SSLH+WS-TLS setelah reboot)$wh"
 echo -e "$yy 18$y. Settings (Pengaturan)$wh"
 echo -e "$yy 19$y. Exit (Keluar)$wh"
-echo -e "$yy 20$y. Salin Repo Script Mantap$wh"
-echo -e "$yy 21$y. Menu Info$wh"
+echo -e "$yy 20$y. copyrepo (Salin Repo Script Mantap)$wh"
+echo -e "$yy 21$y. menuinfo (Untuk Mendapatkan Informasi)$wh"
 echo -e "$y-------------------------------------------------$wh"
 read -p "Select From Options [ 1 - 21 ] : " menu
 case $menu in
