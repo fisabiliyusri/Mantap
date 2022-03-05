@@ -9,4 +9,5 @@ echo -e "v27.tiktokcdn.com"
 echo -e "Server Remote:"
 echo -e "v27.tiktokcdn.com:443"
 echo -e ""
-menuinfo
+
+
