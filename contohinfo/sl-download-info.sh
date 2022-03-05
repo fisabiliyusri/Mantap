@@ -21,5 +21,3 @@ chmod +x info-exra-unli
 chmod +x info-tsel-opok
 chmod +x info-status-respon
 
-cd
-cd /root/
