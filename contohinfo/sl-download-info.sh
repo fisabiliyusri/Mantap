@@ -2,6 +2,13 @@
 
 cd /usr/bin
 
+rm info-cek-tersedia
+rm info-contoh-payload
+rm info-contohws
+rm info-exra-unli
+rm info-tsel-opok
+rm info-status-respon
+
 wget -O info-cek-tersedia "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/info-cek-tersedia.sh"
 
 wget -O info-contoh-payload "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/info-contoh-payload.sh"
