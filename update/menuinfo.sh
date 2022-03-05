@@ -16,7 +16,7 @@ echo -e "$yy 6$y. Info Status Respon Injeck $wh"
 echo -e "$yy 7$y. Menu$wh"
 echo -e "$yy 8$y. Exit$wh"
 echo -e "$y-------------------------------------------------------------$wh"
-read -p "Select From Options [ 1 - 7 ] : " menu
+read -p "Select From Options [ 1 - 8 ] : " menu
 echo -e ""
 case $menu in
 1)
