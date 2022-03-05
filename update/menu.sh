@@ -112,7 +112,7 @@ exit
 clear
 copyrepo
 ;;
-20)
+21)
 clear
 menuinfo
 ;;
