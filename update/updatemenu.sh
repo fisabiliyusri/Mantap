@@ -47,7 +47,9 @@ wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upd
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
 wget -O copyrepo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/salin/copyrepo.sh"
 wget -O slhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh"
+wget -O sl-download-info "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/sl-download-info.sh"
 
+chmod +x sl-download-info
 chmod +x slhost
 chmod +x copyrepo
 chmod +x menu
@@ -70,3 +72,4 @@ chmod +x setmenu
 chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
+sl-download-info
