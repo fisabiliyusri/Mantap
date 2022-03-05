@@ -1,4 +1,5 @@
 #!/bin/bash
+clear
 
 echo -e "STATUS RESPON WAKTU INJECK BUG,SSH,VPN"
 echo -e "301/302 = berarti BUG/PAYLOAD/Port nya di BLOKIR sementara oleh ISP"
