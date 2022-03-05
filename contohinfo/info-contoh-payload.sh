@@ -14,3 +14,4 @@ echo -e "GET wss://bugcdncom/ HTTP/1.1[crlf]Host: domainsshcom[crlf]Upgrade: web
 echo -e "CONTOH YANG SALAH"
 echo -e "GET wss://bugcdncom/HTTP/1.1[crlf]Host:domainsshcom[crlf]Upgrade: websocket[crlf][crlf]"
 echo -e ""
+menuinfo
