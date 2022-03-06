@@ -280,6 +280,10 @@ sudo apt autoclean && sudo apt autoremove
 
 • Restore Data ALL Service
 
+• Auto Fix
+
+• Auto Update
+
 ### Os Supported
 
 • Debian 10 & 9
@@ -376,5 +380,8 @@ sudo apt autoclean && sudo apt autoremove
 
 • White Label
 
+• Auto Fix
+
+• Auto Update
 
 
