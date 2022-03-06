@@ -8,7 +8,10 @@ read -e pwe;
 usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
 echo -e "Masukan Nama User Akun Baru";
 read -e crot;
-sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
+sudo useradd -ms /bin/bash -b /home/$crot $crot;
+usermod -aG sudo $crot;
+echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers
+# sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
 usermod -p `perl -e "print crypt("$pwe","Q4")"` crot;
 clear;
 printf "Mohon Simpan Informasi Akun VPS Ini
