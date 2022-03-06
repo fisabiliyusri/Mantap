@@ -240,9 +240,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • SSH & OpenVPN
 
-• SSH Websocket SSH (Cloudflare)
+• Websocket SSH (Cloudflare)
 
-• SSH Websocket OpenVPN (Cloudflare)
+• Websocket OpenVPN (Cloudflare)
 
 • SSLH
 
