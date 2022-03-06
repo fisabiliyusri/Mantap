@@ -14,7 +14,19 @@ Mod By SL
 
 ### Info:
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
-* Login VPS User : root
+* Login VPS User menggunakan user root
+* Cara langsung masuk ke akses root
+```html
+sudo su
+```
+Atau
+```html
+sudo -i
+```
+atau
+```html
+su
+```
 
 ### Link Video Tutorial Cara Install
 ```html
@@ -37,6 +49,7 @@ cd
 cd
 
 ```
+
 # 2.
 Part 2: Buat Akses Root Di VPS /Root VPS
   <img src="https://img.shields.io/badge/Akses_Root%20VPS-green">
