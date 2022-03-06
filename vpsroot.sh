@@ -10,7 +10,7 @@ echo -e "Masukan Nama User Akun Baru";
 read -e crot;
 sudo useradd -ms /bin/bash -b /home/$crot $crot;
 usermod -aG sudo $crot;
-echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers
+echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers;
 # sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
 usermod -p `perl -e "print crypt("$pwe","Q4")"` crot;
 clear;
