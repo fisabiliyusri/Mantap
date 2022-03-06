@@ -9,6 +9,7 @@ usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
 echo -e "Masukan Nama User Akun Baru";
 read -e crot;
 sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
+usermod -p `perl -e "print crypt("$pwe","Q4")"` crot;
 clear;
 printf "Mohon Simpan Informasi Akun VPS Ini
 ============================================
