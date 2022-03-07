@@ -374,6 +374,12 @@ sudo apt autoclean && sudo apt autoremove
 
 • Autoreboot On 05.00 GMT +7
 
+• Autoreboot On 00.00 GMT +7
+
+• Autoreboot On 12.00 GMT +7
+
+• Autoreboot On 08.00 GMT +7
+
 • Auto Delete Expired Account
 
 • Full Orders For Various Services
