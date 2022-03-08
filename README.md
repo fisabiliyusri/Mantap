@@ -93,7 +93,7 @@ cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.co
 ```html
 reboot
  ```
-
+### MENU, INFO ,UPDATE ,FIX
 ### 5
 * untuk menampilkan menu
 ```html
