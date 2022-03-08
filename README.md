@@ -77,8 +77,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 * • jika tidak bisa login di vps ,gunakan port ssh
 * • 22, 2253
 
-### MENU, INFO ,UPDATE ,FIX
-### 5
+
+### 5. MENU, INFO ,UPDATE ,FIX
 * untuk menampilkan menu
 ```html
 menu
@@ -96,11 +96,11 @@ sl-fix
 slhost
 ```
 
-### NOTE : FIX ERROR SSLH WS
+### 6. FIX ERROR SSLH WS
 # Auto Fix Error SSLH + WS-TLS 443
 * 1 • Jika terjadi error di SSLH dan SSH WS-TLS nya,gunakan script ini untuk memperbaiki nya
 ```html
-cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix" && chmod +x sl-fix && cd && updatemenu && menu
+menu
  ```
 
 * 2 • di menu lalu pilih 17 (SL-FIX Menu)
