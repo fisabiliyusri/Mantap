@@ -87,13 +87,17 @@ menu
 ```html
 updatemenu
 ```
-* otomatis untuk memperbaiki error sslh ws-tls
+* otomatis untuk memperbaiki error SSLH, WS-TLS
 ```html
 sl-fix
 ```
-* otomatis untuk memperbaiki error sertifikat ssl/tls dan subdomain
+* otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
 ```html
 slhost
+```
+* untuk update Sertifikat SSL/TLS
+```html
+certv2ray
 ```
 
 ### 6. FIX ERROR SSLH WS
