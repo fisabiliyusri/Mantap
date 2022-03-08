@@ -94,8 +94,27 @@ cd /usr/bin/ && rm -f sl-fix && wget -O sl-fix "https://raw.githubusercontent.co
 reboot
  ```
 
+### 5
+* untuk menampilkan menu
+```html
+menu
+```
+* untuk update menu dan update info
+```html
+updatemenu
+```
+* otomatis untuk memperbaiki error sslh ws-tls
+```html
+sl-fix
+```
+* otomatis untuk memperbaiki error sertifikat ssl/tls dan subdomain
+```html
+slhost
+```
 
-
+*
+*
+*
 ### 99.
 
 # (Manual) Fix Stunnel5 Error
