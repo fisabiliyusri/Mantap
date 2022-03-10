@@ -93,6 +93,7 @@ apt-get remove --purge exim4 -y
 
 # install wget and curl
 apt -y install wget curl
+apt -y install net-tools
 
 # Install Requirements Tools
 apt install ruby -y
