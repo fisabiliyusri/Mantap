@@ -92,6 +92,7 @@ updatemenu
 sl-fix
 ```
 * otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
+* perbaiki error di bagian acme domain
 ```html
 slhost
 ```
