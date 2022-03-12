@@ -27,6 +27,7 @@ rm -rf copyrepo
 cd /usr/bin
 rm -rf menu
 rm -rf menuinfo
+wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
 wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
 wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
@@ -55,6 +56,7 @@ wget -O grpc2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/
 wget -O grpcupdate2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate2.sh"
 wget -O grpcmenu2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu2.sh"
 
+chmod +x restart
 chmod +x grpcmenu2
 chmod +x grpc2
 chmod +x sl-download-info
