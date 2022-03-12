@@ -26,6 +26,8 @@ systemctl restart ws-nontls
 systemctl restart xray.service
 systemctl restart sl-vless-grpc
 systemctl restart sl-vmess-grpc
+systemctl restart fb-vmess-grpc
+systemctl restart fb-vless-grpc
 systemctl restart shadowsocks-libev
 systemctl restart xl2tpd
 systemctl restart pptpd
