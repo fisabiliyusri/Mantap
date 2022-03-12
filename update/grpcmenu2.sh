@@ -31,7 +31,7 @@ fb-renewgrpc
 fb-cekgrpc
 ;;
 5)
-fb-grpcupdate
+grpcupdate2
 ;;
 6)
 clear
