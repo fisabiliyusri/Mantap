@@ -45,7 +45,7 @@ cat > /etc/xray/$user-tls.json << EOF
 }
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
-vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
+##vmesslink#1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
 vmesslink1="vmess://${uuid}@${domain}:${tls}/?type=grpc&encryption=auto&serviceName=GunService&security=tls&sni=${domain}#$user"
 vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${domain}#$user"
 systemctl restart fb-vmess-grpc.service
@@ -64,7 +64,8 @@ echo -e "Alter ID          : 0"
 echo -e "Mode              : Gun"
 echo -e "Security          : TLS"
 echo -e "Type              : grpc"
-echo -e "Service Name      : GunService"
+echo -e "Jaringan          : GRPC"
+echo -e "Service Name gRPC : GunService"
 echo -e "SNI               : ${domain}"
 echo -e "================================="
 echo -e "Link VMess GRPC  : "
