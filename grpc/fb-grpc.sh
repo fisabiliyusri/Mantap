@@ -184,6 +184,7 @@ cat > /etc/xray/fb-vlessgrpc.json << END
                 "tlsSettings": {
                     "serverName": "${domain}",
                     "alpn": [
+                        "http/1.1",
                         "h2"
                     ],
                     "certificates": [
