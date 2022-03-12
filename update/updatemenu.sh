@@ -61,6 +61,7 @@ wget -O grpcmenu2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/u
 chmod +x restart
 chmod +x grpcmenu2
 chmod +x grpc2
+chmod +x grpcupdate2
 chmod +x sl-download-info
 chmod +x menuinfo
 chmod +x slhost
