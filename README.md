@@ -123,10 +123,12 @@ reboot
 *
 *
 ### 69.
-* Fix gRPC untuk FB Lite,Sosmed,etc..
-Pengaturan DNS
-Remote DNS:
+# Fix gRPC untuk FB Lite,Sosmed,etc..
+* Pengaturan DNS
+* Remote DNS:
+```html
 dns.google
+```
 
 *
 *
