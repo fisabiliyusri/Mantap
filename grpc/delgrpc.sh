@@ -31,7 +31,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/sl-vmessgrpc.json")
 		echo "You have no existing clients!"
 		exit 1
 	fi
-	done
 	
 NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/sl-vlessgrpc.json")
 	if [[ ${NUMBER_OF_CLIENTS} == '0' ]]; then
@@ -39,7 +38,6 @@ NUMBER_OF_CLIENTS=$(grep -c -E "^### " "/etc/xray/sl-vlessgrpc.json")
 		echo "You have no existing clients!"
 		exit 1
 	fi
-	done
 	
 	clear
 	echo ""
