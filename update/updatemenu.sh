@@ -53,7 +53,9 @@ wget -O sl-download-info "https://raw.githubusercontent.com/fisabiliyusri/Mantap
 wget -O menuinfo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menuinfo.sh"
 wget -O grpc2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-grpc.sh"
 wget -O grpcupdate2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate2.sh"
+wget -O grpcmenu2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu2.sh"
 
+chmod +x grpcmenu2
 chmod +x grpc2
 chmod +x sl-download-info
 chmod +x menuinfo
