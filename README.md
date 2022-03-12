@@ -122,9 +122,18 @@ reboot
 *
 *
 *
+### 69.
+* Fix gRPC untuk FB Lite,Sosmed,etc..
+Pengaturan DNS
+Remote DNS:
+dns.google
+
+*
+*
+*
 ### 99.
 
-# (Manual) Fix Stunnel5 Error
+# (Fix Manual) Fix Stunnel5 Error
 * buat domain baru(bash slhost.sh)
 ```html
 cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
@@ -155,7 +164,7 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.
 certv2ray
  ```
 
-### 100 (manual) Fix Error SSLH & Fix Error SSH WS-TLS
+### 100 (Fix manual) Fix Error SSLH & Fix Error SSH WS-TLS
 
 * Perbaiki sslh yang error di vps yang tidak support sslh
 * khusus yang vps nya tidak support sslh
@@ -362,9 +371,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • XRAYS Trojan            : 2083
 
-• XRAYS Vmess GRPC TLS    : 1180
+• XRAYS Vmess GRPC TLS    : 1180,3380
 
-• XRAYS Vless GRPC TLS    : 2280
+• XRAYS Vless GRPC TLS    : 2280,4480
 
 • OHP SSH                 : 8181
 
