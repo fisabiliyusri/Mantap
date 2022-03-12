@@ -52,6 +52,7 @@ wget -O slhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/
 wget -O sl-download-info "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/sl-download-info.sh"
 wget -O menuinfo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menuinfo.sh"
 wget -O grpc2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-grpc.sh"
+wget -O grpcupdate2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate2.sh"
 
 chmod +x grpc2
 chmod +x sl-download-info
