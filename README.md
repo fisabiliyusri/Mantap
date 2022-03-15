@@ -95,6 +95,10 @@ updatemenu
 ```html
 sl-fix
 ```
+```html
+reboot
+```
+*
 * otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
 * perbaiki error di bagian acme domain
 ```html
@@ -104,6 +108,12 @@ slhost
 ```html
 certv2ray
 ```
+```html
+restart
+```
+*
+*
+*
 
 ### 6. FIX ERROR SSLH WS
 # Auto Fix Error SSLH + WS-TLS 443
