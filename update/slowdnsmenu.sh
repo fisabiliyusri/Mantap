@@ -94,7 +94,7 @@ Opcao9 () {
 
 Opcao10 () {
     clear
-    wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/Slowdns/main/Slowdns/update
+    wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/Slowdns/update
     chmod +x update
     bash update
 }

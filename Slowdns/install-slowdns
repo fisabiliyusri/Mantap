@@ -1,0 +1,9 @@
+# test dulu bro
+apt update -y
+apt install -y python3 python3-dnslib net-tools
+apt install ncurses-utils -y
+apt install dnsutils -y
+apt install golang -y
+apt install git -y
+apt install curl -y
+apt install wget -y

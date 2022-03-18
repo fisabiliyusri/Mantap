@@ -93,6 +93,7 @@ apt-get remove --purge exim4 -y
 
 # install wget and curl
 apt -y install wget curl
+apt -y install net-tools
 
 # Install Requirements Tools
 apt install ruby -y
@@ -170,6 +171,8 @@ screen -dmS badvpn badvpn-udpgw --listen-addr 127.0.0.1:7300 --max-clients 500
 # setting port ssh
 sed -i 's/Port 22/Port 22/g' /etc/ssh/sshd_config
 sed -i '/Port 22/a Port 2253' /etc/ssh/sshd_config
+echo "Port 22" >> /etc/ssh/sshd_config
+echo "Port 42" >> /etc/ssh/sshd_config
 /etc/init.d/ssh restart
 
 # install dropbear
@@ -181,11 +184,11 @@ echo "/bin/false" >> /etc/shells
 echo "/usr/sbin/nologin" >> /etc/shells
 /etc/init.d/dropbear restart
 
-# install squid
+# install squid (proxy nya aku matikan)
 cd
-apt -y install squid3
-wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
-sed -i $MYIP2 /etc/squid/squid.conf
+#apt -y install squid3
+#wget -O /etc/squid/squid.conf "https://${akbarvpn}/squid3.conf"
+#sed -i $MYIP2 /etc/squid/squid.conf
 
 # Install SSLH
 apt -y install sslh
@@ -439,7 +442,9 @@ wget -O setmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/upd
 wget -O slowdnsmenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/slowdnsmenu.sh"
 wget -O running "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/running.sh"
 wget -O updatemenu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/updatemenu.sh"
+wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
 
+chmod +x sl-fix
 chmod +x ipsaya
 chmod +x sshovpnmenu
 chmod +x l2tpmenu
@@ -515,6 +520,13 @@ chmod +x renewtrgo
 chmod +x cektrgo
 echo "0 5 * * * root clearlog && reboot" >> /etc/crontab
 echo "0 0 * * * root xp" >> /etc/crontab
+echo "0 1 * * * root delexp" >> /etc/crontab
+echo "10 4 * * * root clearlog && sslh-fix-reboot" >> /etc/crontab
+echo "0 0 * * * root clearlog && reboot" >> /etc/crontab
+echo "0 12 * * * root clearlog && reboot" >> /etc/crontab
+echo "0 18 * * * root clearlog && reboot" >> /etc/crontab
+
+
 # remove unnecessary files
 cd
 apt autoclean -y

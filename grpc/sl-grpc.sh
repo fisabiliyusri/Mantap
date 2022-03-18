@@ -156,8 +156,6 @@ User=root
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vmessgrpc.json
 RestartPreventExitStatus=23
-LimitNPROC=10000
-LimitNOFILE=1000000
 
 [Install]
 WantedBy=multi-user.target
@@ -174,8 +172,6 @@ User=root
 NoNewPrivileges=true
 ExecStart=/usr/local/bin/xray -config /etc/xray/sl-vlessgrpc.json
 RestartPreventExitStatus=23
-LimitNPROC=10000
-LimitNOFILE=1000000
 
 [Install]
 WantedBy=multi-user.target

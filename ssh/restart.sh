@@ -15,12 +15,19 @@ clear
 echo -e ""
 echo -e "Starting Restart All Service"
 sleep 2
+systemctl stop ws-tls
+systemctl start sslh
+systemctl restart sslh
+/etc/init.d/sslh start
+/etc/init.d/sslh restart
 systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart xray.service
 systemctl restart sl-vless-grpc
 systemctl restart sl-vmess-grpc
+systemctl restart fb-vmess-grpc
+systemctl restart fb-vless-grpc
 systemctl restart shadowsocks-libev
 systemctl restart xl2tpd
 systemctl restart pptpd
@@ -37,6 +44,7 @@ systemctl restart trojan-go
 /etc/init.d/dropbear restart
 /etc/init.d/sslh restart
 /etc/init.d/stunnel5 restart
+/etc/init.d/stunnel4 restart
 /etc/init.d/openvpn restart
 /etc/init.d/fail2ban restart
 /etc/init.d/cron restart
