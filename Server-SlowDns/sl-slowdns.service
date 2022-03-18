@@ -1,5 +1,5 @@
 [Unit]
-Description=SlowDNS By SL, nameserver=ns cloudflare
+Description=SlowDNS By SL, nameserver= isi dengan ns cloudflare
 Documentation=https://nekopoi.care
 After=network.target nss-lookup.target
 
