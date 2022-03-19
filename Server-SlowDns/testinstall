@@ -10,9 +10,11 @@ apt install grepcidr -y
 #install golang
 apt-get install golang -y
 
-#download scource slowdns
+#download scource slowdns plugin
+cd
 wget https://github.com/Mygod/dnstt/archive/refs/heads/plugin.zip
 unzip plugin.zip
+unzip dnstt-plugin.zip
 cd 
 
 cd dnstt/dnstt-server
