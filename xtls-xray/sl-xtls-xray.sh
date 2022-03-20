@@ -395,12 +395,15 @@ systemctl stop xtls-xray.service
 systemctl start xtls-xray.service
 systemctl enable xtls-xray.service
 systemctl restart xtls-xray.service
+
 #
 cd /usr/bin
 
 wget -O sl-addxtls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xtls-xray/sl-addxtls.sh"
 chmod +x sl-addxtls
 
+cd
+cp /root/domain /etc/xray
 cd
 cp /root/domain /etc/xray
 cd
