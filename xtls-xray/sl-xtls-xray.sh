@@ -360,8 +360,6 @@ RestartPreventExitStatus=23
 WantedBy=multi-user.target
 END
 
-
-
 # // Enable & Start Service
 # Accept port XTLS Xray
 iptables -I INPUT -m state --state NEW -m tcp -p tcp --dport 4369 -j ACCEPT
@@ -382,11 +380,5 @@ systemctl start xtls-xray.service
 systemctl enable xtls-xray.service
 systemctl restart xtls-xray.service
 
-#
-cd /usr/bin
-wget -O sl-addxtls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xtls-xray/sl-addxtls.sh"
-chmod +x sl-addxtls
-
 cd
 cp /root/domain /etc/xray
-cd
