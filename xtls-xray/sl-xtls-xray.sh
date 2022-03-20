@@ -73,7 +73,6 @@ path_key="/etc/xray/xray.key"
 # Buat Config XTLS Xray
 cat> /etc/xtls/config.json << END
 {
-      {
       "log": {
       "access": "/var/log/xtls/access.log",
       "error": "/var/log/xtls/error.log",
