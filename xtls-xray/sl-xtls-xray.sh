@@ -86,7 +86,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
   "inbounds": [
     {
       "port": 4369,
-      "protocol": "vmess",
+      "protocol": "vless",
       "settings": {
         "clients": [
           {
