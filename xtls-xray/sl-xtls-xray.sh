@@ -49,6 +49,7 @@ cd
 
 mkdir -p /var/log/xtls && chown -R root:root /var/log/xtls
 mkdir -p /usr/local/etc/xtls
+mkdir -p /etc/xtls
 # Make Folder XRay
 mkdir -p /var/log/xray/
 #
@@ -69,8 +70,8 @@ uuid=$(cat /proc/sys/kernel/random/uuid)
 path_crt="/etc/xray/xray.crt"
 path_key="/etc/xray/xray.key"
 
-# Buat Config Xray
-cat > /etc/xray/sl-xtls-xray.json << END
+# Buat Config XTLS Xray
+cat> /etc/xtls/config.json << END
 {
       {
       "log": {
@@ -351,7 +352,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/sl-xtls-xray.json
+ExecStart=/usr/bin/xray/xray -config /etc/xtls/config.json
 Restart=on-failure
 RestartPreventExitStatus=23
 
