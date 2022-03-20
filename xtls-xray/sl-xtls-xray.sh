@@ -63,12 +63,47 @@ path_key="/etc/xray/xray.key"
 cat > /etc/xray/sl-xtls-xray.json << END
 
 {
-  "log": {
-    "access": "/var/log/xray/access.log",
-    "error": "/var/log/xray/error.log",
-    "loglevel": "info"
-  },
-  "inbounds": [
+    "log": {
+            "access": "/var/log/xray/access5.log",
+        "error": "/var/log/xray/error.log",
+        "loglevel": "info"
+    },
+    "inbounds": [
+        {
+            "port": 3380,
+            "protocol": "vmess",
+            "settings": {
+                "clients": [
+                    {
+                        "id": "${uuid}"
+			"flow": "xtls-rprx-direct"
+#xray-vmess-grpc-xtls
+                    }
+                ],
+                "decryption": "none"
+            },
+            "streamSettings": {
+                "network": "gun",
+                "security": "xtls",
+                "xtlsSettings": {
+                    "serverName": "${domain}",
+                    "alpn": [
+                        "http/1.1",
+                        "h2"
+                    ],
+                    "certificates": [
+                        {
+                            "certificateFile": "/etc/xray/xray.crt",
+                            "keyFile": "/etc/xray/xray.key"
+                        }
+                    ]
+                },
+                "grpcSettings": {
+                    "serviceName": "GunService"
+                }
+            }
+        }
+    ],
     {
       "port": 4369,
       "protocol": "vless",
@@ -87,8 +122,8 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "xtlsSettings": {
 	"certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key}"
             }
           ]
         },
@@ -109,7 +144,6 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "clients": [
           {
             "id": "${uuid1}",
-            "alterId": 0",
 	    "flow": "xtls-rprx-direct"
 #xray-vmess-grpc-xtls
           }
