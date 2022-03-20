@@ -1,0 +1,16 @@
+[Unit]
+Description=SlowDNS By SL, nameserver= isi dengan ns cloudflare
+Documentation=https://nekopoi.care
+After=network.target nss-lookup.target
+
+[Service]
+Type=simple
+User=root
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
+NoNewPrivileges=true
+ExecStart=/etc/slowdns/dnstt-server -udp :53 -privkey-file /root/server.key $nameserver 127.0.0.1:22
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
