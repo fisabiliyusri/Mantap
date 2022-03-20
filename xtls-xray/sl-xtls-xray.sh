@@ -85,11 +85,6 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "network": "gun",
         "security": "xtls",
         "xtlsSettings": {
-          "serverName": "${domain}",
-	  "alpn": [
-	  	"http/1.1",
-		"h2"
-	],
 	"certificates": [
             {
               "certificateFile": "${path_crt}",
@@ -124,11 +119,6 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "network": "gun",
         "security": "xtls",
         "xtlsSettings": {
-          "serverName": "${domain}",
-	  "alpn": [
-	  	"http/1.1",
-		"h2"
-	],
 	"certificates": [
             {
               "certificateFile": "${path_crt}",
