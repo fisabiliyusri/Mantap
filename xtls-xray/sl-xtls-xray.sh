@@ -1,18 +1,7 @@
 #!/bin/bash
-# Script By SL
-# XTLS XRAY SL
-# =====================================================
-
-# Color
-RED='\033[0;31m'
-NC='\033[0m'
-GREEN='\033[0;32m'
-ORANGE='\033[0;33m'
-BLUE='\033[0;34m'
-PURPLE='\033[0;35m'
-CYAN='\033[0;36m'
-LIGHT='\033[0;37m'
-
+# XRay Installation
+# SL Script
+# ==================================
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
 domain=$(cat /etc/xray/domain)
@@ -35,6 +24,9 @@ latest_version="$(curl -s https://api.github.com/repos/XTLS/Xray-core/releases |
 # / / Installation Xray Core
 xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
 
+# 
+uuid=$(cat /proc/sys/kernel/random/uuid)
+
 # / / Make Main Directory
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
@@ -48,18 +40,11 @@ chmod +x /usr/local/bin/xray
 
 # Make Folder XRay
 mkdir -p /var/log/xray/
+#
+wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geosite.dat"
+wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geoip.dat"
 
-sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
-cd /root/
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
-bash acme.sh --install
-rm acme.sh
-cd .acme.sh
-bash acme.sh --register-account -m senowahyu62@gmail.com
-bash acme.sh --issue --standalone -d $domain --force
-bash acme.sh --installcert -d $domain --fullchainpath /etc/xray/xray.crt --keypath /etc/xray/xray.key
-
-service squid start
+#
 uuid7=$(cat /proc/sys/kernel/random/uuid)
 uuid1=$(cat /proc/sys/kernel/random/uuid)
 uuid2=$(cat /proc/sys/kernel/random/uuid)
