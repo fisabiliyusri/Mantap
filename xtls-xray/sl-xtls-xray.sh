@@ -38,6 +38,17 @@ unzip -q xray.zip && rm -rf xray.zip
 mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 
+}
+mkdir -p /usr/bin/xray
+cd /usr/bin/xray
+wget -q -O /usr/bin/xray/x.zip "https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
+unzip -o x.zip > /dev/null 2>&1
+rm -f x.zip
+cd
+}
+
+mkdir -p /var/log/xtls && chown -R root:root /var/log/xtls
+mkdir -p /usr/local/etc/xtls
 # Make Folder XRay
 mkdir -p /var/log/xray/
 #
@@ -61,54 +72,20 @@ path_key="/etc/xray/xray.key"
 # Buat Config Xray
 cat > /etc/xray/sl-xtls-xray.json << END
 {
-    "log": {
-            "access": "/var/log/xray/access5.log",
-        "error": "/var/log/xray/error.log",
-        "loglevel": "info"
+      {
+      "log": {
+      "access": "/var/log/xtls/access.log",
+      "error": "/var/log/xtls/error.log",
+      "loglevel": "info"
     },
     "inbounds": [
-        {
-            "port": 3380,
-            "protocol": "vmess",
-            "settings": {
-                "clients": [
-                    {
-                        "id": "${uuid}"
-			"flow": "xtls-rprx-direct"
-#xray-vmess-grpc-xtls
-                    }
-                ],
-                "decryption": "none"
-            },
-            "streamSettings": {
-                "network": "gun",
-                "security": "xtls",
-                "xtlsSettings": {
-                    "serverName": "${domain}",
-                    "alpn": [
-                        "http/1.1",
-                        "h2"
-                    ],
-                    "certificates": [
-                        {
-                            "certificateFile": "/etc/xray/xray.crt",
-                            "keyFile": "/etc/xray/xray.key"
-                        }
-                    ]
-                },
-                "grpcSettings": {
-                    "serviceName": "GunService"
-                }
-            }
-        }
-    ],
-    {
+      {
       "port": 4369,
       "protocol": "vless",
       "settings": {
         "clients": [
           {
-            "id": "${uuid1}",
+            "id": "$(cat /proc/sys/kernel/random/uuid)",
 	    "flow": "xtls-rprx-direct"
 #xray-vless-grpc-xtls
           }
@@ -121,7 +98,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
 	"certificates": [
             {
               "certificateFile": "/etc/xray/xray.crt",
-              "keyFile": "/etc/xray/xray.key}"
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -141,7 +118,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
       "settings": {
         "clients": [
           {
-            "id": "${uuid1}",
+            "id": "$(cat /proc/sys/kernel/random/uuid)",
 	    "flow": "xtls-rprx-direct"
 #xray-vmess-grpc-xtls
           }
@@ -153,8 +130,8 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "xtlsSettings": {
 	"certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -174,7 +151,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
       "settings": {
         "clients": [
           {
-            "id": "${uuid1}",
+            "id": "(cat /proc/sys/kernel/random/uuid)",
             "alterId": 0",
 	    "flow": "xtls-rprx-direct"
 #xray-vmess-ws-xtls
@@ -187,8 +164,8 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "xtlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -210,7 +187,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
       "settings": {
         "clients": [
           {
-            "id": "${uuid3}",
+            "id": "$(cat /proc/sys/kernel/random/uuid)",
 	    "flow": "xtls-rprx-direct"
 #xray-vless-ws-xtls
           }
@@ -223,8 +200,8 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "xtlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ]
         },
@@ -254,7 +231,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
       "settings": {
         "clients": [
           {
-            "password": "${uuid5}",
+            "password": "$(cat /proc/sys/kernel/random/uuid)",
 	    "flow": "xtls-rprx-direct"
 #xray-trojan-tcp-xtls
           }
@@ -271,8 +248,8 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "xtlsSettings": {
           "certificates": [
             {
-              "certificateFile": "${path_crt}",
-              "keyFile": "${path_key}"
+              "certificateFile": "/etc/xray/xray.crt",
+              "keyFile": "/etc/xray/xray.key"
             }
           ],
           "alpn": [
