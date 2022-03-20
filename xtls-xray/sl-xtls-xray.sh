@@ -59,9 +59,7 @@ path_crt="/etc/xray/xray.crt"
 path_key="/etc/xray/xray.key"
 
 # Buat Config Xray
-
 cat > /etc/xray/sl-xtls-xray.json << END
-
 {
     "log": {
             "access": "/var/log/xray/access5.log",
