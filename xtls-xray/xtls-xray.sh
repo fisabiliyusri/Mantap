@@ -226,11 +226,6 @@ cat> /etc/xray/xtls.json << END
 	    "flow": "xtls-rprx-direct"
 #xray-trojan-tcp-xtls
           }
-        ],
-        "fallbacks": [
-          {
-            "dest": 80
-          }
         ]
       },
       "streamSettings": {
@@ -365,10 +360,9 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
-systemctl stop xtls-xray.service
-systemctl start xtls-xray.service
-systemctl enable xtls-xray.service
-systemctl restart xtls-xray.service
-
-cd
-cp /root/domain /etc/xray
+systemctl enable xtls-xray
+systemctl stop xtls-xray
+systemctl start xtls-xray
+systemctl enable xtls-xray
+systemctl start xtls-xray
+systemctl restart xtls-xray
