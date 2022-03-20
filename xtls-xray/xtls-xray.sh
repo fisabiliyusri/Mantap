@@ -38,15 +38,6 @@ unzip -q xray.zip && rm -rf xray.zip
 mv xray /usr/local/bin/xray
 chmod +x /usr/local/bin/xray
 
-}
-mkdir -p /usr/bin/xray
-cd /usr/bin/xray
-wget -q -O /usr/bin/xray/x.zip "https://github.com/XTLS/Xray-core/releases/download/v$latest_version/xray-linux-64.zip"
-unzip -o x.zip > /dev/null 2>&1
-rm -f x.zip
-cd
-}
-
 mkdir -p /var/log/xtls && chown -R root:root /var/log/xtls
 mkdir -p /usr/local/etc/xtls
 mkdir -p /etc/xtls
@@ -71,7 +62,7 @@ path_crt="/etc/xray/xray.crt"
 path_key="/etc/xray/xray.key"
 
 # Buat Config XTLS Xray
-cat> /etc/xtls/config.json << END
+cat> /etc/xray/xtls.json << END
 {
       "log": {
       "access": "/var/log/xtls/access.log",
@@ -351,7 +342,7 @@ User=root
 CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 AmbientCapabilities=CAP_NET_ADMIN CAP_NET_BIND_SERVICE
 NoNewPrivileges=true
-ExecStart=/usr/bin/xray/xray -config /etc/xtls/config.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/xtls.json
 Restart=on-failure
 RestartPreventExitStatus=23
 
