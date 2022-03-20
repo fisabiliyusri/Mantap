@@ -91,7 +91,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "clients": [
           {
             "id": "${uuid1}",
-			"flow": "xtls-rprx-direct"
+	    "flow": "xtls-rprx-direct"
 #xray-vless-grpc-xtls
           }
         ]
@@ -101,11 +101,11 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "security": "xtls",
         "xtlsSettings": {
           "serverName": "${domain}",
-		  "alpn": [
-			"http/1.1",
-			"h2"
-		],
-		  "certificates": [
+	  "alpn": [
+	  	"http/1.1",
+		"h2"
+	],
+	"certificates": [
             {
               "certificateFile": "${path_crt}",
               "keyFile": "${path_key}"
@@ -117,7 +117,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "httpSettings": {},
         "wsSettings": {},
         "quicSettings": {},
-		"grpcSettings": {
+	"grpcSettings": {
             "serviceName": "GunService"
 		}
       }
@@ -130,7 +130,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
           {
             "id": "${uuid1}",
             "alterId": 0",
-			"flow": "xtls-rprx-direct"
+	    "flow": "xtls-rprx-direct"
 #xray-vmess-grpc-xtls
           }
         ]
@@ -140,11 +140,11 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "security": "xtls",
         "xtlsSettings": {
           "serverName": "${domain}",
-		  "alpn": [
-			"http/1.1",
-			"h2"
-		],
-		  "certificates": [
+	  "alpn": [
+	  	"http/1.1",
+		"h2"
+	],
+	"certificates": [
             {
               "certificateFile": "${path_crt}",
               "keyFile": "${path_key}"
@@ -156,7 +156,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "httpSettings": {},
         "wsSettings": {},
         "quicSettings": {},
-		"grpcSettings": {
+	"grpcSettings": {
             "serviceName": "GunService"
 		}
       }
@@ -169,7 +169,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
           {
             "id": "${uuid1}",
             "alterId": 0",
-			"flow": "xtls-rprx-direct"
+	    "flow": "xtls-rprx-direct"
 #xray-vmess-ws-xtls
           }
         ]
@@ -204,7 +204,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "clients": [
           {
             "id": "${uuid3}",
-			"flow": "xtls-rprx-direct"
+	    "flow": "xtls-rprx-direct"
 #xray-vless-ws-xtls
           }
         ],
@@ -248,7 +248,7 @@ cat > /etc/xray/sl-xtls-xray.json << END
         "clients": [
           {
             "password": "${uuid5}",
-			"flow": "xtls-rprx-direct"
+	    "flow": "xtls-rprx-direct"
 #xray-trojan-tcp-xtls
           }
         ],
@@ -355,6 +355,7 @@ END
 
 
 # / / Installation XTLS Xray Service
+systemctl daemon-reload
 cat > /etc/systemd/system/xtls-xray.service << END
 [Unit]
 Description=XTLS Xray Service Create By SL
@@ -398,12 +399,9 @@ systemctl restart xtls-xray.service
 
 #
 cd /usr/bin
-
 wget -O sl-addxtls "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xtls-xray/sl-addxtls.sh"
 chmod +x sl-addxtls
 
-cd
-cp /root/domain /etc/xray
 cd
 cp /root/domain /etc/xray
 cd
