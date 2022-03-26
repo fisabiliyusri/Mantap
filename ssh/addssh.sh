@@ -15,6 +15,7 @@ LIGHT='\033[0;37m'
 
 domain=$(cat /etc/xray/domain)
 sldomain=$(cat /root/nsdomain)
+cdndomain=$(cat /root/awscdndomain)
 slkey=$(cat /root/.dns/server.pub)
 clear
 read -p "Username : " Login
@@ -53,7 +54,7 @@ echo -e "NS (SlowDNS)        : $sldomain"
 echo -e "DNS PUBLIC KEY      : $slkey"
 echo -e "=============Host============="
 echo -e "Host Domain (SSH)   : $domain"
-echo -e "Host CloudFront     : "
+echo -e "CloudFront(AWS CDN) : $cdndomain"
 echo -e "Host SlowDNS (NS)   : $sldomain"
 echo -e "=========Service Port========="
 echo -e "OpenSSH             : 22"
