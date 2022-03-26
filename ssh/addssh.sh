@@ -14,6 +14,8 @@ LIGHT='\033[0;37m'
 # Getting
 
 domain=$(cat /etc/xray/domain)
+sldomain=$(cat /root/nsdomain)
+slkey=$(cat /root/.dns/server.pub)
 clear
 read -p "Username : " Login
 read -p "Password : " Pass
@@ -45,6 +47,15 @@ echo -e "IP/Host             : $IP"
 echo -e "Domain              : $domain"
 echo -e "Username            : $Login"
 echo -e "Password            : $Pass"
+echo -e "Created             : $hariini"
+echo -e "Expired             : $expi"
+echo -e "NS (SlowDNS)        : $sldomain"
+echo -e "DNS PUBLIC KEY      : $slkey
+echo -e "=============Host============="
+echo -e "Host Domain         : $domain"
+echo -e "Host CloudFront     : "
+echo -e "Host SlowDNS        : $sldomain"
+echo -e "=========Service Port========="
 echo -e "OpenSSH             : 22"
 echo -e "Dropbear            : 443, 109, 143"
 echo -e "SSL/TLS             :$ssl"
@@ -54,7 +65,6 @@ echo -e "OHP Dropbear        : 8282"
 echo -e "OHP OpenVPN         : 8383"
 echo -e "SSH Websocket SSL   : 443"
 echo -e "SSH Websocket HTTP  : 8880"
-echo -e "Host CloudFront     : "
 echo -e "CloudFront Websocket: "
 echo -e "OVPN Websocket      : 2086"
 echo -e "OVPN Port TCP       : $ovpn"
@@ -64,8 +74,6 @@ echo -e "OVPN TCP            : http://$IP:89/tcp.ovpn"
 echo -e "OVPN UDP            : http://$IP:89/udp.ovpn"
 echo -e "OVPN SSL            : http://$IP:89/ssl.ovpn"
 echo -e "BadVpn              : 7100-7200-7300"
-echo -e "Created             : $hariini"
-echo -e "Expired             : $expi"
 echo -e "=============================="
 echo -e "Payload Websocket SSL/TLS"
 echo -e "=============================="
