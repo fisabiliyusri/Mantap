@@ -6,14 +6,14 @@ clear;
 echo -e "Masukkan Password:";
 read -e pwe;
 usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
-echo -e "Masukan Nama User Akun Baru";
-read -p "Password : " Pass
-read -e crot;
-sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
-echo -e "$Pass\n$Pass\n"|passwd $crot &> /dev/null
-usermod -p `perl -e "print crypt("$Pass","Q4")"` $crot;
-usermod -aG sudo $crot;
-echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers;
+#echo -e "Masukan Nama User Akun Baru";
+#read -p "Password : " Pass
+#read -e crot;
+#sudo useradd -s /bin/bash -d /home/$crot/ -m -G sudo $crot;
+#echo -e "$Pass\n$Pass\n"|passwd $crot &> /dev/null
+#usermod -p `perl -e "print crypt("$Pass","Q4")"` $crot;
+#usermod -aG sudo $crot;
+#echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers;
 clear;
 printf "Mohon Simpan Informasi Akun VPS Ini
 ============================================
