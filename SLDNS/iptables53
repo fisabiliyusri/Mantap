@@ -1,0 +1,19 @@
+#!/bin/bash
+iptables -P INPUT ACCEPT
+iptables -P FORWARD ACCEPT
+iptables -P OUTPUT ACCEPT
+iptables -t nat -F
+iptables -t mangle -F
+iptables -F
+iptables -X
+
+#SLOWDNS 53
+iptables -t nat -A POSTROUTING -o eth0 -j MASQUERADE
+iptables -I INPUT -p udp --dport 53 -j ACCEPT 
+iptables -t nat -I PREROUTING -p udp --dport 53 -j REDIRECT --to-ports 53
+
+systemctl disable systemd-resolved.service && systemctl stop systemd-resolved.service && 
+mv /etc/resolv.conf /etc/resolv.conf.bkp && echo "nameserver 1.1.1.1" > /etc/resolv.conf
+systemctl enable systemd-resolved.service && systemctl start systemd-resolved.service
+systemctl stop systemd-resolved
+systemctl disable systemd-resolved
