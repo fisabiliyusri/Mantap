@@ -17,7 +17,7 @@ sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 SUB_DOMAIN=${sub}.akbar-store.me
 NS_DOMAIN=nsl${sub}.akbar-store.me
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
-echo "IP=""$SUB_DOMAIN" >> /root/nsdomain
+echo "$NS_DOMAIN" >> /root/nsdomain
 CF_ID=sandigaming01@gmail.com
 CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
