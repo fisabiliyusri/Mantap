@@ -22,6 +22,9 @@ Mod By SL
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
 * Login VPS User menggunakan user root
 * Cara langsung masuk ke akses root
+* VPS AKUN ROOT , BUKAN HP/DEVICE BODOH
+* TIDAK ADA HUBUNGAN NYA DENGAN HP/DEVICE(ANJENG LO)
+
 ```html
 sudo su
 ```
