@@ -39,6 +39,8 @@ cp /etc/shadowsocks-libev/akun.conf backup/ss.conf
 cp -r /var/lib/crot/ backup/crot
 cp -r /home/sstp backup/sstp
 cp -r /etc/xray backup/xray
+cp -r /root/nsdomain backup/nsdomain
+cp -r /etc/slowdns backup/slowdns
 cp -r /etc/trojan-go backup/trojan-go
 cp -r /usr/local/shadowsocksr/ backup/shadowsocksr
 cp -r /home/vps/public_html backup/public_html
