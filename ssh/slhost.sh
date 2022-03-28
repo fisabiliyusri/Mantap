@@ -8,13 +8,15 @@ rm -f /root/domain
 rm -f /etc/v2ray/domain
 rm -f /etc/xray/domain
 rm -rf /etc/xray/domain
+rm -rf /root/nsdomain
+rm nsdomain
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 cp /root/domain /etc/xray/
 
 DOMAIN=zerossl.my.id
 SUB_DOMAIN=${sub}.zerossl.my.id
-NS_DOMAIN=sldns${sub}.zerossl.my.id
+NS_DOMAIN=${sub}sldns.zerossl.my.id
 CF_ID=djarumpentol01@gmail.com
 CF_KEY=fef152f86c0cfc3197a097fb3f6ed3ba8a664
 #DOMAIN=akbar-store.me
