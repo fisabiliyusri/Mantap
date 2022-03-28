@@ -298,7 +298,7 @@ sudo apt autoclean && sudo apt autoremove
 • SSH Over DNS (SlowDNS)
 * untuk kecepatan nya di batasi
 * speed download 2,2 Mbps (Max Speed)
-* speed upload 100 Mbps (Max Speed)
+* speed upload 100+ Mbps (Max Speed)
 * Support semua port ssh
 
 ### Fitur Script
