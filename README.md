@@ -309,9 +309,9 @@ sudo apt autoclean && sudo apt autoremove
 
 • SSH Over DNS (SlowDNS)
 
-• SSH Websocket (Cloudflare)
+• SSH Over Websocket (Cloudflare)
 
-• OpenVPN Websocket (Cloudflare)
+• OpenVPN Over Websocket (Cloudflare)
 
 • SSLH
 
