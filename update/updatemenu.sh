@@ -27,10 +27,11 @@ rm -rf copyrepo
 cd /usr/bin
 rm -rf menu
 rm -rf menuinfo
+rm -rf restart
+rm -rf addssh
 wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
-rm -rf restart
-wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
+wget -O addssh "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/addssh.sh"
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
 wget -O ipsaya "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/ipsaya.sh"
 wget -O sl-fix "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sslh-fix/sl-fix"
@@ -61,6 +62,7 @@ wget -O menuinfo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/up
 
 chmod +x install-sldns
 chmod +x restart
+chmod +x addssh
 chmod +x grpcmenu2
 chmod +x grpc2
 chmod +x grpcupdate2
