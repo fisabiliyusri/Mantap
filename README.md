@@ -343,7 +343,7 @@ sudo apt autoclean && sudo apt autoremove
 
 # Service & Port
 
-• OpenSSH                 : Port SSH
+• SlowDNS                 : Port SSH
 
 • OpenSSH                 : 22, 2253
 
