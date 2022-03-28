@@ -1,1 +1,0 @@
-rm -rf install; wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/Slowdns/main/install; chmod +x install; ./install
