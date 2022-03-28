@@ -291,6 +291,8 @@ sudo apt autoclean && sudo apt autoremove
 
 • SSH & OpenVPN
 
+• SSH Over DNS (SlowDNS)
+
 • SSH Websocket (Cloudflare)
 
 • OpenVPN Websocket (Cloudflare)
@@ -298,8 +300,6 @@ sudo apt autoclean && sudo apt autoremove
 • SSLH
 
 • SSH CloudFront Websocket (Aws CloudFront Only) [OFF]
-
-• SLOWDNS Over SSH [OFF]
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OPEN HTTP PUNCHER)
 
@@ -342,6 +342,8 @@ sudo apt autoclean && sudo apt autoremove
 • Ubuntu 18.04 & 20.04
 
 # Service & Port
+
+• OpenSSH                 : Port SSH
 
 • OpenSSH                 : 22, 2253
 
@@ -400,13 +402,6 @@ sudo apt autoclean && sudo apt autoremove
 • Trojan Go               : 2087
 
 • CloudFront Websocket    : [OFF]
-
-• SLOWDNS OPENSSH         : (2253)[OFF]
-
-• SLOWDNS DROPBEAR        : (1153)[OFF]
-
-• SLOWDNS SSL/TLS         : (3353)[OFF]
-
 
 
  ### Server Information & Other Features
