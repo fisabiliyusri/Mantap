@@ -27,6 +27,7 @@ rm -rf copyrepo
 cd /usr/bin
 rm -rf menu
 rm -rf menuinfo
+wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
 rm -rf restart
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
@@ -54,10 +55,11 @@ wget -O copyrepo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sa
 wget -O slhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh"
 wget -O sl-download-info "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/sl-download-info.sh"
 wget -O menuinfo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menuinfo.sh"
-wget -O grpc2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-grpc.sh"
-wget -O grpcupdate2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate2.sh"
-wget -O grpcmenu2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu2.sh"
+#wget -O grpc2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-grpc.sh"
+#wget -O grpcupdate2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcupdate2.sh"
+#wget -O grpcmenu2 "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/grpcmenu2.sh"
 
+chmod +x install-sldns
 chmod +x restart
 chmod +x grpcmenu2
 chmod +x grpc2
@@ -87,6 +89,6 @@ chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
 sl-download-info
-grpc2
-
+install-sldns
+cd
 
