@@ -17,6 +17,8 @@ Mod By SL
 * HARAP DI BACA TOLOL
 * CAPEK GW JELASIN NYA
 * MEMBUAT SERVER ,MEMBUAT SERVER ,MEMBUAT SERVER
+
+# SCRIPT UNTUK MEMBUAT SERVER VPN ,BUKAN HP/DEVICE TOLOL
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
 * Login VPS User menggunakan user root
 * Cara langsung masuk ke akses root
