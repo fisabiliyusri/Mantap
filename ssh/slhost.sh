@@ -12,14 +12,19 @@ mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
 cp /root/domain /etc/xray/
 
-DOMAIN=akbar-store.me
+DOMAIN=zerossl.my.id
+SUB_DOMAIN=${sub}.zerossl.my.id
+NS_DOMAIN=sldns${sub}.zerossl.my.id
+CF_ID=djarumpentol01@gmail.com
+CF_KEY=fef152f86c0cfc3197a097fb3f6ed3ba8a664
+#DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
-SUB_DOMAIN=${sub}.akbar-store.me
-NS_DOMAIN=nsl${sub}.akbar-store.me
+#SUB_DOMAIN=${sub}.akbar-store.me
+#NS_DOMAIN=sldns${sub}.akbar-store.me
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 echo "$NS_DOMAIN" >> /root/nsdomain
-CF_ID=sandigaming01@gmail.com
-CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
+#CF_ID=sandigaming01@gmail.com
+#CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
