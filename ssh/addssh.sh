@@ -31,6 +31,16 @@ sqd="$(cat ~/log-install.txt | grep -w "Squid" | cut -d: -f2)"
 ovpn="$(netstat -nlpt | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 ovpn2="$(netstat -nlpu | grep -i openvpn | grep -i 0.0.0.0 | awk '{print $4}' | cut -d: -f2)"
 clear
+systemctl stop client-sldns
+systemctl stop server-sldns
+pkill sldns-server
+pkill sldns-client
+systemctl enable client-sldns
+systemctl enable server-sldns
+systemctl start client-sldns
+systemctl start server-sldns
+systemctl restart client-sldns
+systemctl restart server-sldns
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart ssh-ohp
@@ -57,7 +67,7 @@ echo -e "Host Domain (SSH)   : $domain"
 echo -e "CloudFront(AWS CDN) : $cdndomain"
 echo -e "Host NS (SlowDNS)   : $sldomain"
 echo -e "=========Service Port========="
-echo -e "SlowDNS             : ALL SSH Port
+echo -e "SlowDNS             : ALL SSH Port"
 echo -e "OpenSSH             : 22"
 echo -e "Dropbear            : 443, 109, 143"
 echo -e "SSL/TLS             :$ssl"
