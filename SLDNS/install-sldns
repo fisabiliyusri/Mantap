@@ -1,5 +1,5 @@
 #!/bin/bash
-# Script By SL
+# Script  By SL
 # 2022 SLOWDNS
 # ===============================================
 wget https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
