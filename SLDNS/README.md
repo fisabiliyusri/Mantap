@@ -5,7 +5,8 @@ SSH OVER DNS create by SL
 https://github.com/fisabiliyusri/SLDNS
 ```
 # INFO
-INI SCRIPT BERSIFAT GRATIS DAN INI SCRIPT DI LARANG DI JUAL PERBELIKAN
+* INI SCRIPT BERSIFAT GRATIS DAN INI SCRIPT DI LARANG DI JUAL PERBELIKAN
+* Ini Script bisa di Mod/Modifikasi/edit dengan bebas
 
 # INFO Khusus SlowDNS
 • SSH Over DNS (SlowDNS)
