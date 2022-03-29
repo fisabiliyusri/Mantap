@@ -47,6 +47,10 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 * MINIMAL RAM 1/2 GB UNTUK MENGGUNAKAN SCRIPT INI
 * SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
 
+# Khusus Untuk OS
+• Debian 10 & 9
+atau
+• Ubuntu 18.04 & 20.04
 ## Installation 
 ## 1.
 Part 1: Update dan Upgrade
