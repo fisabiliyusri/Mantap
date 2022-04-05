@@ -13,16 +13,11 @@ Mod By SL
 <p align="center"><img src="https://img.shields.io/badge/Service-SSH_OpenSSH-success.svg">  <img src="https://img.shields.io/badge/Service-SSH_Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-SlowDns-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-XRAY-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_Websocket_TLS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_gRPC_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_TROJAN-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan_Go-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">  <img src= "https://img.shields.io/badge/Service-Shadowsocks-success.svg">  
 
 ### Info:
-* INI KHUSUS UNTUK MEMBUAT SERVER 
-* HARAP DI BACA TOLOL
-* CAPEK GW JELASIN NYA
-* MEMBUAT SERVER ,MEMBUAT SERVER ,MEMBUAT SERVER
-
-# SCRIPT UNTUK MEMBUAT SERVER VPN ,BUKAN HP/DEVICE TOLOL
+* INI SCRIPT KHUSUS UNTUK MEMBUAT SERVER VPN
+* HARAP DI BACA 
+# SCRIPT UNTUK MEMBUAT SERVER VPN
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
-* VPS AKUN ROOT , BUKAN HP/DEVICE BODOH
-* TIDAK ADA HUBUNGAN NYA DENGAN HP/DEVICE(ANJENG LO)
-
+* VPS AKUN ROOT
 * Login VPS User menggunakan user root
 * Cara langsung masuk ke akses root
 
@@ -44,7 +39,7 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 ```
 
 ## INFO TAMBAHAN , SILAHKAN DI BACA 
-* MINIMAL RAM 1/2 GB UNTUK MENGGUNAKAN SCRIPT INI
+* MINIMAL RAM 1 GB UNTUK MENGGUNAKAN SCRIPT INI
 * SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
 
 # Khusus Untuk OS
@@ -150,49 +145,7 @@ reboot
 *
 *
 *
-### 69.
-# Fix gRPC untuk FB Lite,Sosmed,etc..
-* Pengaturan DNS
-* Remote DNS:
-```html
-dns.google
-```
 
-*
-*
-*
-### 99.
-
-# (Fix Manual) Fix Stunnel5 Error
-* buat domain baru(bash slhost.sh)
-```html
-cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
- ```
-
-* edit manual ip domain
-```html
-nano /var/lib/crot/ipvps.conf
- ```
-```html
-IP=masukan host subdomain kamu
- ```
-
-* edit manual domain
-```html
-nano /etc/xray/domain
- ```
-```html
-isi dengan host subdomain kamu
- ```
-
-* lalu update cert
-```html
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && chmod +x certv2ray.sh && bash certv2ray.sh
- ```
-* atau
-```html
-certv2ray
- ```
 
 ### 100 (Fix manual) Fix Error SSLH & Fix Error SSH WS-TLS
 
@@ -224,77 +177,6 @@ systemctl start ws-tls
 reboot
 ```
 *done
-
-# perintah
-```html
-wget = download
-cp = copy/salin
-nano = edit
-rm = hapus
-rm -r = hapus
-rm -f = hapus
-rm -rf = hapus
-git clone = digunakan untuk mengunduh code yang ada pada repository
- ```
-
-# (hapus) uninstall script websocket
-```html
-rm -r /etc/systemd/system/ws-nontls.service 
-&& 
-rm -r /etc/systemd/system/ws-tls.service 
-&& 
-rm -r /usr/local/bin/ws-nontls 
-&& 
-rm -r /usr/local/bin/ws-tls 
-&&
-rm -r /etc/systemd/system/ws-ovpn.service 
-&& 
-rm -r /usr/local/bin/ws-ovpn 
- ```
-# (hapus) uninstall ssl && stunnel
-```html
-
-rm -f /etc/default/sslh
-rm -r -f stunnel
-rm -f stunnel5.zip
-rm -f /etc/stunnel5/stunnel5.conf
-rm -r -f /usr/local/share/doc/stunnel/
-rm -r -f /usr/local/etc/stunnel/
-rm -f /usr/local/bin/stunnel
-rm -f /usr/local/bin/stunnel3
-rm -f /usr/local/bin/stunnel4
-rm -f /usr/local/bin/stunnel5
-```
-# (hapus) uninstall all sslh && all stunnel
-```html
-sudo apt-get remove stunnel4
-&&
-sudo apt-get remove stunnel5
-&&
-sudo apt-get remove --auto-remove stunnel4
-&&
-sudo apt-get remove --auto-remove stunnel5
-&&
-sudo apt-get purge stunnel4
-&&
-sudo apt-get purge stunnel5
-&&
-sudo apt-get purge --auto-remove stunnel4
-&&
-sudo apt-get purge --auto-remove stunnel5
-&&
-
-sudo apt remove sslh
-&&
-sudo apt-get remove --auto-remove sslh
-&&
-sudo apt-get purge sslh
-&&
-sudo apt-get purge --auto-remove sslh
-&&
-sudo apt autoclean && sudo apt autoremove
-&& 
-```
 
 
 
