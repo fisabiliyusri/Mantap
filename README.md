@@ -55,7 +55,7 @@ apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
   
 ## 2.0
-Aktifkan Root Sementara
+Login ke VPS dan Aktifkan Root Sementara
   ```html
 sudo su
 cd
@@ -71,14 +71,6 @@ Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws
   wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
   ```
   
-# 2.5
-Di sini wajib pake user root atau bisa aktifkan root sementara
-   ```html
-sudo su
-cd
-cd
-
-  ```
 ### 3.
 Part 3: Install Semua Layanan VPN /Install All VPN Service
   <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20Batch-green">
@@ -90,6 +82,8 @@ rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-
 * • jika tidak bisa login di vps ,gunakan port ssh
 * • 22, 2253
 
+### Jangan Lupa Traktir Kopi
+https://trakteer.id/sulaiman-l/tip
 
 ### 5. MENU, INFO ,UPDATE ,FIX
 * untuk menampilkan menu
