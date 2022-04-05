@@ -147,7 +147,7 @@ reboot
 *
 
 
-### 100 (Fix manual) Fix Error SSLH & Fix Error SSH WS-TLS
+### 100 (Fix manual) Fix Error SSLH
 
 * Perbaiki sslh yang error di vps yang tidak support sslh
 * khusus yang vps nya tidak support sslh
@@ -163,11 +163,9 @@ echo sslh:x:109:114::/nonexistent:/usr/sbin/nologin >> /etc/passwd
 
 * start sslh dan jalankan
 ```html
-systemctl start sslh 
-&& 
-/etc/init.d/sslh start 
-&& 
-/etc/init.d/sslh restart 
+systemctl start sslh
+/etc/init.d/sslh start
+/etc/init.d/sslh restart
 ```
 * lalu start ws-tls
 ```html
