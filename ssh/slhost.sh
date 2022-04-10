@@ -12,17 +12,18 @@ rm -rf /root/nsdomain
 rm nsdomain
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
-cp /root/domain /etc/xray/
 
+sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
+subsl=$(</dev/urandom tr -dc a-x0-9 | head -c4)
 DOMAIN=zerossl.my.id
 SUB_DOMAIN=${sub}.zerossl.my.id
-NS_DOMAIN=${sub}sldns.zerossl.my.id
+NS_DOMAIN=${subsl}.zerossl.my.id
 CF_ID=djarumpentol01@gmail.com
 CF_KEY=fef152f86c0cfc3197a097fb3f6ed3ba8a664
 #DOMAIN=akbar-store.me
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 #SUB_DOMAIN=${sub}.akbar-store.me
-#NS_DOMAIN=sldns${sub}.akbar-store.me
+#NS_DOMAIN=${sub}.akbar-store.me
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 echo "$NS_DOMAIN" >> /root/nsdomain
 #CF_ID=sandigaming01@gmail.com
@@ -77,11 +78,11 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${SUB_DOMAIN}'","ttl":120,"proxied":false}')
-echo "Host : $SUB_DOMAIN"
-echo $SUB_DOMAIN > /root/domain
-cp /root/domain /etc/xray/
 echo $SUB_DOMAIN > /etc/v2ray/domain
-echo $SUB_DOMAIN > /etc/xray/domain
+echo "Host Domain : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
-echo $SUB_DOMAIN > /etc/xray/domain
+echo "Host SlowDNS : $NS_DOMAIN"
+cp /root/domain /etc/xray/
+cd
+
 
