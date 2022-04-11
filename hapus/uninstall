@@ -6,6 +6,13 @@ systemctl stop sslh
 systemctl stop squid3
 systemctl stop stunnel4
 systemctl stop stunnel5
+pkill stunnel4
+pkill stunnel5
+pkill squid
+pkill squid3
+pkill squid-1
+pkill squid-3
+pkill python
 cd
 rm -rf /etc/systemd/system/ws-nontls.service
 rm -rf /etc/systemd/system/ws-tls.service
