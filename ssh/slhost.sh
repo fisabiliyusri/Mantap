@@ -12,16 +12,15 @@ rm -rf /root/nsdomain
 rm nsdomain
 mkdir -p /usr/bin/xray
 mkdir -p /etc/xray
-
+#
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c4)
-DOMAIN=zerossl.my.id
-SUB_DOMAIN=${sub}.zerossl.my.id
-NS_DOMAIN=${subsl}.zerossl.my.id
-CF_ID=djarumpentol01@gmail.com
-CF_KEY=fef152f86c0cfc3197a097fb3f6ed3ba8a664
+DOMAIN=autosc.me
+SUB_DOMAIN=${sub}.autosc.me
+NS_DOMAIN=${subsl}.autosc.me
+CF_ID=awaledyan@gmail.com
+CF_KEY=7c9a592ee3186932780cffb3f1b6dbfee8084
 #DOMAIN=akbar-store.me
-sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 #SUB_DOMAIN=${sub}.akbar-store.me
 #NS_DOMAIN=${sub}.akbar-store.me
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
