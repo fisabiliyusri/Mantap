@@ -329,4 +329,4 @@ chmod +x delgrpc
 chmod +x renewgrpc
 chmod +x cekgrpc
 
-rm -f fb-grpc.sh
+rm -f xray-grpc.sh
