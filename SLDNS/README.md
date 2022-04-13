@@ -4,6 +4,12 @@ SSH OVER DNS create by SL
 ```html
 https://github.com/fisabiliyusri/SLDNS
 ```
+
+Script Auto Installer SlowDNS
+```html
+https://github.com/fisabiliyusri/SLDNS
+```
+
 # INFO
 * INI SCRIPT BERSIFAT GRATIS DAN INI SCRIPT DI LARANG DI JUAL PERBELIKAN
 * Ini Script bisa di Mod/Modifikasi/edit dengan bebas
@@ -11,7 +17,7 @@ https://github.com/fisabiliyusri/SLDNS
 # INFO Khusus SlowDNS
 • SSH Over DNS (SlowDNS)
 * untuk kecepatan nya di batasi
-* speed download 2,2 Mbps (Max Speed)
+* speed download 2,3 Mbps (Max Speed)
 * speed upload 100+ Mbps (Max Speed)
 * Support semua port ssh
 
