@@ -91,5 +91,6 @@ chmod +x running
 chmod +x updatemenu
 sl-download-info
 install-sldns
+xray-grpc
 cd
 
