@@ -18,8 +18,8 @@ mkdir -p /etc/xray
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c4)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c4)
 DOMAIN=autosc.me
-SUB_DOMAIN=${sub}.autosc.me
-NS_DOMAIN=${subsl}.autosc.me
+SUB_DOMAIN=vpn${sub}.autosc.me
+NS_DOMAIN=ns${subsl}.autosc.me
 CF_ID=awaledyan@gmail.com
 CF_KEY=7c9a592ee3186932780cffb3f1b6dbfee8084
 #DOMAIN=akbar-store.me
