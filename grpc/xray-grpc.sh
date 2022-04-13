@@ -158,7 +158,7 @@ cat > /etc/xray/vmessgrpc.json << END
 }
 END
 
-cat > /etc/xray/fvlessgrpc.json << END
+cat > /etc/xray/vlessgrpc.json << END
 {
     "log": {
             "access": "/var/log/xray/access5.log",
