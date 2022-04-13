@@ -7,7 +7,8 @@ https://github.com/fisabiliyusri/SLDNS
 
 Script Auto Installer SlowDNS
 ```html
-https://github.com/fisabiliyusri/SLDNS
+wget -q -O /usr/bin/install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
+install-sldns
 ```
 
 # INFO
@@ -29,8 +30,8 @@ https://github.com/fisabiliyusri/SLDNS
 
 # CLIENT PORT:
 * UDP DNS 3369,2269
-* DoT 169
-* DoH 99
+* DoT 169 [OFFLINE]
+* DoH 99 [OFFLINE]
 * SSH ALL PORT
 
 # Support DNS Protokol
