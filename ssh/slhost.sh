@@ -84,7 +84,6 @@ rm -rf /root/nsdomain
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo "Host SlowDNS : $NS_DOMAIN"
-cp /root/domain /etc/xray/
 echo "$NS_DOMAIN" >> /root/nsdomain
 echo "$SUB_DOMAIN" >> /etc/xray/domain
 cd
