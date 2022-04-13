@@ -45,7 +45,7 @@ wget -q -O /usr/local/bin/geosite.dat "https://raw.githubusercontent.com/fisabil
 wget -q -O /usr/local/bin/geoip.dat "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/geoip.dat"
 
 #
-cat > /etc/xray/fb-vmessgrpc.json << END
+cat > /etc/xray/vmessgrpc.json << END
 {
     "log": {
             "access": "/var/log/xray/access5.log",
@@ -158,7 +158,7 @@ cat > /etc/xray/fb-vmessgrpc.json << END
 }
 END
 
-cat > /etc/xray/fb-vlessgrpc.json << END
+cat > /etc/xray/fvlessgrpc.json << END
 {
     "log": {
             "access": "/var/log/xray/access5.log",
@@ -272,7 +272,7 @@ cat > /etc/xray/fb-vlessgrpc.json << END
 END
 
 
-cat > /etc/systemd/system/fb-vmess-grpc.service << EOF
+cat > /etc/systemd/system/vmess-grpc.service << EOF
 [Unit]
 Description=XRay VMess GRPC Service
 Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
@@ -281,14 +281,14 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/fb-vmessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vmessgrpc.json
 RestartPreventExitStatus=23
 
 [Install]
 WantedBy=multi-user.target
 EOF
 
-cat > /etc/systemd/system/fb-vless-grpc.service << EOF
+cat > /etc/systemd/system/vless-grpc.service << EOF
 [Unit]
 Description=XRay VMess GRPC Service
 Documentation=https://speedtest.net https://github.com/XTLS/Xray-core
@@ -297,7 +297,7 @@ After=network.target nss-lookup.target
 [Service]
 User=root
 NoNewPrivileges=true
-ExecStart=/usr/local/bin/xray -config /etc/xray/fb-vlessgrpc.json
+ExecStart=/usr/local/bin/xray -config /etc/xray/vlessgrpc.json
 RestartPreventExitStatus=23
 
 [Install]
@@ -313,22 +313,20 @@ iptables-restore -t < /etc/iptables.up.rules
 netfilter-persistent save
 netfilter-persistent reload
 systemctl daemon-reload
-systemctl enable fb-vmess-grpc
-systemctl restart fb-vmess-grpc
-systemctl enable fb-vless-grpc
-systemctl restart fb-vless-grpc
+systemctl enable vmess-grpc
+systemctl restart vmess-grpc
+systemctl enable vless-grpc
+systemctl restart vless-grpc
 #
 cd /usr/bin
+wget -O addgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-addgrpc.sh"
+wget -O delgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-delgrpc.sh"
+wget -O renewgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-renewgrpc.sh"
+wget -O cekgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-cekgrpc.sh"
 
-
-wget -O fb-addgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-addgrpc.sh"
-wget -O fb-delgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-delgrpc.sh"
-wget -O fb-renewgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-renewgrpc.sh"
-wget -O fb-cekgrpc "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/fb-cekgrpc.sh"
-
-chmod +x fb-addgrpc
-chmod +x fb-delgrpc
-chmod +x fb-renewgrpc
-chmod +x fb-cekgrpc
+chmod +x faddgrpc
+chmod +x delgrpc
+chmod +x renewgrpc
+chmod +x cekgrpc
 
 rm -f fb-grpc.sh
