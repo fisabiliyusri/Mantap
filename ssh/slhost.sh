@@ -77,6 +77,8 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      -H "X-Auth-Key: ${CF_KEY}" \
      -H "Content-Type: application/json" \
      --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${SUB_DOMAIN}'","ttl":120,"proxied":false}')
+rm -rf /etc/xray/domain
+rm -rf /root/nsdomain
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo "Host SlowDNS : $NS_DOMAIN"
