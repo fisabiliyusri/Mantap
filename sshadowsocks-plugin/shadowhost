@@ -65,5 +65,4 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
 echo "Host Shadowsocks : $SUB_DOMAIN"
 echo "$SUB_DOMAIN" >> /etc/shadowsocks/domain
 echo "$NS_DOMAIN" >> /etc/shadowsocks/nsdomain
-cd
 
