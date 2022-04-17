@@ -59,11 +59,11 @@ tar zxf v2ray-plugin.tar.gz && rm -rf v2ray-plugin.tar.gz
 unzip -q gost-plugin.zip && rm -rf gost-plugin.zip
 #unzip -q v2ray.zip && rm -rf v2ray.zip
 #unzip -q xray.zip && rm -rf xray.zip
-cp xray-plugin_linux_arm64 xray-plugin
-cp v2ray-plugin_linux_arm64 v2ray-plugin
-mv v2ray-plugin /usr/local/bin/
-mv gost-plugin /usr/local/bin/
-mv xray-plugin /usr/local/bin/
+cp -r xray-plugin_linux_arm64 xray-plugin
+cp -r v2ray-plugin_linux_arm64 v2ray-plugin
+cp -r v2ray-plugin /usr/local/bin/
+cp -r gost-plugin /usr/local/bin/
+cp -r xray-plugin /usr/local/bin/
 chmod +x /usr/local/bin/v2ray-plugin
 chmod +x /usr/local/bin/gost-plugin
 chmod +x /usr/local/bin/xray-plugin
