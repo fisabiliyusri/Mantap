@@ -51,6 +51,9 @@ date
 #xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v1.5.4/xray-plugin-linux-arm64-v1.5.4.tar.gz"
 
 # / / Unzip Shadowsocks plugin Linux arm64
+rm -rf /usr/local/bin/v2ray-plugin
+rm -rf /usr/local/bin/gost-plugin
+rm -rf /usr/local/bin/xray-plugin
 cd /usr/bin/
 rm -rf xray-plugin
 rm -rf v2xray-plugin
@@ -59,6 +62,9 @@ cd /usr/bin/
 wget -O gost-plugin "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/gost-plugin"
 wget -O v2ray-plugin "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/v2ray-plugin"
 wget -O xray-plugin "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/xray-plugin"
+chmod +x gost-plugin
+chmod +x v2ray-plugin
+chmod +x xray-plugin
 #curl -sL "$v2rayplugin_link" -o v2ray-plugin.tar.gz
 #curl -sL "$gostplugin_link" -o gost-plugin.zip
 #curl -sL "$xrayplugin_link" -o xray-plugin.tar.gz
