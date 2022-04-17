@@ -71,6 +71,9 @@ cp -r v2ray-plugin_linux_arm64 v2ray-plugin
 cp -r v2ray-plugin /usr/local/bin/v2ray-plugin
 cp -r gost-plugin /usr/local/bin/gost-plugin
 cp -r xray-plugin /usr/local/bin/xray-plugin
+cp -r v2ray-plugin /usr/bin/v2ray-plugin
+cp -r gost-plugin /usr/bin/gost-plugin
+cp -r xray-plugin /usr/bin/xray-plugin
 rm -rf xray-plugin_linux_arm64
 rm -rf v2ray-plugin_linux_arm64
 chmod +x /usr/local/bin/v2ray-plugin
