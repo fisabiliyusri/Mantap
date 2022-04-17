@@ -20,11 +20,11 @@ rm -rf /var/lib/crot/ipvps.conf
 #
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
-DOMAIN=autosc.me
-SUB_DOMAIN=vpn-${sub}.autosc.me
-NS_DOMAIN=ns-${subsl}.autosc.me
-CF_ID=awaledyan@gmail.com
-CF_KEY=7c9a592ee3186932780cffb3f1b6dbfee8084
+DOMAIN=mdxcloud.net
+SUB_DOMAIN=vpn-${sub}.mdxcloud.net
+NS_DOMAIN=ns-${subsl}.mdxcloud.net
+CF_ID=wapres.area82@gmail.com
+CF_KEY=13ff9e1224988985f0834a25e59efad433d85
 echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
