@@ -262,7 +262,7 @@ cat > /etc/shadowsocks-libev/$user-v2raywss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"v2ray-plugin",
-    "plugin_opts":"mux=0;server;tls;path=/;cert=$path_crt;key=$path_key"
+    "plugin_opts":"mux=0;server;tls;path=/wss;cert=$path_crt;key=$path_key"
 }
 END
 #v2rayws
@@ -278,7 +278,7 @@ cat > /etc/shadowsocks-libev/$user-v2rayws.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"v2ray-plugin",
-    "plugin_opts":"mux=0;server;path=/"
+    "plugin_opts":"mux=0;server;path=/ws"
 }
 END
 #v2raygrpc
@@ -326,7 +326,7 @@ cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;tls;path=/;cert=$path_crt;key=$path_key"
+    "plugin_opts":"mux=0;server;tls;path=/wss;cert=$path_crt;key=$path_key"
 }
 END
 #xrayws
@@ -342,7 +342,7 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;path=/"
+    "plugin_opts":"mux=0;server;path=/ws"
 }
 END
 #xraygrpctls
@@ -470,7 +470,7 @@ cat > /etc/shadowsocks-libev/$user-gostws.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=ws;path=/"
+    "plugin_opts":"server;mode=ws;path=/ws"
 }
 END
 #gostwss
@@ -486,7 +486,7 @@ cat > /etc/shadowsocks-libev/$user-gostwss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/"
+    "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
 #gostmws
@@ -502,7 +502,7 @@ cat > /etc/shadowsocks-libev/$user-gostmws.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=mws;path=/"
+    "plugin_opts":"server;mode=mws;path=/ws"
 }
 END
 #gostmwss
@@ -518,7 +518,7 @@ cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=mwss;cert=$path_crt;key=$path_key;path=/"
+    "plugin_opts":"server;mode=mwss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
 #gostquic
@@ -792,10 +792,10 @@ echo -e "MWSS           : $gostmwss"
 echo -e "Quic TLS       : [OFF]"
 echo -e "========================="
 echo -e "Link All Config: #://$ip:89/$user.json"
-echo -e "Link Aplikasi v2ray-plugin: #://$ip:89/xray-plugin-universal.apk"
-echo -e "Link Aplikasi gost-plugin: #://$ip:89/gost-plugin-x86.zip"
-echo -e "Link Aplikasi gost-plugin: #://$ip:89/gost-plugin-arm.zip"
-echo -e "Link Aplikasi xray-plugin: #://$ip:89/v2ray-plugin-universal.apk"
+echo -e "Link Aplikasi v2ray-plugin: #://$myip:89/xray-plugin-universal.apk"
+echo -e "Link Aplikasi gost-plugin: #://$myip:89/gost-plugin-x86.zip"
+echo -e "Link Aplikasi gost-plugin: #://$myip:89/gost-plugin-arm.zip"
+echo -e "Link Aplikasi xray-plugin: #://$myip:89/v2ray-plugin-universal.apk"
 echo -e "ganti tanda # menjadi http"
 echo -e "========================="
 echo -e "Script Mod By SL"
