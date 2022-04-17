@@ -372,7 +372,7 @@ cat > /etc/shadowsocks-libev/$user-xrayquic.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
     "plugin":"xray-plugin",
-    "plugin_opts":"server;tls;mode=quic;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;tls;mode=quic;host=;cert=$path_crt;key=$path_key"
 }
 END
 #gosttls
@@ -615,14 +615,14 @@ linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com#obf-http"
 #v2ray
 linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/ws#v2rayhttp"
 linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/wss#v2raytls"
-linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;tls;mode=quic#v2rayquictls"
+linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;tls;mode=quic;host=#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;tls;mode=grpc#v2raygrpc"
 #xray
 linkss7="ss://${tmp7}?plugin=xray-plugin;path=/ws#xrayhttp"
 linkss8="ss://${tmp8}?plugin=xray-plugin;path=/wss;tls#xraytls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
-linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic#xrayquictls"
+linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=#xrayquictls"
 #gostlink
 linkss13="ss://${tmp13}?plugin=gost-plugin;mode=tls#gost-tls"
 linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls#gost-mtls"
