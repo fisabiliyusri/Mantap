@@ -77,14 +77,12 @@ wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyus
 
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 # // Certificate File
-path_crt="/etc/shadowsocks/xray.crt"
-path_key="/etc/shadowsocks/xray.key"
 cd /root/etc/shadowsocks/
 rm -rf .acme.sh
-wget https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
+wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
-cd /root/etc/shadowsocks/.acme.sh
+cd .acme.sh
 domain=$(cat /etc/shadowsocks/domain)
 bash acme.sh --register-account -m slinfinity69@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
