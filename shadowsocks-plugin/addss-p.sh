@@ -613,13 +613,13 @@ tmp22=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gosth2" | base64 -w0)
 linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bing.com#obfs-tls"
 linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com#obf-http"
 #v2ray
-linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/#v2rayhttp"
-linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/#v2raytls"
+linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/ws#v2rayhttp"
+linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/wss#v2raytls"
 linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;tls;mode=quic#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;tls;mode=grpc#v2raygrpc"
 #xray
-linkss7="ss://${tmp7}?plugin=xray-plugin;path=/#xrayhttp"
-linkss8="ss://${tmp8}?plugin=xray-plugin;path=/;tls#xraytls"
+linkss7="ss://${tmp7}?plugin=xray-plugin;path=/ws#xrayhttp"
+linkss8="ss://${tmp8}?plugin=xray-plugin;path=/wss;tls#xraytls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
 linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic#xrayquictls"
