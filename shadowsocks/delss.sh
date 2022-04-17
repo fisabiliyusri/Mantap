@@ -57,6 +57,51 @@ systemctl disable shadowsocks-libev-server@$user-tls.service
 systemctl disable shadowsocks-libev-server@$user-http.service
 systemctl stop shadowsocks-libev-server@$user-tls.service
 systemctl stop shadowsocks-libev-server@$user-http.service
+# disable
+systemctl disable shadowsocks-libev-server@$user-tls.service
+systemctl disable shadowsocks-libev-server@$user-http.service
+systemctl disable shadowsocks-libev-server@$user-v2rayws.service
+systemctl disable shadowsocks-libev-server@$user-v2raywss.service
+systemctl disable shadowsocks-libev-server@$user-v2rayquic.service
+systemctl disable shadowsocks-libev-server@$user-v2raygrpc.service
+systemctl disable shadowsocks-libev-server@$user-xrayws.service
+systemctl disable shadowsocks-libev-server@$user-xraywss.service
+systemctl disable shadowsocks-libev-server@$user-xraygrpctls.service
+systemctl disable shadowsocks-libev-server@$user-xraygrpchttp.service
+systemctl disable shadowsocks-libev-server@$user-xrayquic.service
+systemctl disable shadowsocks-libev-server@$user-gostls.service
+systemctl disable shadowsocks-libev-server@$user-gostmtls.service
+systemctl disable shadowsocks-libev-server@$user-gostxtls.service
+systemctl disable shadowsocks-libev-server@$user-gostgrpc.service
+systemctl disable shadowsocks-libev-server@$user-gostws.service
+systemctl disable shadowsocks-libev-server@$user-gostwss.service
+systemctl disable shadowsocks-libev-server@$user-gostmws.service
+systemctl disable shadowsocks-libev-server@$user-gostmwss.service
+systemctl disable shadowsocks-libev-server@$user-gostquic.service
+systemctl disable shadowsocks-libev-server@$user-gosth2.service
+# stop
+systemctl stop shadowsocks-libev-server@$user-tls.service
+systemctl stop shadowsocks-libev-server@$user-http.service
+systemctl stop shadowsocks-libev-server@$user-v2rayws.service
+systemctl stop shadowsocks-libev-server@$user-v2raywss.service
+systemctl stop shadowsocks-libev-server@$user-v2rayquic.service
+systemctl stop shadowsocks-libev-server@$user-v2raygrpc.service
+systemctl stop shadowsocks-libev-server@$user-xrayws.service
+systemctl stop shadowsocks-libev-server@$user-xraywss.service
+systemctl stop shadowsocks-libev-server@$user-xraygrpctls.service
+systemctl stop shadowsocks-libev-server@$user-xraygrpchttp.service
+systemctl stop shadowsocks-libev-server@$user-xrayquic.service
+systemctl stop shadowsocks-libev-server@$user-gostls.service
+systemctl stop shadowsocks-libev-server@$user-gostmtls.service
+systemctl stop shadowsocks-libev-server@$user-gostxtls.service
+systemctl stop shadowsocks-libev-server@$user-gostgrpc.service
+systemctl stop shadowsocks-libev-server@$user-gostws.service
+systemctl stop shadowsocks-libev-server@$user-gostwss.service
+systemctl stop shadowsocks-libev-server@$user-gostmws.service
+systemctl stop shadowsocks-libev-server@$user-gostmwss.service
+systemctl stop shadowsocks-libev-server@$user-gostquic.service
+systemctl stop shadowsocks-libev-server@$user-gosth2.service
+
 rm -f "/etc/shadowsocks-libev/$user-tls.json"
 rm -f "/etc/shadowsocks-libev/$user-http.json"
 clear
