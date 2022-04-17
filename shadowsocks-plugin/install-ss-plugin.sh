@@ -14,6 +14,7 @@ LIGHT='\033[0;37m'
 
 rm -rf /usr/bin/shadowhost
 cd /usr/bin
+wget -O addss-p "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/addss-p.sh"
 wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sshadowsocks-plugin/shadowhost"
 chmod +x shadowhost
 shadowhost
