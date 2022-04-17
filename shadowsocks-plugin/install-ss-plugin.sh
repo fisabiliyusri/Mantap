@@ -43,9 +43,9 @@ latest_versionvxray="$(curl -s https://api.github.com/repos/teddysun/xray-plugin
 versi_v2ray-plugin=$latest_versionv2ray
 versi_xray-plugin=$latest_versionxray
 # / / Installation V2rayPlugin_GostPlugin_XrayPlugin
-v2rayplugin_link="https://github.com/teddysun/v2ray-plugin/releases/download/v$latest_versionv2ray/v2ray-plugin-linux-arm64-v$latest_versionv2ray.tar.gz"
+v2rayplugin_link="https://github.com/teddysun/v2ray-plugin/releases/download/v4.44.0/v2ray-plugin-linux-arm64-v4.44.0.tar.gz"
 gostplugin_link="https://github.com/maskedeken/gost-plugin/releases/download/v1.6.1/gost-plugin_linux_arm64-1.6.1.zip"
-xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v$latest_versionxray/xray-plugin-linux-arm64-v$latest_versionv2ray.tar.gz"
+xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v1.5.4/xray-plugin-linux-arm64-v1.5.4.tar.gz"
 
 # / / Unzip Shadowsocks plugin Linux arm64
 cd `mktemp -d`
@@ -74,10 +74,10 @@ chmod +x /usr/local/bin/xray-plugin
 
 # // download
 cd /home/vps/public_html/
-wget -O gost-plugin-arm.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/gost-plugin-arm.zip"
-wget -O gost-plugin-x86.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/gost-plugin-x86.zip"
-wget -O v2ray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/v2ray-plugin-universal-v4.44.0.apk"
-wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/xray-plugin-universal-v1.5.4.apk"
+wget -O gost-plugin-arm.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/gost-plugin-arm.zip"
+wget -O gost-plugin-x86.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/gost-plugin-x86.zip"
+wget -O v2ray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/v2ray-plugin-universal-v4.44.0.apk"
+wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/xray-plugin-universal-v1.5.4.apk"
 
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 # // Certificate File
