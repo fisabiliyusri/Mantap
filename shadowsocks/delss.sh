@@ -101,9 +101,28 @@ systemctl stop shadowsocks-libev-server@$user-gostmws.service
 systemctl stop shadowsocks-libev-server@$user-gostmwss.service
 systemctl stop shadowsocks-libev-server@$user-gostquic.service
 systemctl stop shadowsocks-libev-server@$user-gosth2.service
-
+# hapus akun
 rm -f "/etc/shadowsocks-libev/$user-tls.json"
 rm -f "/etc/shadowsocks-libev/$user-http.json"
+rm -f "/etc/shadowsocks-libev/$user-v2rayws.json"
+rm -f "/etc/shadowsocks-libev/$user-v2raywss.json"
+rm -f "/etc/shadowsocks-libev/$user-v2rayquic.json"
+rm -f "/etc/shadowsocks-libev/$user-v2raygrpc.json"
+rm -f "/etc/shadowsocks-libev/$user-xrayws.json"
+rm -f "/etc/shadowsocks-libev/$user-xraywss.json"
+rm -f "/etc/shadowsocks-libev/$user-xraygrpctls.json"
+rm -f "/etc/shadowsocks-libev/$user-xraygrpchttp.json"
+rm -f "/etc/shadowsocks-libev/$user-xrayquic.json"
+rm -f "/etc/shadowsocks-libev/$user-gosttls.json"
+rm -f "/etc/shadowsocks-libev/$user-gostmtls.json"
+rm -f "/etc/shadowsocks-libev/$user-gostxtls.json"
+rm -f "/etc/shadowsocks-libev/$user-gostgrpc.json"
+rm -f "/etc/shadowsocks-libev/$user-gostws.json"
+rm -f "/etc/shadowsocks-libev/$user-gostwss.json"
+rm -f "/etc/shadowsocks-libev/$user-gostmws.json"
+rm -f "/etc/shadowsocks-libev/$user-gostmwss.json"
+rm -f "/etc/shadowsocks-libev/$user-gostquic.json"
+rm -f "/etc/shadowsocks-libev/$user-gosth2.json"
 clear
 echo ""
 echo "==========================="
