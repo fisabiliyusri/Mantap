@@ -48,8 +48,13 @@ gostplugin_link="https://github.com/maskedeken/gost-plugin/releases/download/v1.
 xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v$latest_versionxray/xray-plugin-linux-arm64-v$latest_versionv2ray.tar.gz"
 
 # / / Unzip Shadowsocks plugin Linux arm64
-#cd `mktemp -d`
-cd /usr/local/bin/
+cd `mktemp -d`
+#cd /usr/local/bin/
+rm -rf xray-plugin_linux_arm64
+rm -rf xray-plugin
+rm -rf v2ray-plugin_linux_arm64
+rm -rf v2xray-plugin
+rm -rf gost-plugin
 curl -sL "$v2rayplugin_link" -o v2ray-plugin.tar.gz
 curl -sL "$gostplugin_link" -o gost-plugin.zip
 curl -sL "$xrayplugin_link" -o xray-plugin.tar.gz
@@ -60,9 +65,9 @@ unzip -q gost-plugin.zip && rm -rf gost-plugin.zip
 #unzip -q xray.zip && rm -rf xray.zip
 cp -r xray-plugin_linux_arm64 xray-plugin
 cp -r v2ray-plugin_linux_arm64 v2ray-plugin
-cp -r v2ray-plugin /usr/local/bin/
-cp -r gost-plugin /usr/local/bin/
-cp -r xray-plugin /usr/local/bin/
+cp -r v2ray-plugin /usr/local/bin/v2ray-plugin
+cp -r gost-plugin /usr/local/bin/gost-plugin
+cp -r xray-plugin /usr/local/bin/xray-plugin
 chmod +x /usr/local/bin/v2ray-plugin
 chmod +x /usr/local/bin/gost-plugin
 chmod +x /usr/local/bin/xray-plugin
@@ -77,7 +82,6 @@ wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyus
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 # // Certificate File
 cd /root/
-rm -rf .acme.sh
 wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
