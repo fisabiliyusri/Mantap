@@ -50,7 +50,8 @@ gostplugin_link="https://github.com/maskedeken/gost-plugin/releases/download/v1.
 xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v$latest_versionxray/xray-plugin-linux-arm64-v$.tar.gz"
 
 # / / Unzip Shadowsocks plugin Linux arm64
-cd `mktemp -d`
+#cd `mktemp -d`
+cd /usr/local/bin/
 curl -sL "$v2rayplugin_link" -o v2ray-plugin.tar.gz
 curl -sL "$gostplugin_link" -o gost-plugin.zip
 curl -sL "$xrayplugin_link" -o xray-plugin.tar.gz
