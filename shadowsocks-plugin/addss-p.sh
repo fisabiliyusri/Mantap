@@ -261,7 +261,7 @@ cat > /etc/shadowsocks-libev/$user-v2raywss.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"v2ray-plugin",
+    "plugin":"/usr/bin/v2ray-plugin",
     "plugin_opts":"mux=0;server;tls;path=/wss;cert=$path_crt;key=$path_key"
 }
 END
@@ -277,7 +277,7 @@ cat > /etc/shadowsocks-libev/$user-v2rayws.json <<-END
     "no_delay":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"v2ray-plugin",
+    "plugin":"/usr/bin/v2ray-plugin",
     "plugin_opts":"mux=0;server;path=/ws"
 }
 END
@@ -293,7 +293,7 @@ cat > /etc/shadowsocks-libev/$user-v2raygrpc.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"v2ray-plugin",
+    "plugin":"/usr/bin/v2ray-plugin",
     "plugin_opts":"server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -309,7 +309,7 @@ cat > /etc/shadowsocks-libev/$user-v2rayquic.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"v2ray-plugin",
+    "plugin":"/usr/bin/v2ray-plugin",
     "plugin_opts":"server;tls;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -325,7 +325,7 @@ cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"xray-plugin",
+    "plugin":"/usr/bin/xray-plugin",
     "plugin_opts":"mux=0;server;tls;path=/wss;cert=$path_crt;key=$path_key"
 }
 END
@@ -341,7 +341,7 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"xray-plugin",
+    "plugin":"/usr/bin/xray-plugin",
     "plugin_opts":"mux=0;server;path=/ws"
 }
 END
@@ -357,7 +357,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"xray-plugin",
+    "plugin":"/usr/bin/xray-plugin",
     "plugin_opts":"server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -373,7 +373,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpchttp.json <<-END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"xray-plugin",
+    "plugin":"/usr/bin/xray-plugin",
     "plugin_opts":"server;mode=grpc"
 }
 END
@@ -389,7 +389,7 @@ cat > /etc/shadowsocks-libev/$user-xrayquic.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"xray-plugin",
+    "plugin":"/usr/bin/xray-plugin",
     "plugin_opts":"server;tls;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -405,7 +405,7 @@ cat > /etc/shadowsocks-libev/$user-gosttls.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=tls;cert=$path_crt;key=$path_key"
 }
 END
@@ -421,7 +421,7 @@ cat > /etc/shadowsocks-libev/$user-gostmtls.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=mtls;cert=$path_crt;key=$path_key"
 }
 END
@@ -437,7 +437,7 @@ cat > /etc/shadowsocks-libev/$user-gostxtls.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=xtls;cert=$path_crt;key=$path_key"
 }
 END
@@ -453,7 +453,7 @@ cat > /etc/shadowsocks-libev/$user-gostgrpc.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -469,7 +469,7 @@ cat > /etc/shadowsocks-libev/$user-gostws.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=ws;path=/ws"
 }
 END
@@ -485,7 +485,7 @@ cat > /etc/shadowsocks-libev/$user-gostwss.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
@@ -501,7 +501,7 @@ cat > /etc/shadowsocks-libev/$user-gostmws.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=mws;path=/ws"
 }
 END
@@ -517,7 +517,7 @@ cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=mwss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
@@ -533,7 +533,7 @@ cat > /etc/shadowsocks-libev/$user-gostquic.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -549,7 +549,7 @@ cat > /etc/shadowsocks-libev/$user-gosth2.json<<END
     "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"gost-plugin",
+    "plugin":"/usr/bin/gost-plugin",
     "plugin_opts":"server;mode=h2;cert=$path_crt;key=$path_key"
 }
 END
