@@ -42,12 +42,11 @@ mkdir -p /etc/shadowsocks
 latest_versionv2ray="$(curl -s https://api.github.com/repos/teddysun/v2ray-plugin/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 latest_versionvxray="$(curl -s https://api.github.com/repos/teddysun/xray-plugin/releases | grep tag_name | sed -E 's/.*"v(.*)".*/\1/' | head -n 1)"
 versi_v2ray-plugin=$latest_versionv2ray
-versi_gost-plugin=$latest_versiongost
 versi_xray-plugin=$latest_versionxray
 # / / Installation V2rayPlugin_GostPlugin_XrayPlugin
-v2rayplugin_link="https://github.com/teddysun/v2ray-plugin/releases/download/v$latest_versionv2ray/v2ray-plugin-linux-arm64-v$.tar.gz"
+v2rayplugin_link="https://github.com/teddysun/v2ray-plugin/releases/download/v$latest_versionv2ray/v2ray-plugin-linux-arm64-v$versi_v2ray-plugin.tar.gz"
 gostplugin_link="https://github.com/maskedeken/gost-plugin/releases/download/v1.6.1/gost-plugin_linux_arm64-1.6.1.zip"
-xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v$latest_versionxray/xray-plugin-linux-arm64-v$.tar.gz"
+xrayplugin_link="https://github.com/teddysun/xray-plugin/releases/download/v$latest_versionxray/xray-plugin-linux-arm64-v$versi_xray-plugin.tar.gz"
 
 # / / Unzip Shadowsocks plugin Linux arm64
 #cd `mktemp -d`
