@@ -57,7 +57,9 @@ wget -O copyrepo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sa
 wget -O slhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh"
 wget -O sl-download-info "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/contohinfo/sl-download-info.sh"
 wget -O menuinfo "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menuinfo.sh"
+wget -O install-ss-plugin "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/install-ss-plugin.sh"
 
+chmod +x install-ss-plugin
 chmod +x xray-grpc
 chmod +x install-sldns
 chmod +x restart
@@ -90,7 +92,8 @@ chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
 sl-download-info
-install-sldns
-xray-grpc
+#install-sldns
+install-ss-plugin
+#xray-grpc
 cd
 
