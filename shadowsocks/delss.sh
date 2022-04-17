@@ -123,6 +123,7 @@ rm -f "/etc/shadowsocks-libev/$user-gostmws.json"
 rm -f "/etc/shadowsocks-libev/$user-gostmwss.json"
 rm -f "/etc/shadowsocks-libev/$user-gostquic.json"
 rm -f "/etc/shadowsocks-libev/$user-gosth2.json"
+rm -f "/home/vps/public_html/$user.json"
 clear
 echo ""
 echo "==========================="
