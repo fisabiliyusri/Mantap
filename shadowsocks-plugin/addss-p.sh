@@ -257,8 +257,6 @@ cat > /etc/shadowsocks-libev/$user-v2raywss.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"/usr/bin/v2ray-plugin",
@@ -273,11 +271,9 @@ cat > /etc/shadowsocks-libev/$user-v2rayws.json <<-END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "fast_open":false,
-    "no_delay":true,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/v2ray-plugin",
+    "plugin":"v2ray-plugin",
     "plugin_opts":"mux=0;server;path=/ws"
 }
 END
@@ -289,11 +285,9 @@ cat > /etc/shadowsocks-libev/$user-v2raygrpc.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/v2ray-plugin",
+    "plugin":"v2ray-plugin",
     "plugin_opts":"server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -305,11 +299,9 @@ cat > /etc/shadowsocks-libev/$user-v2rayquic.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"/usr/bin/v2ray-plugin",
+    "plugin":"v2ray-plugin",
     "plugin_opts":"server;tls;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -321,11 +313,9 @@ cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/xray-plugin",
+    "plugin":"xray-plugin",
     "plugin_opts":"mux=0;server;tls;path=/wss;cert=$path_crt;key=$path_key"
 }
 END
@@ -336,12 +326,10 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "server_port":$xrayws,
     "password":"$user",
     "timeout":60,
-    "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
+    "method":"aes-256-cfb",,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/xray-plugin",
+    "plugin":"xray-plugin",
     "plugin_opts":"mux=0;server;path=/ws"
 }
 END
@@ -353,11 +341,9 @@ cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/xray-plugin",
+    "plugin":"xray-plugin",
     "plugin_opts":"server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -369,11 +355,9 @@ cat > /etc/shadowsocks-libev/$user-xraygrpchttp.json <<-END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/xray-plugin",
+    "plugin":"xray-plugin",
     "plugin_opts":"server;mode=grpc"
 }
 END
@@ -385,11 +369,9 @@ cat > /etc/shadowsocks-libev/$user-xrayquic.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"/usr/bin/xray-plugin",
+    "plugin":"xray-plugin",
     "plugin_opts":"server;tls;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -401,11 +383,9 @@ cat > /etc/shadowsocks-libev/$user-gosttls.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=tls;cert=$path_crt;key=$path_key"
 }
 END
@@ -417,11 +397,9 @@ cat > /etc/shadowsocks-libev/$user-gostmtls.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=mtls;cert=$path_crt;key=$path_key"
 }
 END
@@ -433,11 +411,9 @@ cat > /etc/shadowsocks-libev/$user-gostxtls.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=xtls;cert=$path_crt;key=$path_key"
 }
 END
@@ -449,11 +425,9 @@ cat > /etc/shadowsocks-libev/$user-gostgrpc.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
@@ -465,11 +439,9 @@ cat > /etc/shadowsocks-libev/$user-gostws.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=ws;path=/ws"
 }
 END
@@ -481,11 +453,9 @@ cat > /etc/shadowsocks-libev/$user-gostwss.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
@@ -497,8 +467,6 @@ cat > /etc/shadowsocks-libev/$user-gostmws.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"/usr/bin/gost-plugin",
@@ -513,11 +481,9 @@ cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=mwss;cert=$path_crt;key=$path_key;path=/wss"
 }
 END
@@ -529,11 +495,9 @@ cat > /etc/shadowsocks-libev/$user-gostquic.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=quic;cert=$path_crt;key=$path_key"
 }
 END
@@ -545,11 +509,9 @@ cat > /etc/shadowsocks-libev/$user-gosth2.json<<END
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
-    "no_delay":true,
-    "fast_open":false,
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
-    "plugin":"/usr/bin/gost-plugin",
+    "plugin":"gost-plugin",
     "plugin_opts":"server;mode=h2;cert=$path_crt;key=$path_key"
 }
 END
@@ -759,8 +721,8 @@ echo -e "Method         : aes-256-cfb"
 echo -e "Created        : $hariini"
 echo -e "Expired        : $exp"
 echo -e "Service Name   : GunService"
-echo -e "PATH WS HTTP   : /"
-echo -e "PATH WSS TLS   : /"
+echo -e "PATH WS HTTP   : /ws"
+echo -e "PATH WSS TLS   : /wss"
 echo -e "Info Websocket : Khusus Bug Cloudflare && wajib pake subdomain"
 echo -e "========-obfs-plugin-========="
 echo -e "OBFS TLS       : $tls"
@@ -791,11 +753,11 @@ echo -e "MWS            : $gostmws"
 echo -e "MWSS           : $gostmwss"
 echo -e "Quic TLS       : [OFF]"
 echo -e "========================="
-echo -e "Link All Config: #://$ip:89/$user.json"
-echo -e "Link Aplikasi v2ray-plugin: #://$myip:89/xray-plugin-universal.apk"
-echo -e "Link Aplikasi gost-plugin: #://$myip:89/gost-plugin-x86.zip"
-echo -e "Link Aplikasi gost-plugin: #://$myip:89/gost-plugin-arm.zip"
-echo -e "Link Aplikasi xray-plugin: #://$myip:89/v2ray-plugin-universal.apk"
+echo -e "Link All Config: #://$MYIP:89/$user.json"
+echo -e "Link Aplikasi v2ray-plugin: #://$MYIP:89/xray-plugin-universal.apk"
+echo -e "Link Aplikasi gost-plugin: #://$MYIP:89/gost-plugin-x86.zip"
+echo -e "Link Aplikasi gost-plugin: #://$MYIP:89/gost-plugin-arm.zip"
+echo -e "Link Aplikasi xray-plugin: #://$MYIP:89/v2ray-plugin-universal.apk"
 echo -e "ganti tanda # menjadi http"
 echo -e "========================="
 echo -e "Script Mod By SL"
