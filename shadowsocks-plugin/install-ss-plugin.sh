@@ -88,10 +88,10 @@ bash acme.sh --installcert -d $domain --fullchainpath /etc/shadowsocks/xray.crt 
 #cd /etc/shadowsocks
 #rm -rf .acme.sh
 cd /home/vps/public_html/
-wget -O gost-plugin-arm.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/gost-plugin-arm.zip"
-wget -O gost-plugin-x86.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/gost-plugin-x86.zip"
-wget -O v2ray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/v2ray-plugin-universal-v4.44.0.apk"
-wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/xray-plugin-universal-v1.5.4.apk"
+wget -O gost-plugin-arm.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/gost-plugin-arm.zip"
+wget -O gost-plugin-x86.zip "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/gost-plugin-x86.zip"
+wget -O v2ray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/v2ray-plugin-universal-v4.44.0.apk"
+wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyusri/Shadowsocks-Plugin/main/xray-plugin-universal-v1.5.4.apk"
 cd
 
 
