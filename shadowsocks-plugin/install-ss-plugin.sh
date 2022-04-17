@@ -77,7 +77,7 @@ wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyus
 
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 # // Certificate File
-cd /root/etc/shadowsocks/
+cd /etc/shadowsocks/
 rm -rf .acme.sh
 wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
