@@ -17,8 +17,10 @@ mkdir -p /usr/local/bin/
 mkdir -p /etc/shadowsocks
 rm -rf /usr/bin/shadowhost
 cd /usr/bin
-wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/shadowhost.sh"
-chmod +x shadowhost && shadowhost
+wget -O addss-p https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/addss-p.sh
+chmod +x addss-p
+#wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/shadowhost.sh"
+#chmod +x shadowhost && shadowhost
 cd
 MYIP=$(wget -qO- ipinfo.io/ip);
 clear
@@ -68,6 +70,8 @@ cp -r v2ray-plugin_linux_arm64 v2ray-plugin
 cp -r v2ray-plugin /usr/local/bin/v2ray-plugin
 cp -r gost-plugin /usr/local/bin/gost-plugin
 cp -r xray-plugin /usr/local/bin/xray-plugin
+rm -rf xray-plugin_linux_arm64
+rm -rf v2ray-plugin_linux_arm64
 chmod +x /usr/local/bin/v2ray-plugin
 chmod +x /usr/local/bin/gost-plugin
 chmod +x /usr/local/bin/xray-plugin
