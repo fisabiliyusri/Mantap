@@ -12,6 +12,9 @@ PURPLE='\033[0;35m'
 CYAN='\033[0;36m'
 LIGHT='\033[0;37m'
 
+# / / Make Main Directory
+mkdir -p /usr/local/bin/
+mkdir -p /etc/shadowsocks
 rm -rf /usr/bin/shadowhost
 cd /usr/bin
 wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/shadowhost.sh"
@@ -32,10 +35,6 @@ timedatectl set-timezone Asia/Jakarta
 chronyc sourcestats -v
 chronyc tracking -v
 date
-
-# / / Make Main Directory
-mkdir -p /usr/local/bin/
-mkdir -p /etc/shadowsocks
 
 # / / Ambil V2ray-Plugin Core Version Terbaru
 #teddysun/v2ray-plugin/releases
@@ -83,7 +82,6 @@ wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master
 bash acme.sh --install
 rm acme.sh
 cd .acme.sh
-domain=$(cat /etc/shadowsocks/domain)
 bash acme.sh --register-account -m slinfinity69@gmail.com
 bash acme.sh --issue --standalone -d $domain --force
 bash acme.sh --installcert -d $domain --fullchainpath /etc/shadowsocks/xray.crt --keypath /etc/shadowsocks/xray.key
