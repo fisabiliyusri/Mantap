@@ -14,7 +14,7 @@ LIGHT='\033[0;37m'
 
 rm -rf /usr/bin/shadowhost
 cd /usr/bin
-wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sshadowsocks-plugin/shadowhost"
+wget -O shadowhost "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/shadowhost.sh"
 chmod +x shadowhost && shadowhost
 cd
 MYIP=$(wget -qO- ipinfo.io/ip);
