@@ -2,6 +2,7 @@
 # Script  By SL
 # 2022 SLOWDNS
 # ===============================================
+cd
 rm -rf slhostdns.sh
 wget https://raw.githubusercontent.com/fisabiliyusri/SLDNS/main/slowdns/slhostdns.sh && chmod +x slhostdns.sh && ./slhostdns.sh
 nameserver=$(cat /root/nsdomain)
