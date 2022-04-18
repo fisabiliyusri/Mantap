@@ -95,12 +95,12 @@ xraygrpctls=623
 else
 xraygrpctls="$((lastport9+1))"
 fi
-if [[ $lastport1 == '' ]]; then
+if [[ $alastport1 == '' ]]; then
 xraygrpchttp=624
 else
 xraygrpchttp="$((alastport1+1))"
 fi
-if [[ $lastport2 == '' ]]; then
+if [[ $alastport2 == '' ]]; then
 xrayquic=625
 else
 xrayquic="$((alastport2+1))"
@@ -113,7 +113,7 @@ fi
 if [[ $alastport4 == '' ]]; then
 gostmtls=752
 else
-gostmtls="$((lastport4+1))"
+gostmtls="$((alastport4+1))"
 fi
 if [[ $alastport5 == '' ]]; then
 gostxtls=753
@@ -140,17 +140,17 @@ gostbmws=757
 else
 gostbmws="$((alastport9+1))"
 fi
-if [[ $blastport20 == '' ]]; then
+if [[ $blastport1 == '' ]]; then
 gostamwss=758
 else
 gostamwss="$((blastport1+1))"
 fi
-if [[ $lastport21 == '' ]]; then
+if [[ $lastport2 == '' ]]; then
 gostquic=759
 else
 gostquic="$((blastport2+1))"
 fi
-if [[ $lastport3 == '' ]]; then
+if [[ $blastport3 == '' ]]; then
 gosth2=760
 else
 gosth2="$((blastport3+1))"
