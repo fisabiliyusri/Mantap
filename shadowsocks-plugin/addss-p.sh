@@ -344,7 +344,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=1;server;tls;mode=grpc;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
 #xraygrpchttp
@@ -358,7 +358,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpchttp.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=1;server;mode=grpc"
+    "plugin_opts":"server;mode=grpc"
 }
 END
 #xrayquic
@@ -372,7 +372,7 @@ cat > /etc/shadowsocks-libev/$user-xrayquic.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=1;server;tls;mode=quic;host=;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;tls;mode=quic;host=;cert=$path_crt;key=$path_key"
 }
 END
 #gosttls
@@ -638,12 +638,12 @@ linkss22="ss://${tmp22}?plugin=gost-plugin;mode=h2;path=/gost;insecure=1#gosth2"
 echo -e "### $user $exp
 port_tls $tls
 port_http $http
-port_v2rayws $v2rayws
-port_v2raywss $v2raywss
+port_v2raybws $v2raybws
+port_v2rayawss $v2rayawss
 port_v2rayquic $v2rayquic
 port_v2raygrpc $v2raygrpc
-port_xrayws $xrayws
-port_xraywss $xraywss
+port_xrayaws $xraybws
+port_xraybwss $xrayawss
 port_xraygrpctls $xraygrpctls
 port_xraygrpchttp $xraygrpchttp
 port_xrayquic $xrayquic
@@ -651,10 +651,10 @@ port_gosttls $gosttls
 port_gostmtls $gostmtls
 port_gostxtls $gostxtls
 port_gostgrpc $gostgrpc
-port_gostws $gostws
-port_gostwss $gostwss
-port_gostmws $gostmws
-port_gostmwss $gostmwss
+port_gostbws $gostbws
+port_gostawss $gostawss
+port_gostbmws $gostbmws
+port_gostamwss $gostamwss
 port_gostquic $gostquic
 port_gosth2 $gosth2">>"/etc/shadowsocks-libev/akun.conf"
 cat > /home/vps/public_html/$user.json<<END
