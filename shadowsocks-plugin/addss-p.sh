@@ -29,12 +29,12 @@ path_key="/etc/shadowsocks/xray.key"
 IP=$(wget -qO- ipinfo.io/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport3=$(grep "port_v2raywss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport4=$(grep "port_v2rayws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+lastport3=$(grep "port_v2rayawss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+lastport4=$(grep "port_v2raybws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport5=$(grep "port_v2raygrpc" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport6=$(grep "port_v2rayquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport7=$(grep "port_xrayws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport8=$(grep "port_xraywss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+lastport7=$(grep "port_xraybws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+lastport8=$(grep "port_xrayawss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport9=$(grep "port_xraygrpctls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 alastport1=$(grep "port_xraygrpchttp" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 alastport2=$(grep "port_xrayquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
@@ -42,10 +42,10 @@ alastport3=$(grep "port_gosttls" /etc/shadowsocks-libev/akun.conf | tail -n1 | a
 alastport4=$(grep "port_gostmtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 alastport5=$(grep "port_gostxtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 alastport6=$(grep "port_gostgrpc" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-alastport7=$(grep "port_gostws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-alastport8=$(grep "port_gostwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-alastport9=$(grep "port_gostmws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-blastport1=$(grep "port_gostmwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport7=$(grep "port_gostbws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport8=$(grep "port_gostawss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport9=$(grep "port_gostbmws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+blastport1=$(grep "port_gostamwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 blastport2=$(grep "port_gostquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 blastport3=$(grep "port_gosth2" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 
@@ -61,14 +61,14 @@ else
 http="$((lastport2+1))"
 fi
 if [[ $lastport3 == '' ]]; then
-v2raywss=521
+v2rayawss=521
 else
-v2raywss="$((lastport3+1))"
+v2rayawss="$((lastport3+1))"
 fi
 if [[ $lastport4 == '' ]]; then
-v2rayws=522
+v2raybws=522
 else
-v2rayws="$((lastport4+1))"
+v2raybws="$((lastport4+1))"
 fi
 if [[ $lastport5 == '' ]]; then
 v2raygrpc=523
@@ -81,14 +81,14 @@ else
 v2rayquic="$((lastport6+1))"
 fi
 if [[ $lastport7 == '' ]]; then
-xrayws=621
+xraybws=621
 else
-xrayws="$((lastport7+1))"
+xraybws="$((lastport7+1))"
 fi
 if [[ $lastport8 == '' ]]; then
-xraywss=622
+xrayawss=622
 else
-xraywss="$((lastport8+1))"
+xrayawss="$((lastport8+1))"
 fi
 if [[ $lastport9 == '' ]]; then
 xraygrpctls=623
@@ -126,24 +126,24 @@ else
 gostgrpc="$((alastport6+1))"
 fi
 if [[ $alastport7 == '' ]]; then
-gostws=755
+gostbws=755
 else
-gostws="$((alastport7+1))"
+gostbws="$((alastport7+1))"
 fi
 if [[ $alastport8 == '' ]]; then
-gostwss=756
+gostawss=756
 else
-gostwss="$((alastport8+1))"
+gostawss="$((alastport8+1))"
 fi
 if [[ $alastport9 == '' ]]; then
-gostmws=757
+gostbmws=757
 else
-gostmws="$((alastport9+1))"
+gostbmws="$((alastport9+1))"
 fi
 if [[ $blastport20 == '' ]]; then
-gostmwss=758
+gostamwss=758
 else
-gostmwss="$((blastport1+1))"
+gostamwss="$((blastport1+1))"
 fi
 if [[ $lastport21 == '' ]]; then
 gostquic=759
@@ -253,7 +253,7 @@ END
 cat > /etc/shadowsocks-libev/$user-v2raywss.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$v2raywss,
+    "server_port":$v2rayawss,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -267,7 +267,7 @@ END
 cat > /etc/shadowsocks-libev/$user-v2rayws.json <<-END
 {
     "server":"0.0.0.0",
-    "server_port":$v2rayws,
+    "server_port":$v2raybws,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -309,7 +309,7 @@ END
 cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$xraywss,
+    "server_port":$xrayawss,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -323,7 +323,7 @@ END
 cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
 {
     "server":"0.0.0.0",
-    "server_port":$xrayws,
+    "server_port":$xraybws,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",,
@@ -435,7 +435,7 @@ END
 cat > /etc/shadowsocks-libev/$user-gostws.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$gostws,
+    "server_port":$gostbws,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -449,21 +449,21 @@ END
 cat > /etc/shadowsocks-libev/$user-gostwss.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$gostwss,
+    "server_port":$gostawss,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/wss"
+    "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/gost"
 }
 END
 #gostmws
 cat > /etc/shadowsocks-libev/$user-gostmws.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$gostmws,
+    "server_port":$gostbmws,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -477,7 +477,7 @@ END
 cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$gostmwss,
+    "server_port":$gostamwss,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
@@ -730,14 +730,14 @@ echo -e "OBFS TLS       : $tls"
 echo -e "OBFS HTTP      : $http"
 echo -e "========-v2ray-plugin-========"
 echo -e "=Transport Mode-===-Port-====="
-echo -e "Websocket TLS  : $v2raywss"
-echo -e "Websocket HTTP : $v2rayws"
+echo -e "Websocket TLS  : $v2rayawss"
+echo -e "Websocket HTTP : $v2raybws"
 echo -e "Quic TLS       : $v2rayquic"
 echo -e "gRPC TLS       : $v2raygrpc"
 echo -e "========-xray-plugin-========="
 echo -e "=Transport Mode-===-Port-====="
-echo -e "Websocket TLS  : $xraywss"
-echo -e "Websocket HTTP : $xrayws"
+echo -e "Websocket TLS  : $xrayawss"
+echo -e "Websocket HTTP : $xraybws"
 echo -e "gRPC HTTP      : $xraygrpchttp"
 echo -e "gRPC TLS       : $xraygrpctls"
 echo -e "Quic TLS       : $xrayquic"
@@ -748,10 +748,10 @@ echo -e "MTLS           : $gostmtls"
 echo -e "XTLS           : $gostxtls"
 echo -e "gRPC TLS       : $gostgrpc"
 echo -e "H2 TLS         : $gosth2"
-echo -e "WSS TLS        : $gostwss"
-echo -e "WS HTTP        : $gostws"
-echo -e "MWS            : $gostmws"
-echo -e "MWSS           : $gostmwss"
+echo -e "WSS TLS        : $gostawss"
+echo -e "WS HTTP        : $gostbws"
+echo -e "MWS            : $gostbmws"
+echo -e "MWSS           : $gostamwss"
 echo -e "Quic TLS       : [OFF]"
 echo -e "========================="
 echo -e "Link All Config: #://$MYIP:89/$user.json"
