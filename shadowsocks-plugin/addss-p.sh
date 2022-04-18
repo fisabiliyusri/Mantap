@@ -36,18 +36,18 @@ lastport6=$(grep "port_v2rayquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | 
 lastport7=$(grep "port_xrayws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport8=$(grep "port_xraywss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport9=$(grep "port_xraygrpctls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport11=$(grep "port_xraygrpchttp" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport12=$(grep "port_xrayquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport13=$(grep "port_gosttls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport14=$(grep "port_gostmtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport15=$(grep "port_gostxtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport16=$(grep "port_gostgrpc" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport17=$(grep "port_gostws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport18=$(grep "port_gostwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport19=$(grep "port_gostmws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport20=$(grep "port_gostmwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport21=$(grep "port_gostquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
-lastport22=$(grep "port_gosth2" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport1=$(grep "port_xraygrpchttp" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport2=$(grep "port_xrayquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport3=$(grep "port_gosttls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport4=$(grep "port_gostmtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport5=$(grep "port_gostxtls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport6=$(grep "port_gostgrpc" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport7=$(grep "port_gostws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport8=$(grep "port_gostwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+alastport9=$(grep "port_gostmws" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+blastport1=$(grep "port_gostmwss" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+blastport2=$(grep "port_gostquic" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
+blastport3=$(grep "port_gosth2" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 
 
 if [[ $lastport1 == '' ]]; then
@@ -95,65 +95,65 @@ xraygrpctls=623
 else
 xraygrpctls="$((lastport9+1))"
 fi
-if [[ $lastport11 == '' ]]; then
+if [[ $lastport1 == '' ]]; then
 xraygrpchttp=624
 else
-xraygrpchttp="$((lastport11+1))"
+xraygrpchttp="$((alastport1+1))"
 fi
-if [[ $lastport12 == '' ]]; then
+if [[ $lastport2 == '' ]]; then
 xrayquic=625
 else
-xrayquic="$((lastport12+1))"
+xrayquic="$((alastport2+1))"
 fi
-if [[ $lastport13 == '' ]]; then
+if [[ $alastport3 == '' ]]; then
 gosttls=751
 else
-gosttls="$((lastport13+1))"
+gosttls="$((alastport3+1))"
 fi
-if [[ $lastport14 == '' ]]; then
+if [[ $alastport4 == '' ]]; then
 gostmtls=752
 else
-gostmtls="$((lastport14+1))"
+gostmtls="$((lastport4+1))"
 fi
-if [[ $lastport15 == '' ]]; then
+if [[ $alastport5 == '' ]]; then
 gostxtls=753
 else
-gostxtls="$((lastport15+1))"
+gostxtls="$((alastport5+1))"
 fi
-if [[ $lastport16 == '' ]]; then
+if [[ $alastport6 == '' ]]; then
 gostgrpc=754
 else
-gostgrpc="$((lastport16+1))"
+gostgrpc="$((alastport6+1))"
 fi
-if [[ $lastport17 == '' ]]; then
+if [[ $alastport7 == '' ]]; then
 gostws=755
 else
-gostws="$((lastport17+1))"
+gostws="$((alastport7+1))"
 fi
-if [[ $lastport18 == '' ]]; then
+if [[ $alastport8 == '' ]]; then
 gostwss=756
 else
-gostwss="$((lastport18+1))"
+gostwss="$((alastport8+1))"
 fi
-if [[ $lastport19 == '' ]]; then
+if [[ $alastport9 == '' ]]; then
 gostmws=757
 else
-gostmws="$((lastport19+1))"
+gostmws="$((alastport9+1))"
 fi
-if [[ $lastport20 == '' ]]; then
+if [[ $blastport20 == '' ]]; then
 gostmwss=758
 else
-gostmwss="$((lastport20+1))"
+gostmwss="$((blastport1+1))"
 fi
 if [[ $lastport21 == '' ]]; then
 gostquic=759
 else
-gostquic="$((lastport21+1))"
+gostquic="$((blastport2+1))"
 fi
-if [[ $lastport22 == '' ]]; then
+if [[ $lastport3 == '' ]]; then
 gosth2=760
 else
-gosth2="$((lastport22+1))"
+gosth2="$((blastport3+1))"
 fi
 source /var/lib/crot/ipvps.conf
 if [[ "$IP2" = "" ]]; then
@@ -721,8 +721,9 @@ echo -e "Method         : aes-256-cfb"
 echo -e "Created        : $hariini"
 echo -e "Expired        : $exp"
 echo -e "Service Name   : GunService"
-echo -e "PATH WS HTTP   : /ws"
-echo -e "PATH WSS TLS   : /wss"
+echo -e "PATH v2ray     : /v2ray"
+echo -e "PATH gost      : /gost"
+echo -e "PATH xray      : /xray"
 echo -e "Info Websocket : Khusus Bug Cloudflare && wajib pake subdomain"
 echo -e "========-obfs-plugin-========="
 echo -e "OBFS TLS       : $tls"
