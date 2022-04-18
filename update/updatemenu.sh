@@ -92,7 +92,7 @@ chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
 sl-download-info
-#install-sldns
+install-sldns
 install-ss-plugin
 #xray-grpc
 cd
