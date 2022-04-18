@@ -316,7 +316,7 @@ cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;tls;path=/xray;cert=$path_crt;key=$path_key"
+    "plugin_opts":"mux=1;server;tls;path=/xray;cert=$path_crt;key=$path_key"
 }
 END
 #xrayws
@@ -330,7 +330,7 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;path=/xray"
+    "plugin_opts":"mux=1;server;path=/xray"
 }
 END
 #xraygrpctls
@@ -344,7 +344,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;tls;mode=grpc;cert=$path_crt;key=$path_key"
+    "plugin_opts":"mux=1;server;tls;mode=grpc;cert=$path_crt;key=$path_key"
 }
 END
 #xraygrpchttp
@@ -358,7 +358,7 @@ cat > /etc/shadowsocks-libev/$user-xraygrpchttp.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;mode=grpc"
+    "plugin_opts":"mux=1;server;mode=grpc"
 }
 END
 #xrayquic
@@ -372,7 +372,7 @@ cat > /etc/shadowsocks-libev/$user-xrayquic.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_only",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=0;server;tls;mode=quic;host=;cert=$path_crt;key=$path_key"
+    "plugin_opts":"mux=1;server;tls;mode=quic;host=;cert=$path_crt;key=$path_key"
 }
 END
 #gosttls
@@ -470,7 +470,7 @@ cat > /etc/shadowsocks-libev/$user-gostmws.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=mws;path=/gost"
+    "plugin_opts":"server;mux=1;mode=mws;path=/gost"
 }
 END
 #gostmwss
@@ -512,7 +512,7 @@ cat > /etc/shadowsocks-libev/$user-gosth2.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=h2;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;mode=h2;path=/gost;cert=$path_crt;key=$path_key"
 }
 END
 
@@ -589,12 +589,12 @@ systemctl start shadowsocks-libev-server@$user-gosth2.service
 
 tmp1=$(echo -n "aes-256-cfb:${user}@${MYIP}:$tls" | base64 -w0)
 tmp2=$(echo -n "aes-256-cfb:${user}@${MYIP}:$http" | base64 -w0)
-tmp3=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2rayws" | base64 -w0)
-tmp4=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2raywss" | base64 -w0)
+tmp3=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2raybws" | base64 -w0)
+tmp4=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2rayawss" | base64 -w0)
 tmp5=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2rayquic" | base64 -w0)
 tmp6=$(echo -n "aes-256-cfb:${user}@${MYIP}:$v2raygrpc" | base64 -w0)
-tmp7=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xrayws" | base64 -w0)
-tmp8=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xraywss" | base64 -w0)
+tmp7=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xraybws" | base64 -w0)
+tmp8=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xrayawss" | base64 -w0)
 tmp9=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xraygrpctls" | base64 -w0)
 tmp11=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xraygrpchttp" | base64 -w0)
 tmp12=$(echo -n "aes-256-cfb:${user}@${MYIP}:$xrayquic" | base64 -w0)
@@ -602,10 +602,10 @@ tmp13=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gosttls" | base64 -w0)
 tmp14=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostmtls" | base64 -w0)
 tmp15=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostxtls" | base64 -w0)
 tmp16=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostgrpc" | base64 -w0)
-tmp17=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostws" | base64 -w0)
-tmp18=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostwss" | base64 -w0)
-tmp19=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostmws" | base64 -w0)
-tmp20=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostmwss" | base64 -w0)
+tmp17=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostbws" | base64 -w0)
+tmp18=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostawss" | base64 -w0)
+tmp19=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostbmws" | base64 -w0)
+tmp20=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostamwss" | base64 -w0)
 tmp21=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gostquic" | base64 -w0)
 tmp22=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gosth2" | base64 -w0)
 
@@ -613,27 +613,27 @@ tmp22=$(echo -n "aes-256-cfb:${user}@${MYIP}:$gosth2" | base64 -w0)
 linkss1="ss://${tmp1}?plugin=obfs-local;obfs=tls;obfs-host=bing.com#obfs-tls"
 linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com#obf-http"
 #v2ray
-linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/v2ray#v2rayhttp"
-linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/v2ray#v2raytls"
+linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/v2ray#v2raywshttp"
+linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/v2ray#v2raywstls"
 linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;tls;mode=quic;host=#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;tls;mode=grpc#v2raygrpc"
 #xray
-linkss7="ss://${tmp7}?plugin=xray-plugin;path=/xray#xrayhttp"
-linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls#xraytls"
+linkss7="ss://${tmp7}?plugin=xray-plugin;path=/xray#xraywshttp"
+linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls#xraywstls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
 linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=#xrayquictls"
 #gostlink
-linkss13="ss://${tmp13}?plugin=gost-plugin;mode=tls#gost-tls"
-linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls#gost-mtls"
-linkss15="ss://${tmp15}?plugin=gost-plugin;mode=xtls#gost-xtls"
+linkss13="ss://${tmp13}?plugin=gost-plugin;mode=tls;insecure=1#gost-tls"
+linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls;insecure=1#gost-mtls"
+linkss15="ss://${tmp15}?plugin=gost-plugin;mode=xtls;insecure=1#gost-xtls"
 linkss16="ss://${tmp16}?plugin=gost-plugin;mode=grpc#gost-grpc"
 linkss17="ss://${tmp17}?plugin=gost-plugin;mode=ws;path=/gost#gostws"
 linkss18="ss://${tmp18}?plugin=gost-plugin;mode=wss;path=/gost;insecure=1#gostwss"
-linkss19="ss://${tmp19}?plugin=gost-plugin;mode=mws;path=/gost#gostmws"
+linkss19="ss://${tmp19}?plugin=gost-plugin;mode=mws;mux=1;path=/gost#gostmws"
 linkss20="ss://${tmp20}?plugin=gost-plugin;mode=mwss;mux=1;path=/gost;insecure=1#gostmwss"
 linkss21="ss://${tmp21}?plugin=gost-plugin;mode=quic;insecure=1#gostquic"
-linkss22="ss://${tmp22}?plugin=gost-plugin;mode=h2;path=/;insecure=1#gosth2"
+linkss22="ss://${tmp22}?plugin=gost-plugin;mode=h2;path=/gost;insecure=1#gosth2"
 
 echo -e "### $user $exp
 port_tls $tls
