@@ -484,7 +484,7 @@ cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=mwss;cert=$path_crt;key=$path_key;path=/gost"
+    "plugin_opts":"server;mux=1;mode=mwss;cert=$path_crt;key=$path_key;path=/gost"
 }
 END
 #gostquic
@@ -631,7 +631,7 @@ linkss16="ss://${tmp16}?plugin=gost-plugin;mode=grpc#gost-grpc"
 linkss17="ss://${tmp17}?plugin=gost-plugin;mode=ws;path=/gost#gostws"
 linkss18="ss://${tmp18}?plugin=gost-plugin;mode=wss;path=/gost;insecure=1#gostwss"
 linkss19="ss://${tmp19}?plugin=gost-plugin;mode=mws;path=/gost#gostmws"
-linkss20="ss://${tmp20}?plugin=gost-plugin;mode=mwss;path=/gost;insecure=1#gostmwss"
+linkss20="ss://${tmp20}?plugin=gost-plugin;mode=mwss;mux=1;path=/gost;insecure=1#gostmwss"
 linkss21="ss://${tmp21}?plugin=gost-plugin;mode=quic;insecure=1#gostquic"
 linkss22="ss://${tmp22}?plugin=gost-plugin;mode=h2;path=/;insecure=1#gosth2"
 
