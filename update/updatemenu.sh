@@ -28,9 +28,9 @@ cd /usr/bin
 rm -rf menu
 rm -rf menuinfo
 rm -rf restart
-rm -rf install-sldns
+#rm -rf install-sldns
 rm -rf addssh
-wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
+#wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
 wget -O addssh "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/addssh.sh"
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
@@ -93,8 +93,8 @@ chmod +x slowdnsmenu
 chmod +x running
 chmod +x updatemenu
 sl-download-info
-install-sldns
-install-ss-plugin
+#install-sldns
+#install-ss-plugin
 #xray-grpc
 cd
 
