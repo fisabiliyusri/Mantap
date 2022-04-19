@@ -619,7 +619,7 @@ linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;mode=quic;host=#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;mode=grpc#v2raygrpc"
 #xray
 linkss7="ss://${tmp7}?plugin=xray-plugin;path=/xray#xraywshttp"
-linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls#xraywstls"
+linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls;host=$domain#xraywstls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc;host=$domain#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
 linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=$domain#xrayquictls"
