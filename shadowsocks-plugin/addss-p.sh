@@ -81,12 +81,12 @@ else
 v2rayquic="$((lastport6+1))"
 fi
 if [[ $lastport7 == '' ]]; then
-xraybws=821
+xraybws=831
 else
 xraybws="$((lastport7+1))"
 fi
 if [[ $lastport8 == '' ]]; then
-xrayawss=922
+xrayawss=921
 else
 xrayawss="$((lastport8+1))"
 fi
@@ -320,18 +320,19 @@ cat > /etc/shadowsocks-libev/$user-xraywss.json<<END
 }
 END
 #xrayws
-cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
+cat > /etc/shadowsocks-libev/$user-xrayws.json<<END
 {
     "server":"0.0.0.0",
     "server_port":$xraybws,
     "password":"$user",
     "timeout":60,
-    "method":"aes-256-cfb",,
+    "method":"aes-256-cfb",
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
     "plugin_opts":"mux=0;server;path=/xray"
 }
+
 END
 #xraygrpctls
 cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
