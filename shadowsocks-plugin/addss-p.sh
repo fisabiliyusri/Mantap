@@ -393,7 +393,7 @@ END
 cat > /etc/shadowsocks-libev/$user-gostmtls.json<<END
 {
     "server":"0.0.0.0",
-    "server_port":$gosmtls,
+    "server_port":$gostmtls,
     "password":"$user",
     "timeout":60,
     "method":"aes-256-cfb",
