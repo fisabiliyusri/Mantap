@@ -615,8 +615,8 @@ linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com#obf-http"
 #v2ray
 linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/v2ray#v2raywshttp"
 linkss4="ss://${tmp4}?plugin=v2ray-plugin;tls;path=/v2ray#v2raywstls"
-linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;mode=quic;host=$domain#v2rayquictls"
-linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;mode=grpc#v2raygrpc"
+linkss5="ss://${tmp5}?plugin=v2ray-plugin;mode=quic;host=$domain#v2rayquictls"
+linkss6="ss://${tmp6}?plugin=v2ray-plugin;mode=grpc#v2raygrpc"
 #xray
 linkss7="ss://${tmp7}?plugin=xray-plugin;mux=0;path=/xray#xraywshttp"
 linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls;host=$domain#xraywstls"
