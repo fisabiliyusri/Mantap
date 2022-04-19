@@ -386,7 +386,7 @@ cat > /etc/shadowsocks-libev/$user-gosttls.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=tls;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;cert=$path_crt;key=$path_key;mode=xtls"
 }
 END
 #gostmtls
@@ -414,7 +414,7 @@ cat > /etc/shadowsocks-libev/$user-gostxtls.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=xtls;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;cert=$path_crt;key=$path_key;mode=xtls"
 }
 END
 #gostgrpc
@@ -428,7 +428,7 @@ cat > /etc/shadowsocks-libev/$user-gostgrpc.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=grpc;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;cert=$path_crt;key=$path_key;mode=grpc"
 }
 END
 #gostws
