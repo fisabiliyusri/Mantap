@@ -131,27 +131,27 @@ else
 gostbws="$((alastport7+1))"
 fi
 if [[ $alastport8 == '' ]]; then
-gostawss=756
+gostawss=851
 else
 gostawss="$((alastport8+1))"
 fi
 if [[ $alastport9 == '' ]]; then
-gostbmws=757
+gostbmws=861
 else
 gostbmws="$((alastport9+1))"
 fi
 if [[ $blastport1 == '' ]]; then
-gostamwss=758
+gostamwss=921
 else
 gostamwss="$((blastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-gostquic=759
+gostquic=911
 else
 gostquic="$((blastport2+1))"
 fi
 if [[ $blastport3 == '' ]]; then
-gosth2=760
+gosth2=922
 else
 gosth2="$((blastport3+1))"
 fi
