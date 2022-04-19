@@ -622,7 +622,7 @@ linkss7="ss://${tmp7}?plugin=xray-plugin;path=/xray#xraywshttp"
 linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls#xraywstls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
-linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=#xrayquictls"
+linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=$domain#xrayquictls"
 #gostlink
 linkss13="ss://${tmp13}?plugin=gost-plugin;mode=tls;insecure=1#gost-tls"
 linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls;insecure=1#gost-mtls"
