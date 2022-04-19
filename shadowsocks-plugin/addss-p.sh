@@ -330,7 +330,7 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=1;server;path=/xray"
+    "plugin_opts":"mux=0;server;path=/xray"
 }
 END
 #xraygrpctls
