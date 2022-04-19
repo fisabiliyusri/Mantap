@@ -260,7 +260,7 @@ cat > /etc/shadowsocks-libev/$user-v2raywss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"v2ray-plugin",
-    "plugin_opts":"server;tls;path=/v2ray;cert=$path_crt;key=$path_key"
+    "plugin_opts":"server;tls;host=$domain;path=/v2ray;cert=$path_crt;key=$path_key"
 }
 END
 #v2rayws
@@ -456,7 +456,7 @@ cat > /etc/shadowsocks-libev/$user-gostwss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mode=wss;cert=$path_crt;key=$path_key;path=/gost"
+    "plugin_opts":"server;mode=wss;host=$domain;cert=$path_crt;key=$path_key;path=/gost"
 }
 END
 #gostmws
@@ -484,7 +484,7 @@ cat > /etc/shadowsocks-libev/$user-gostmwss.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;mux=1;mode=mwss;cert=$path_crt;key=$path_key;path=/gost"
+    "plugin_opts":"server;mux=1;mode=mwss;host=$domain;cert=$path_crt;key=$path_key;path=/gost"
 }
 END
 #gostquic
