@@ -8,7 +8,7 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 #########################
 
 
-MYIP=$(curl -sS ipv4.icanhazip.com)
+MYIP=$(curl -sS v2xrayid.tech)
 clear
 domain=$(cat /etc/xray/domain)
 tls=$(cat /etc/xray/vmessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
