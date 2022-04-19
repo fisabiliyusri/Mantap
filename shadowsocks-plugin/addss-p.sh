@@ -400,7 +400,7 @@ cat > /etc/shadowsocks-libev/$user-gostmtls.json<<END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"gost-plugin",
-    "plugin_opts":"server;cert=$path_crt;key=$path_key;mode=mtls"
+    "plugin_opts":"server;mux=1;cert=$path_crt;key=$path_key;mode=mtls"
 }
 END
 #gostxtls
