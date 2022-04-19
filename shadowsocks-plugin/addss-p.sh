@@ -332,7 +332,6 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json<<END
     "plugin":"xray-plugin",
     "plugin_opts":"mux=0;server;path=/xray"
 }
-
 END
 #xraygrpctls
 cat > /etc/shadowsocks-libev/$user-xraygrpctls.json<<END
