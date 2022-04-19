@@ -330,7 +330,7 @@ cat > /etc/shadowsocks-libev/$user-xrayws.json <<-END
     "nameserver":"8.8.8.8",
     "mode":"tcp_and_udp",
     "plugin":"xray-plugin",
-    "plugin_opts":"mux=1;server;path=/xray"
+    "plugin_opts":"mux=0;server;path=/xray"
 }
 END
 #xraygrpctls
@@ -618,7 +618,7 @@ linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/v2ray#v2raywstls"
 linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;mode=quic;host=#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;mode=grpc#v2raygrpc"
 #xray
-linkss7="ss://${tmp7}?plugin=xray-plugin;path=/xray#xraywshttp"
+linkss7="ss://${tmp7}?plugin=xray-plugin;mux=0;path=/xray#xraywshttp"
 linkss8="ss://${tmp8}?plugin=xray-plugin;path=/xray;tls;host=$domain#xraywstls"
 linkss9="ss://${tmp9}?plugin=xray-plugin;tls;mode=grpc;host=$domain#xraygrpctls"
 linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
