@@ -615,7 +615,7 @@ linkss2="ss://${tmp2}?plugin=obfs-local;obfs=http;obfs-host=bing.com#obf-http"
 #v2ray
 linkss3="ss://${tmp3}?plugin=v2ray-plugin;mux=0;path=/v2ray#v2raywshttp"
 linkss4="ss://${tmp4}?plugin=v2ray-plugin;mux=0;tls;path=/v2ray#v2raywstls"
-linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;mode=quic;host=#v2rayquictls"
+linkss5="ss://${tmp5}?plugin=v2ray-plugin;server;mode=quic;host=$domain#v2rayquictls"
 linkss6="ss://${tmp6}?plugin=v2ray-plugin;server;mode=grpc#v2raygrpc"
 #xray
 linkss7="ss://${tmp7}?plugin=xray-plugin;mux=0;path=/xray#xraywshttp"
@@ -625,7 +625,7 @@ linkss11="ss://${tmp11}?plugin=xray-plugin;mode=grpc#xraygrpchttp"
 linkss12="ss://${tmp12}?plugin=xray-plugin;mode=quic;host=$domain#xrayquictls"
 #gostlink
 linkss13="ss://${tmp13}?plugin=gost-plugin;mode=tls;insecure=1#gost-tls"
-linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls;insecure=1#gost-mtls"
+linkss14="ss://${tmp14}?plugin=gost-plugin;mode=mtls;mux=1;insecure=1#gost-mtls"
 linkss15="ss://${tmp15}?plugin=gost-plugin;mode=xtls;insecure=1#gost-xtls"
 linkss16="ss://${tmp16}?plugin=gost-plugin;mode=grpc;insecure=1;serviceName=GunService#gost-grpc"
 linkss17="ss://${tmp17}?plugin=gost-plugin;mode=ws;path=/gost#gostws"
