@@ -61,7 +61,7 @@ else
 http="$((lastport2+1))"
 fi
 if [[ $lastport3 == '' ]]; then
-v2rayawss=521
+v2rayawss=421
 else
 v2rayawss="$((lastport3+1))"
 fi
@@ -71,87 +71,87 @@ else
 v2raybws="$((lastport4+1))"
 fi
 if [[ $lastport5 == '' ]]; then
-v2raygrpc=523
+v2raygrpc=623
 else
 v2raygrpc="$((lastport5+1))"
 fi
 if [[ $lastport6 == '' ]]; then
-v2rayquic=526
+v2rayquic=726
 else
 v2rayquic="$((lastport6+1))"
 fi
 if [[ $lastport7 == '' ]]; then
-xraybws=621
+xraybws=821
 else
 xraybws="$((lastport7+1))"
 fi
 if [[ $lastport8 == '' ]]; then
-xrayawss=622
+xrayawss=922
 else
 xrayawss="$((lastport8+1))"
 fi
 if [[ $lastport9 == '' ]]; then
-xraygrpctls=623
+xraygrpctls=1623
 else
 xraygrpctls="$((lastport9+1))"
 fi
 if [[ $alastport1 == '' ]]; then
-xraygrpchttp=624
+xraygrpchttp=2624
 else
 xraygrpchttp="$((alastport1+1))"
 fi
 if [[ $alastport2 == '' ]]; then
-xrayquic=625
+xrayquic=3626
 else
 xrayquic="$((alastport2+1))"
 fi
 if [[ $alastport3 == '' ]]; then
-gosttls=751
+gosttls=4751
 else
 gosttls="$((alastport3+1))"
 fi
 if [[ $alastport4 == '' ]]; then
-gostmtls=752
+gostmtls=5753
 else
 gostmtls="$((alastport4+1))"
 fi
 if [[ $alastport5 == '' ]]; then
-gostxtls=753
+gostxtls=6755
 else
 gostxtls="$((alastport5+1))"
 fi
 if [[ $alastport6 == '' ]]; then
-gostgrpc=754
+gostgrpc=7757
 else
 gostgrpc="$((alastport6+1))"
 fi
 if [[ $alastport7 == '' ]]; then
-gostbws=755
+gostbws=8759
 else
 gostbws="$((alastport7+1))"
 fi
 if [[ $alastport8 == '' ]]; then
-gostawss=851
+gostawss=9851
 else
 gostawss="$((alastport8+1))"
 fi
 if [[ $alastport9 == '' ]]; then
-gostbmws=861
+gostbmws=1861
 else
 gostbmws="$((alastport9+1))"
 fi
 if [[ $blastport1 == '' ]]; then
-gostamwss=921
+gostamwss=2921
 else
 gostamwss="$((blastport1+1))"
 fi
 if [[ $lastport2 == '' ]]; then
-gostquic=911
+gostquic=3911
 else
 gostquic="$((blastport2+1))"
 fi
 if [[ $blastport3 == '' ]]; then
-gosth2=922
+gosth2=4922
 else
 gosth2="$((blastport3+1))"
 fi
