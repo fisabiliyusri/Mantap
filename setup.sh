@@ -77,7 +77,9 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-s
 #
 # install xray grpc
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
-#
+# install shadowsocks plugin
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
+ 
 
 rm -f /root/ssh-vpn.sh
 rm -f /root/sstp.sh
@@ -92,6 +94,7 @@ rm -f /root/ohp.sh
 rm -f /root/install
 rm -f /root/sl-grpc.sh
 rm -f /root/install-sldns
+rm -f /root/install-ss-plugin.sh
 cat <<EOF> /etc/systemd/system/autosett.service
 [Unit]
 Description=autosetting
