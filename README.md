@@ -51,7 +51,7 @@ atau
 Part 1: Update dan Upgrade
    <img src="https://img.shields.io/badge/Update%20Upgrade-green"> 
   ```html
-apt-get update && apt-get upgrade -y && apt-get install software-properties-common -y && update-grub && sleep 2 && reboot
+apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
   
 ## 2.0
