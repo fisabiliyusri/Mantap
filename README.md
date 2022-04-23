@@ -137,8 +137,8 @@ reboot
  ```
 
 ### 7. Info Websocket
-# Websocket harus menggunakan subdomain/domain dan sudah di pointing di cloudflare (CDN CLOUDFLARE)
-Tanpa subdomain/domain mustahil bisa terhubung dengan bug yang berasal dari cloudflare
+* Websocket harus menggunakan subdomain/domain dan sudah di pointing di cloudflare (CDN CLOUDFLARE)
+* Tanpa subdomain/domain mustahil bisa terhubung dengan bug yang berasal dari cloudflare
 *
 *
 *
