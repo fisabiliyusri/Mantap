@@ -21,9 +21,8 @@ Mod By SL
 <p align="center"><img src="https://img.shields.io/badge/Service-SSH_OpenSSH-success.svg">  <img src="https://img.shields.io/badge/Service-SSH_Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-SlowDns-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-XRAY-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_Websocket_TLS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_gRPC_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_TROJAN-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan_Go-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">  <img src= "https://img.shields.io/badge/Service-Shadowsocks-success.svg">  
 
 ### Info:
-* INI SCRIPT KHUSUS UNTUK MEMBUAT SERVER VPN
-* HARAP DI BACA 
-# SCRIPT UNTUK MEMBUAT SERVER VPN
+* HARAP DI BACA & UTAMAKAN MEMBACA
+# INI SCRIPT KHUSUS UNTUK MEMBUAT SERVER VPN
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
 * VPS AKUN ROOT
 * Login VPS User menggunakan user root
@@ -51,9 +50,9 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 * SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
 
 # Khusus Untuk OS
-• Debian 10 & 9
+* • Debian 10 & 9
 atau
-• Ubuntu 18.04 & 20.04
+* • Ubuntu 18.04 & 20.04
 ## Installation 
 ## 1.
 Part 1: Update dan Upgrade
