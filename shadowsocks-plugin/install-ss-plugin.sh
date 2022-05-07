@@ -97,6 +97,8 @@ wget -O xray-plugin-universal.apk "https://raw.githubusercontent.com/fisabiliyus
 sudo lsof -t -i tcp:80 -s tcp:listen | sudo xargs kill
 # // Certificate File
 cd /root/
+rm -rf acme.sh
+rm -rf .acme.sh
 wget -O acme.sh https://raw.githubusercontent.com/acmesh-official/acme.sh/master/acme.sh
 bash acme.sh --install
 rm acme.sh
