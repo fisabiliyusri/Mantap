@@ -75,8 +75,10 @@ wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-s
 # Informasi IP Saya dan Semua Port TCP UDP
 # wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ipsaya.sh && chmod +x ipsaya.sh
 #
-# install xray grpc
+# install xray sl-grpc
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/sl-grpc.sh && chmod +x sl-grpc.sh && screen -S sl-grpc ./sl-grpc.sh
+# install xray grpc
+wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/grpc/xray-grpc.sh && chmod +x xray-grpc.sh && screen -S xray-grpc ./xray-grpc.sh
 # install shadowsocks plugin
 wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/shadowsocks-plugin/install-ss-plugin.sh && chmod +x install-ss-plugin.sh && ./install-ss-plugin.sh
  
