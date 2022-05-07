@@ -23,13 +23,13 @@ echo -e "$yy 12$y. XRAY GRPC MENU$wh"
 echo -e "$yy 13$y. SLOWDNS MENU (OFF)$wh"
 echo -e "$yy 14$y. CEK SEMUA IP PORT$wh"
 echo -e "$yy 15$y. CEK SEMUA SERVICE VPN$wh"
-echo -e "$yy 16$y. UPDATE MENU (Update 2x)$wh"
-echo -e "$yy 17$y. SL-FIX (Perbaiki Error SSLH+WS-TLS setelah reboot)$wh"
+echo -e "$yy 16$y. UPDATE MENU (Update)$wh"
+echo -e "$yy 17$y. sl-fix (Perbaiki Error SSLH+WS-TLS setelah reboot)$wh"
 echo -e "$yy 18$y. Settings (Pengaturan)$wh"
 echo -e "$yy 19$y. Exit (Keluar)$wh"
 echo -e "$yy 20$y. copyrepo (Salin Repo Script Mantap)$wh"
 echo -e "$yy 21$y. menuinfo (Untuk Mendapatkan Informasi)$wh"
-echo -e "$yy 22$y. Shadowsocks Plugin Menu (OFFLINE)$wh"
+echo -e "$yy 22$y. Shadowsocks Plugin Menu$wh"
 echo -e "$y-------------------------------------------------$wh"
 read -p "Select From Options [ 1 - 22 ] : " menu
 case $menu in
@@ -119,7 +119,7 @@ menuinfo
 ;;
 22)
 clear
-tungguaja
+addss-p
 ;;
 *)
 clear
