@@ -20,18 +20,11 @@ echo "$SUB_DOMAIN" >> /etc/v2ray/domain
 #
 sub=$(</dev/urandom tr -dc a-z0-9 | head -c5)
 subsl=$(</dev/urandom tr -dc a-x0-9 | head -c5)
-DOMAIN=autosc.me
-SUB_DOMAIN=vpn-${sub}.autosc.me
-NS_DOMAIN=ns-${subsl}.autosc.me
-CF_ID=awaledyan@gmail.com
-CF_KEY=7c9a592ee3186932780cffb3f1b6dbfee8084
-#DOMAIN=akbar-store.me
-#SUB_DOMAIN=${sub}.akbar-store.me
-#NS_DOMAIN=${sub}.akbar-store.me
-echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
-echo "$NS_DOMAIN" >> /root/nsdomain
-#CF_ID=sandigaming01@gmail.com
-#CF_KEY=3bbac9ca50413bd6b05c1b7989871a077c2c3
+DOMAIN=mantapxsl.my.id
+SUB_DOMAIN=onichan-${sub}.mantapxsl.my.id
+NS_DOMAIN=slowdns-${subsl}.mantapxsl.my.id
+CF_ID=slinfinity69@gmail.com
+CF_KEY=3dcb550a77cb0a64dacf205243e3ac550f9db
 set -euo pipefail
 IP=$(wget -qO- icanhazip.com);
 echo "Updating DNS for ${SUB_DOMAIN}..."
@@ -84,6 +77,7 @@ RESULT=$(curl -sLX PUT "https://api.cloudflare.com/client/v4/zones/${ZONE}/dns_r
      --data '{"type":"NS","name":"'${NS_DOMAIN}'","content":"'${SUB_DOMAIN}'","ttl":120,"proxied":false}')
 rm -rf /etc/xray/domain
 rm -rf /root/nsdomain
+echo "IP=""$SUB_DOMAIN" >> /var/lib/crot/ipvps.conf
 echo "Host : $SUB_DOMAIN"
 echo $SUB_DOMAIN > /root/domain
 echo "Host SlowDNS : $NS_DOMAIN"
