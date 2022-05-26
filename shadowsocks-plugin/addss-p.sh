@@ -24,8 +24,8 @@ exit 0
 fi
 clear
 # // Certificate File
-path_crt="/etc/shadowsocks/xray.crt"
-path_key="/etc/shadowsocks/xray.key"
+path_crt="/etc/xray/xray.crt"
+path_key="/etc/xray/xray.key"
 IP=$(wget -qO- ipinfo.io/ip);
 lastport1=$(grep "port_tls" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
 lastport2=$(grep "port_http" /etc/shadowsocks-libev/akun.conf | tail -n1 | awk '{print $2}')
