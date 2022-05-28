@@ -98,5 +98,3 @@ sl-download-info
 #install-ss-plugin
 #xray-grpc
 cd
-certv2ray
-cd
