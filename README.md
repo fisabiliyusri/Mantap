@@ -123,16 +123,14 @@ sl-fix
 ```html
 reboot
 ```
-*
+* Perbaiki SSL ERROR
 * otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
 * perbaiki error di bagian acme domain
-```html
-slhost
-```
 * untuk update Sertifikat SSL/TLS
 ```html
-certv2ray
+slhost && certv2ray
 ```
+* lalu restart
 ```html
 restart
 ```
