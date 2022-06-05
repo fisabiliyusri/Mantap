@@ -1,11 +1,9 @@
 #!/bin/bash
 # Mod By SL
-wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sshd_config;
-systemctl restart sshd;
-clear;
-echo -e "Masukkan Password:";
-read -e pwe;
-usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
+# User Akun Baru Dengan Akses Root (Akun Baru);
+# Username   = $crot ;
+# Password   = $Pass ;
+# ============================================";
 #echo -e "Masukan Nama User Akun Baru";
 #read -p "Password : " Pass
 #read -e crot;
@@ -14,6 +12,12 @@ usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
 #usermod -p `perl -e "print crypt("$Pass","Q4")"` $crot;
 #usermod -aG sudo $crot;
 #echo "$crot    ALL=(ALL:ALL) ALL" >> /etc/sudoers;
+wget -qO- -O /etc/ssh/sshd_config https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/sshd_config;
+systemctl restart sshd;
+clear;
+echo -e "Masukkan Password:";
+read -e pwe;
+usermod -p `perl -e "print crypt("$pwe","Q4")"` root;
 clear;
 printf "Mohon Simpan Informasi Akun VPS Ini
 ============================================
@@ -22,9 +26,5 @@ Ip address = $(curl -Ls http://ipinfo.io/ip)
 Username   = root
 Password   = $pwe
 ============================================
-User Akun Baru Dengan Akses Root (Akun Baru)
-Username   = $crot
-Password   = $Pass
-============================================";
 echo "";
 exit;
