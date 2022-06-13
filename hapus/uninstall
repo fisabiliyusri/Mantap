@@ -1,0 +1,51 @@
+systemctl stop ws-tls
+systemctl stop ws-nontls
+systemctl stop ws-ovpn
+systemctl stop squid
+systemctl stop sslh
+systemctl stop squid3
+systemctl stop stunnel4
+systemctl stop stunnel5
+pkill stunnel4
+pkill stunnel5
+pkill squid
+pkill squid3
+pkill squid-1
+pkill squid-3
+pkill python
+cd
+rm -rf /etc/systemd/system/ws-nontls.service
+rm -rf /etc/systemd/system/ws-tls.service
+rm -rf /usr/local/bin/ws-nontls
+rm -rf /usr/local/bin/ws-tls
+rm -rf /etc/systemd/system/ws-ovpn.service
+rm -rf /usr/local/bin/ws-ovpn
+rm -rf /etc/default/sslh
+rm -rf -f stunnel
+rm -rf stunnel5.zip
+rm -rf /etc/stunnel5/stunnel5.conf
+rm -rf /usr/local/share/doc/stunnel/
+rm -rf /usr/local/etc/stunnel/
+rm -rf /usr/local/bin/stunnel
+rm -rf /usr/local/bin/stunnel3
+rm -rf /usr/local/bin/stunnel4
+rm -rf /usr/local/bin/stunnel5
+apt-get remove stunnel4
+apt-get remove stunnel5
+apt-get remove --auto-remove stunnel4
+apt-get remove --auto-remove stunnel5
+apt-get purge stunnel4
+apt-get purge stunnel5
+apt-get purge --auto-remove stunnel4
+apt-get purge --auto-remove stunnel5
+apt remove sslh
+apt-get remove --auto-remove sslh
+apt-get purge sslh
+apt-get purge --auto-remove sslh
+apt autoclean
+apt autoremove
+apt-get remove squid -y
+apt-get remove --auto-remove squid
+apt-get purge squid
+apt-get purge --auto-remove squid
+cd

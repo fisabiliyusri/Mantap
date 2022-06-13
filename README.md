@@ -1,3 +1,11 @@
+<p align="center">
+<img src="https://readme-typing-svg.herokuapp.com?color=%2336BCF7&center=true&vCenter=true&lines=S+U+L+A+I+M+A+N++L" />
+</p>
+<p align='center'><a href="https://api.daily.dev/get?r=fisabiliyusri"><img src="https://raw.githubusercontent.com/fisabiliyusri/.github/main/kotori2.png?r=82s" width="150" alt="Hayuk"/></a></p>
+
+![fisabiliyusri's card name](https://cardivo.vercel.app/api?name=SULAIMAN%20L&description=Hi,%20everyone!%20and%20Nice%20to%20meet%20you%20%F0%9F%91%8B&image=https://raw.githubusercontent.com/fisabiliyusri/.github/main/kurumiwangy3.jpg?v=4&backgroundColor=%23ecf0f1&twitter=/&github=fisabiliyusri&pattern=leaf&colorPattern=%23eaeaea)
+
+
 <h2 align="center">
 Auto Script Install All VPN Service
 Mod By SL
@@ -9,13 +17,17 @@ Mod By SL
 <p align="center"><img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%209&message=Stretch&color=purple"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=debian&label=Debian%2010&message=Buster&color=purple">  <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2018&message=Lts&color=red"> <img src="https://img.shields.io/static/v1?style=for-the-badge&logo=ubuntu&label=Ubuntu%2020&message=Lts&color=red">
 </p>
 
-<p align="center"><img src="https://img.shields.io/badge/Service-SSH_Websocket-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN_Websocket-success.svg">  <img src="https://img.shields.io/badge/Service-SSLH-success.svg">  <img src="https://img.shields.io/badge/Service-Stunnel5-success.svg">  <img src= "https://img.shields.io/badge/Service-OHP_Open_Http_Puncher-success.svg">  <img src= "https://img.shields.io/badge/Service-SSTP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-L2TP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-PPTP_VPN-success.svg">
+<p align="center"><img src="https://img.shields.io/badge/Service-SSH_Over_Websocket-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN_Over_Websocket-success.svg">  <img src="https://img.shields.io/badge/Service-SSH_Over_DNS-success.svg">  <img src="https://img.shields.io/badge/Service-SSLH-success.svg">  <img src="https://img.shields.io/badge/Service-Stunnel5-success.svg">  <img src= "https://img.shields.io/badge/Service-OHP_Open_Http_Puncher-success.svg">  <img src= "https://img.shields.io/badge/Service-SSTP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-L2TP_VPN-success.svg">  <img src= "https://img.shields.io/badge/Service-PPTP_VPN-success.svg">
 <p align="center"><img src="https://img.shields.io/badge/Service-SSH_OpenSSH-success.svg">  <img src="https://img.shields.io/badge/Service-SSH_Dropbear-success.svg">  <img src="https://img.shields.io/badge/Service-BadVPN-success.svg">  <img src="https://img.shields.io/badge/Service-OpenVPN-success.svg">  <img src="https://img.shields.io/badge/Service-Squid3-success.svg">  <img   src="https://img.shields.io/badge/Service-Webmin-success.svg">  <img src="https://img.shields.io/badge/Service-SlowDns-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-XRAY-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_Websocket_TLS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_gRPC_VLESS_VMESS-success.svg">  <img src="https://img.shields.io/badge/Service-XRAY_TROJAN-success.svg">  <p align="center"><img src="https://img.shields.io/badge/Service-SSR-success.svg">  <img src="https://img.shields.io/badge/Service-Trojan_Go-success.svg">  <img src="https://img.shields.io/badge/Service-WireGuard-success.svg">  <img src= "https://img.shields.io/badge/Service-Shadowsocks-success.svg">  
 
 ### Info:
+* HARAP DI BACA & UTAMAKAN MEMBACA
+# INI SCRIPT KHUSUS UNTUK MEMBUAT SERVER VPN
 Buat VPS Fresh atau VPS Baru dan Wajib Menggunakan User: root
+* VPS AKUN ROOT
 * Login VPS User menggunakan user root
 * Cara langsung masuk ke akses root
+
 ```html
 sudo su
 ```
@@ -34,53 +46,67 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 ```
 
 ## INFO TAMBAHAN , SILAHKAN DI BACA 
-* MINIMAL RAM 2 GB UNTUK MENGGUNAKAN SCRIPT INI
+* MINIMAL RAM 1 GB UNTUK MENGGUNAKAN SCRIPT INI
 * SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
 
+# Khusus Untuk OS
+* • Debian 10 & 9
+atau
+* • Ubuntu 18.04 & 20.04
+* Working For VPS AWS,AZURE,DO
 ## Installation 
 ## 1.
-Part 1: Update dan Upgrade
-   <img src="https://img.shields.io/badge/Update%20Upgrade-green"> 
+<img src="https://img.shields.io/badge/Update%20_&_%20Upgrade-green">
+
   ```html
 apt-get update && apt-get upgrade -y && update-grub && sleep 2 && reboot
 ```
   
 ## 2.0
-Aktifkan Root Sementara
-  ```html
-sudo su
-cd
-cd
+<img src="https://img.shields.io/badge/Login_Root%20VPS-green">
 
-```
+* Login ke VPS dan Aktifkan Root Sementara
 
-# 2.
-Part 2: Buat Akses Root Di VPS /Root VPS
-  <img src="https://img.shields.io/badge/Akses_Root%20VPS-green">
-Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
-   ```html
-  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
-  ```
   
-# 2.5
-Di sini wajib pake user root atau bisa aktifkan root sementara
-   ```html
+```html
 sudo su
 cd
 cd
-
-  ```
-### 3.
-Part 3: Install Semua Layanan VPN /Install All VPN Service
-  <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20Batch-green">
-  ```html
-rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
 ```
+
+## 2.
+
+  <img src="https://img.shields.io/badge/Buat_Akses_Root%20VPS-green">
+
+* Buat Akses Root Di VPS /Root VPS
+* Untuk Mengizinkan Root Dan Ubah Password Login di VPS Google Cloud Platform, Aws, Dan Lain-lain
+   
+```html
+  wget -qO- -O vpsroot.sh https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/vpsroot.sh && bash vpsroot.sh
+  
+```
+  
+### 3.
+
+  <img src="https://img.shields.io/badge/Install_Semua_Layanan_VPN%20-green">
+
+* Install Semua Layanan VPN /Install All VPN Service
+   
+```html
+rm -f setup.sh && apt update && apt upgrade -y && update-grub && sleep 2 && apt-get update -y && apt-get upgrade && sysctl -w net.ipv6.conf.all.disable_ipv6=1 && sysctl -w net.ipv6.conf.default.disable_ipv6=1 && apt update && apt install -y bzip2 gzip coreutils screen curl unzip && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/setup.sh && chmod +x setup.sh && sed -i -e 's/\r$//' setup.sh && screen -S setup ./setup.sh
+  
+```
+  
 
 ### 4. DONE / SELESAI
+<img src="https://img.shields.io/badge/DONE%20_/_%20SELESAI-green">
+
 * • jika tidak bisa login di vps ,gunakan port ssh
 * • 22, 2253
 
+### Jangan Lupa Traktir Kopi
+<a href="https://trakteer.id/sulaiman-l/tip" target="_blank"><img id="wse-buttons-preview" src="https://cdn.trakteer.id/images/embed/trbtn-red-6.png" height="40" style="border: 0px; height: 40px;" alt="Trakteer Saya"></a>
+https://trakteer.id/sulaiman-l/tip
 
 ### 5. MENU, INFO ,UPDATE ,FIX
 * untuk menampilkan menu
@@ -98,16 +124,14 @@ sl-fix
 ```html
 reboot
 ```
-*
+* Perbaiki SSL ERROR
 * otomatis untuk memperbaiki error Sertifikat SSL/TLS dan SUBDOMAIN
 * perbaiki error di bagian acme domain
-```html
-slhost
-```
 * untuk update Sertifikat SSL/TLS
 ```html
-certv2ray
+slhost && certv2ray
 ```
+* lalu restart
 ```html
 restart
 ```
@@ -132,55 +156,15 @@ menu
 reboot
  ```
 
-
+### 7. Info Websocket
+* Websocket harus menggunakan subdomain/domain dan sudah di pointing di cloudflare (CDN CLOUDFLARE)
+* Tanpa subdomain/domain mustahil bisa terhubung dengan bug yang berasal dari cloudflare
 *
 *
 *
-### 69.
-# Fix gRPC untuk FB Lite,Sosmed,etc..
-* Pengaturan DNS
-* Remote DNS:
-```html
-dns.google
-```
 
-*
-*
-*
-### 99.
 
-# (Fix Manual) Fix Stunnel5 Error
-* buat domain baru(bash slhost.sh)
-```html
-cd /usr/bin && wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/slhost.sh && bash slhost.sh
- ```
-
-* edit manual ip domain
-```html
-nano /var/lib/crot/ipvps.conf
- ```
-```html
-IP=masukan host subdomain kamu
- ```
-
-* edit manual domain
-```html
-nano /etc/xray/domain
- ```
-```html
-isi dengan host subdomain kamu
- ```
-
-* lalu update cert
-```html
-wget https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/xray/certv2ray.sh && chmod +x certv2ray.sh && bash certv2ray.sh
- ```
-* atau
-```html
-certv2ray
- ```
-
-### 100 (Fix manual) Fix Error SSLH & Fix Error SSH WS-TLS
+### 100 (Fix manual) Fix Error SSLH
 
 * Perbaiki sslh yang error di vps yang tidak support sslh
 * khusus yang vps nya tidak support sslh
@@ -196,11 +180,9 @@ echo sslh:x:109:114::/nonexistent:/usr/sbin/nologin >> /etc/passwd
 
 * start sslh dan jalankan
 ```html
-systemctl start sslh 
-&& 
-/etc/init.d/sslh start 
-&& 
-/etc/init.d/sslh restart 
+systemctl start sslh
+/etc/init.d/sslh start
+/etc/init.d/sslh restart
 ```
 * lalu start ws-tls
 ```html
@@ -211,79 +193,14 @@ reboot
 ```
 *done
 
-# perintah
-```html
-wget = download
-cp = copy/salin
-nano = edit
-rm = hapus
-rm -r = hapus
-rm -f = hapus
-rm -rf = hapus
-git clone = digunakan untuk mengunduh code yang ada pada repository
- ```
-
-# (hapus) uninstall script websocket
-```html
-rm -r /etc/systemd/system/ws-nontls.service 
-&& 
-rm -r /etc/systemd/system/ws-tls.service 
-&& 
-rm -r /usr/local/bin/ws-nontls 
-&& 
-rm -r /usr/local/bin/ws-tls 
-&&
-rm -r /etc/systemd/system/ws-ovpn.service 
-&& 
-rm -r /usr/local/bin/ws-ovpn 
- ```
-# (hapus) uninstall ssl && stunnel
-```html
-
-rm -f /etc/default/sslh
-rm -r -f stunnel
-rm -f stunnel5.zip
-rm -f /etc/stunnel5/stunnel5.conf
-rm -r -f /usr/local/share/doc/stunnel/
-rm -r -f /usr/local/etc/stunnel/
-rm -f /usr/local/bin/stunnel
-rm -f /usr/local/bin/stunnel3
-rm -f /usr/local/bin/stunnel4
-rm -f /usr/local/bin/stunnel5
-```
-# (hapus) uninstall all sslh && all stunnel
-```html
-sudo apt-get remove stunnel4
-&&
-sudo apt-get remove stunnel5
-&&
-sudo apt-get remove --auto-remove stunnel4
-&&
-sudo apt-get remove --auto-remove stunnel5
-&&
-sudo apt-get purge stunnel4
-&&
-sudo apt-get purge stunnel5
-&&
-sudo apt-get purge --auto-remove stunnel4
-&&
-sudo apt-get purge --auto-remove stunnel5
-&&
-
-sudo apt remove sslh
-&&
-sudo apt-get remove --auto-remove sslh
-&&
-sudo apt-get purge sslh
-&&
-sudo apt-get purge --auto-remove sslh
-&&
-sudo apt autoclean && sudo apt autoremove
-&& 
-```
 
 
-
+# INFO Khusus SlowDNS
+• SSH Over DNS (SlowDNS)
+* untuk kecepatan nya di batasi
+* speed download 3 Mbps (Max Speed)
+* speed upload 100+ Mbps (Max Speed)
+* Support semua port ssh
 
 ### Fitur Script
 
@@ -291,15 +208,15 @@ sudo apt autoclean && sudo apt autoremove
 
 • SSH & OpenVPN
 
-• SSH Websocket (Cloudflare)
+• SSH Over DNS (SlowDNS)
 
-• OpenVPN Websocket (Cloudflare)
+• SSH Over Websocket (Cloudflare)
+
+• OpenVPN Over Websocket (Cloudflare)
 
 • SSLH
 
-• SSH CloudFront Websocket (Aws CloudFront Only) [OFF]
-
-• SLOWDNS Over SSH [OFF]
+• SSH CloudFront Over Websocket (Aws CloudFront Only) [OFF]
 
 • OHP SSH & OHP Dropbear & OHP OpenVPN (OPEN HTTP PUNCHER)
 
@@ -313,7 +230,15 @@ sudo apt autoclean && sudo apt autoremove
 
 • XRAY VLESS GRPC
 
-• SHADOWSOCKS
+• SHADOWSOCKS 
+
+• SHADOWSOCKS OBFS
+
+• SHADOWSOCKS xray-plugin
+
+• SHADOWSOCKS v2ray-plugin
+
+• SHADOWSOCKS gost-plugin
 
 • SSR
 
@@ -343,70 +268,65 @@ sudo apt autoclean && sudo apt autoremove
 
 # Service & Port
 
-• OpenSSH                 : 22, 2253
+• SlowDNS                   : All Port SSH
 
-• Dropbear                : 443, 109, 143, 1153
+• OpenSSH                   : 22, 2253
 
-• Stunnel5                : 443, 445, 777
+• Dropbear                  : 443, 109, 143, 1153
 
-• OpenVPN                 : TCP 1194, UDP 2200, SSL 990
+• Stunnel5                  : 443, 445, 777
 
-• Websocket SSH TLS       : 443
+• OpenVPN                   : TCP 1194, UDP 2200, SSL 990
 
-• Websocket SSH HTTP      : 8880
+• Websocket SSH TLS         : 443
 
-• Websocket OpenVPN       : 2086
+• Websocket SSH HTTP        : 8880
 
-• Squid Proxy             : 3128, 8080
+• Websocket OpenVPN         : 2086
 
-• Badvpn                  : 7100, 7200, 7300
+• Squid Proxy               : 3128, 8080 [OFF]
 
-• Nginx                   : 89
+• Badvpn                    : 7100, 7200, 7300
 
-• Wireguard               : 7070
+• Nginx                     : 89
 
-• L2TP/IPSEC VPN          : 1701
+• Wireguard                 : 7070
 
-• PPTP VPN                : 1732
+• L2TP/IPSEC VPN            : 1701
 
-• SSTP VPN                : 444
+• PPTP VPN                  : 1732
 
-• Shadowsocks-R           : 1443-1543
+• SSTP VPN                  : 444
 
-• SS-OBFS TLS             : 2443-2543
+• Shadowsocks-R             : 1443-1543
 
-• SS-OBFS HTTP            : 3443-3543
+• SS-OBFS TLS               : 2443-2543
 
-• XRAYS Vmess TLS         : 8443
+• SS-OBFS HTTP              : 3443-3543
 
-• XRAYS Vmess None TLS    : 80
+• XRAYS Vmess TLS           : 8443
 
-• XRAYS Vless TLS         : 8443
+• XRAYS Vmess None TLS      : 80
 
-• XRAYS Vless None TLS    : 80
+• XRAYS Vless TLS           : 8443
 
-• XRAYS Trojan            : 2083
+• XRAYS Vless None TLS      : 80
 
-• XRAYS Vmess GRPC TLS    : 1180,3380
+• XRAYS Trojan              : 2083
 
-• XRAYS Vless GRPC TLS    : 2280,4480
+• XRAYS Vmess GRPC TLS      : 1180,3380
 
-• OHP SSH                 : 8181
+• XRAYS Vless GRPC TLS      : 2280,4480
 
-• OHP Dropbear            : 8282
+• OHP SSH                   : 8181
 
-• OHP OpenVPN             : 8383
+• OHP Dropbear              : 8282
 
-• Trojan Go               : 2087
+• OHP OpenVPN               : 8383
 
-• CloudFront Websocket    : [OFF]
+• Trojan Go                 : 2087
 
-• SLOWDNS OPENSSH         : (2253)[OFF]
-
-• SLOWDNS DROPBEAR        : (1153)[OFF]
-
-• SLOWDNS SSL/TLS         : (3353)[OFF]
-
+• CloudFront Over Websocket : [OFF]
 
 
  ### Server Information & Other Features
@@ -441,4 +361,17 @@ sudo apt autoclean && sudo apt autoremove
 
 • Auto Update
 
-
+<p align="center">
+<img height=21 src="https://komarev.com/ghpvc/?username=fisabiliyusri">
+</p>
+<div height='45' align="center">
+<h2>Contact me: <br>
+<a href="https://github.com/fisabiliyusri"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/github.svg" height='50'> </a>
+<a href="https://facebook.com/sulaiman.xl"> <img src="https://cdn.jsdelivr.net/npm/simple-icons@3.0.1/icons/facebook.svg" height='50'> </a>
+<a href="https://trakteer.id/sulaiman-l/tip"> <img src="https://cdn.trakteer.id/images/embed/trbtn-red-6.png" height='50'> </a>
+</h2>
+</div>
+<h2 align="center">
+<img height=150 src="https://github-readme-stats.vercel.app/api/top-langs/?username=fisabiliyusri&layout=compact&theme=dark">
+<img height=150 src="https://github-readme-stats.vercel.app/api?username=fisabiliyusri&count_private=true&show_icons=true&theme=dark">
+<h2 align="center">

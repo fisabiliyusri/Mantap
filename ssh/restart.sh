@@ -24,10 +24,8 @@ systemctl restart ssrmu
 systemctl restart ws-tls
 systemctl restart ws-nontls
 systemctl restart xray.service
-systemctl restart sl-vless-grpc
-systemctl restart sl-vmess-grpc
-systemctl restart fb-vmess-grpc
-systemctl restart fb-vless-grpc
+systemctl restart vless-grpc
+systemctl restart vmess-grpc
 systemctl restart shadowsocks-libev
 systemctl restart xl2tpd
 systemctl restart pptpd

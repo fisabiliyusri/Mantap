@@ -11,11 +11,11 @@ biji=`date +"%Y-%m-%d" -d "$dateFromServer"`
 MYIP=$(curl -sS ipv4.icanhazip.com)
 clear
 domain=$(cat /etc/xray/domain)
-tls=$(cat /etc/xray/sl-vmessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
-vl=$(cat /etc/xray/sl-vlessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
+tls=$(cat /etc/xray/vmessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
+vl=$(cat /etc/xray/vlessgrpc.json | grep port | awk '{print $2}' | sed 's/,//g')
 until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 		read -rp "User: " -e user
-		CLIENT_EXISTS=$(grep -w $user /etc/xray/sl-vmessgrpc.json | wc -l)
+		CLIENT_EXISTS=$(grep -w $user /etc/xray/vmessgrpc.json | wc -l)
 
 		if [[ ${CLIENT_EXISTS} == '1' ]]; then
 			echo ""
@@ -26,9 +26,9 @@ until [[ $user =~ ^[a-zA-Z0-9_]+$ && ${CLIENT_EXISTS} == '0' ]]; do
 uuid=$(cat /proc/sys/kernel/random/uuid)
 exp=`date -d "$masaaktif days" +"%Y-%m-%d"`
 sed -i '/#vmessgrpc$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/sl-vmessgrpc.json
+},{"id": "'""$uuid""'","alterId": '"0"',"email": "'""$user""'"' /etc/xray/vmessgrpc.json
 sed -i '/#vlessgrpc$/a\### '"$user $exp"'\
-},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/sl-vlessgrpc.json
+},{"id": "'""$uuid""'","email": "'""$user""'"' /etc/xray/vlessgrpc.json
 cat > /etc/xray/$user-tls.json << EOF
       {
       "v": "0",
@@ -45,10 +45,13 @@ cat > /etc/xray/$user-tls.json << EOF
 }
 EOF
 vmess_base641=$( base64 -w 0 <<< $vmess_json1)
-vmesslink1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
+##vmesslink#1="vmess://$(base64 -w 0 /etc/xray/$user-tls.json)"
+vmesslink1="vmess://${uuid}@${domain}:${tls}/?type=grpc&encryption=auto&serviceName=GunService&security=tls&sni=${domain}#$user"
 vlesslink1="vless://${uuid}@${domain}:${vl}?mode=gun&security=tls&encryption=none&type=grpc&serviceName=GunService&sni=${domain}#$user"
-systemctl restart sl-vmess-grpc.service
-systemctl restart sl-vless-grpc.service
+systemctl restart fb-vmess-grpc.service
+systemctl restart fb-vless-grpc.service
+systemctl restart vmess-grpc.service
+systemctl restart vless-grpc.service
 service cron restart
 clear
 echo -e "================================="
@@ -63,7 +66,8 @@ echo -e "Alter ID          : 0"
 echo -e "Mode              : Gun"
 echo -e "Security          : TLS"
 echo -e "Type              : grpc"
-echo -e "Service Name      : GunService"
+echo -e "Jaringan          : GRPC"
+echo -e "Service Name gRPC : GunService"
 echo -e "SNI               : ${domain}"
 echo -e "================================="
 echo -e "Link VMess GRPC  : "

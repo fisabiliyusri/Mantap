@@ -7,7 +7,7 @@ echo "Checking VPS"
 #EDIT IZIN
 clear
 echo -n > /tmp/other.txt
-data=( `cat /etc/xray/sl-vmessgrpc.json | grep '^###' | cut -d ' ' -f 2`);
+data=( `cat /etc/xray/vmessgrpc.json | grep '^###' | cut -d ' ' -f 2`);
 echo "-------------------------------";
 echo "   XRAY GRPC VMess User Login";
 echo "-------------------------------";
@@ -43,7 +43,7 @@ done
 oth=$(cat /tmp/other.txt | sort | uniq | nl)
 echo "$oth";
 echo "-------------------------------"
-dt=( `cat /etc/xray/sl-vlessgrpc.json | grep '^###' | cut -d ' ' -f 2`);
+dt=( `cat /etc/xray/vlessgrpc.json | grep '^###' | cut -d ' ' -f 2`);
 echo "-------------------------------";
 echo "   XRAY GRPC VLess User Login";
 echo "-------------------------------";

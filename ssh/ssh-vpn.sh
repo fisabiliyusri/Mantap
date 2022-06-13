@@ -39,7 +39,7 @@ state=Indonesia
 locality=Indonesia
 organization=infinity
 organizationalunit=infinity
-commonname=cdn.covid19.go.id
+commonname=localhost
 email=hayuk69@gmail.com
 
 # simple password minimal
