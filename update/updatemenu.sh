@@ -29,7 +29,7 @@ rm -rf menu
 rm -rf menuinfo
 rm -rf restart
 rm -rf slhost
-#rm -rf install-sldns
+rm -rf install-sldns
 rm -rf addssh
 wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
