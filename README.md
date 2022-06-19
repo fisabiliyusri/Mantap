@@ -165,6 +165,22 @@ reboot
 *
 *
 
+### 8. Edit Port SSL WS atau Ganti Port SSL(Manual)
+* ubah port yg mau di ubah ,jika 443 silahkan ubah tulisan yang ada 443
+* setelah di edit lalu di simpan (CTRL+X+Y dan enter)
+
+```html
+nano /etc/systemd/system/ws-tls.service
+ ```
+```html
+nano /usr/local/bin/ws-tls
+ ```
+```html
+nano /etc/default/sslh
+ ```
+```html
+nano /etc/stunnel5/stunnel5.conf
+ ```
 
 ### 100 (Fix manual) Fix Error SSLH
 
