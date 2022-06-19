@@ -31,7 +31,7 @@ rm -rf restart
 rm -rf slhost
 #rm -rf install-sldns
 rm -rf addssh
-#wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
+wget -O install-sldns "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/SLDNS/install-sldns"
 wget -O restart "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/restart.sh"
 wget -O addssh "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/ssh/addssh.sh"
 wget -O menu "https://raw.githubusercontent.com/fisabiliyusri/Mantap/main/update/menu.sh"
