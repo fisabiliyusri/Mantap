@@ -49,7 +49,7 @@ https://www.facebook.com/100031931503057/posts/628374871570224/?app=fbl
 
 ## INFO TAMBAHAN , SILAHKAN DI BACA 
 * MINIMAL RAM 1 GB UNTUK MENGGUNAKAN SCRIPT INI
-* SILAHKAN HAPUS PROXY SQUID JIKA VPS TERASA BERAT
+* MAAF PROXY SQUID NYA SAYA HAPUS, silahkan edit script ini secara manual
 
 # Khusus Untuk OS
 * • Debian 10 & 9
@@ -216,8 +216,7 @@ reboot
 # INFO Khusus SlowDNS
 • SSH Over DNS (SlowDNS)
 * untuk kecepatan nya di batasi
-* speed download 3 Mbps (Max Speed)
-* speed upload 100+ Mbps (Max Speed)
+* speed download 4 Mbps (Max Speed)
 * Support semua port ssh
 
 ### Fitur Script
